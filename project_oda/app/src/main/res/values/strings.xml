@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">project_oda</string>
+    <string name="loading">로딩중...</string>
+    <string name="password">비밀번호</string>
+    <string name="id">oda1234</string>
+    <string name="auto_login">자동로그인</string>
+    <string name="search_password">비밀번호 찾기</string>
+    <string name="btn_login">로그인</string>
+    <string name="btn_sign_in">회원가입</string>
+    <string name="btn_duplicate">중복확인</string>
+    <string name="btn_verify">인증하기</string>
+    <string name="btn_post">우편번호 검색</string>
+    <string name="welcome1">오다에 오신 것을 환영합니다</string>
+    <string name="welcome2">회원가입에 필요한 정보를 기입해주세요.</string>
+</resources>
