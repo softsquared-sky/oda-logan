@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import my.project.project_oda.R;
-import my.project.project_oda.src.Splash.Splash;
 
 public class LoginActivity extends Activity {
 
@@ -20,12 +19,14 @@ public class LoginActivity extends Activity {
 
         switch (view.getId()){
             case R.id.btn_login:
+                Intent LoginIntent = new Intent(this, HomeActivity.class);
+                startActivity(LoginIntent);
+                finish();
                 break;
-            case R.id.btn_sign_in:
-                Intent intent = new Intent(this, SignInActivity.class);
-                startActivity(intent);
+            case R.id.btn_sign_up:
+                Intent SignUpintent = new Intent(this, SignUpActivity.class);
+                startActivity(SignUpintent);
                 break;
-
         }
     }//onClick finished
 

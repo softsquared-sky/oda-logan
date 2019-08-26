@@ -6,4 +6,7 @@
     <color name="splash_back">#6fccd7</color>
     <color name="normal">#9b9b9b</color>
     <color name="white">#ffffff</color>
+    <color name="catering">#4a4a4a</color>
+    <color name="sign_up">#809b9b9b</color>
+    <color name="boarder">#1e000000</color>
 </resources>

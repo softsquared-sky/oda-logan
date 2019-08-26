@@ -9,14 +9,24 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="215dp"
-        android:background="@drawable/login_top">
-    <ImageView
-        android:layout_width="93dp"
-        android:layout_height="93dp"
-        android:layout_gravity="center_horizontal|center_vertical"
-        android:src="@drawable/group"
-        />
+        android:layout_height="215dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/splash_back" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_marginTop="105dp"
+            android:layout_height="110dp"
+            android:background="@drawable/login_top" />
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:src="@drawable/group" />
     </FrameLayout>
 
     <EditText
@@ -94,13 +104,13 @@
         />
 
     <Button
-        android:id="@+id/btn_sign_in"
+        android:id="@+id/btn_sign_up"
         android:layout_width="290dp"
         android:layout_height="48dp"
         android:layout_marginTop="21dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_sign_in"
-        android:text="@string/btn_sign_in"
+        android:background="@drawable/btn_sign_up"
+        android:text="@string/btn_sign_up"
         android:textColor="@color/splash_back"
         android:textSize="16sp"
         android:onClick="onClick"

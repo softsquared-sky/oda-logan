@@ -25,7 +25,7 @@
         <activity android:name=".src.main.LoginActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".src.main.SignInActivity"
+        <activity android:name=".src.main.SignUpActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

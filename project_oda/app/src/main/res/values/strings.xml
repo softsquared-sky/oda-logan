@@ -1,15 +1,37 @@
 <resources>
+    <string name="oda">오다</string>
     <string name="app_name">project_oda</string>
     <string name="loading">로딩중...</string>
     <string name="password">비밀번호</string>
+    <string name="password_ok">비밀번호 확인</string>
     <string name="id">oda1234</string>
     <string name="auto_login">자동로그인</string>
     <string name="search_password">비밀번호 찾기</string>
     <string name="btn_login">로그인</string>
-    <string name="btn_sign_in">회원가입</string>
+    <string name="btn_sign_up">회원가입</string>
     <string name="btn_duplicate">중복확인</string>
+    <string name="btn_duplicate_ok">사용가능</string>
     <string name="btn_verify">인증하기</string>
+    <string name="btn_verify_ok">인증완료</string>
     <string name="btn_post">우편번호 검색</string>
+    <string name="edt_post_detail">상세 주소</string>
+    <string name="catering_type">요식업 종류</string>
+    <string name="catering_0">한식</string>
+    <string name="catering_1">양식</string>
+    <string name="catering_2">중식</string>
+    <string name="catering_3">일식</string>
+    <string name="catering_4">분식</string>
+    <string name="catering_5">베이커리/카페</string>
+    <string name="catering_6">패스트푸드</string>
+    <string name="catering_7">기타</string>
+    <string name="sign_up">가입하기</string>
+    <string name="business_number">사업자 번호를 입력해주세요.</string>
     <string name="welcome1">오다에 오신 것을 환영합니다</string>
     <string name="welcome2">회원가입에 필요한 정보를 기입해주세요.</string>
+
+    <string name="menu_home">홈</string>
+    <string name="menu_cate">카테고리</string>
+    <string name="menu_tip">꿀팁</string>
+    <string name="menu_myPage">마이페이지</string>
+
 </resources>
