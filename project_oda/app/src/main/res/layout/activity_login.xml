@@ -13,14 +13,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:background="@color/splash_back" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_marginTop="105dp"
-            android:layout_height="110dp"
-            android:background="@drawable/login_top" />
+            android:layout_height="match_parent"
+            android:src="@drawable/login_top_background"
+            android:scaleType="fitXY"/>
 
         <ImageView
             android:layout_width="93dp"

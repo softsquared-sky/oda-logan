@@ -17,14 +17,14 @@ public class ApplicationClass extends Application {
     public static MediaType MEDIA_TYPE_JPEG = MediaType.parse("image/jpeg");
 
     // 테스트 서버 주소, 나중에 바꿔야 함
-    public static String BASE_URL = "http://apis.newvement.com/";
+    public static String BASE_URL = "http://13.209.41.173";
     // 실서버 주소
 //    public static String BASE_URL = "https://template.softsquared.com/";
 
     public static SharedPreferences sSharedPreferences = null;
 
     // SharedPreferences 키 값
-    public static String TAG = "TEMPLATE_APP";
+    public static String TAG = "로그";
 
     // JWT Token 값
     public static String X_ACCESS_TOKEN = "X-ACCESS-TOKEN";
@@ -61,4 +61,23 @@ public class ApplicationClass extends Application {
 
         return retrofit;
     }
+
+    public static Retrofit getRetrofit_for_check() {
+        if (retrofit == null) {
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .readTimeout(5000, TimeUnit.MILLISECONDS)
+                    .connectTimeout(5000, TimeUnit.MILLISECONDS)
+                    .build();
+
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .client(client)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+
+        return retrofit;
+    }
+
+
 }

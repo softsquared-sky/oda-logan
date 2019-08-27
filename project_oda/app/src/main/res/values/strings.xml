@@ -25,9 +25,13 @@
     <string name="catering_6">패스트푸드</string>
     <string name="catering_7">기타</string>
     <string name="sign_up">가입하기</string>
+    <string name="select_all">전체선택</string>
+    <string name="go_fast">바로 주문하기 선택상품 </string>
     <string name="business_number">사업자 번호를 입력해주세요.</string>
     <string name="welcome1">오다에 오신 것을 환영합니다</string>
     <string name="welcome2">회원가입에 필요한 정보를 기입해주세요.</string>
+
+    <string name="search_keyword">&#160;&#160;검색어를 입력해주세요</string>
 
     <string name="menu_home">홈</string>
     <string name="menu_cate">카테고리</string>

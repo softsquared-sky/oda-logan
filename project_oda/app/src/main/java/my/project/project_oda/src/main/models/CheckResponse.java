@@ -2,7 +2,7 @@ package my.project.project_oda.src.main.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DefaultResponse {
+public class CheckResponse {
     @SerializedName("code")
     private int code;
 

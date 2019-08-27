@@ -61,7 +61,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/edt_sign_in_id"
+                android:id="@+id/edt_sign_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="17dp"
@@ -69,7 +69,7 @@
                 android:layout_marginEnd="17dp"
                 android:hint="@string/id"
                 android:singleLine="true"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btn_duplicate"
@@ -81,7 +81,7 @@
                 android:background="@drawable/btn_duplicate"
                 android:text="@string/btn_duplicate"
                 android:textColor="@color/normal"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:onClick="onClick"
                 />
 
@@ -97,7 +97,7 @@
             android:inputType="textPassword"
             android:hint="@string/password"
             android:singleLine="true"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_sign_up_password_ok"
@@ -109,7 +109,7 @@
             android:inputType="textPassword"
             android:hint="@string/password_ok"
             android:singleLine="true"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -124,7 +124,7 @@
                 android:layout_marginEnd="17dp"
                 android:hint="@string/business_number"
                 android:singleLine="true"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btn_verify"
@@ -136,7 +136,7 @@
                 android:background="@drawable/btn_duplicate"
                 android:text="@string/btn_verify"
                 android:textColor="@color/normal"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:onClick="onClick"
                 />
 
@@ -167,7 +167,7 @@
                 android:background="@drawable/btn_duplicate"
                 android:text="@string/btn_post"
                 android:textColor="@color/normal"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:onClick="onClick"
                 />
 
@@ -182,7 +182,7 @@
             android:layout_marginEnd="17dp"
             android:hint="@string/edt_post_detail"
             android:singleLine="true"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -191,7 +191,7 @@
             android:layout_marginTop="27dp"
             android:text="@string/catering_type"
             android:textColor="@color/splash_back"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <RadioGroup

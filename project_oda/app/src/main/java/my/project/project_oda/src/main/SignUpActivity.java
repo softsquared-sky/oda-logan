@@ -1,18 +1,25 @@
 package my.project.project_oda.src.main;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 import my.project.project_oda.R;
+import my.project.project_oda.src.main.interfaces.MainActivityView;
 import my.project.project_oda.src.main.models.SignUpForm;
+import my.project.project_oda.src.BaseActivity;
+import static my.project.project_oda.src.ApplicationClass.*;
 
-public class SignUpActivity extends Activity implements RadioGroup.OnCheckedChangeListener {
-
+public class SignUpActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, MainActivityView {
 
     private RadioButton mRb[];
     private RadioGroup mRgLine1;
@@ -30,7 +37,6 @@ public class SignUpActivity extends Activity implements RadioGroup.OnCheckedChan
     private Button mbtn_verify;
     private Button mbtn_post;
 
-    private static String TAG = "로그";
     SignUpForm form;
 
     @Override
@@ -38,6 +44,7 @@ public class SignUpActivity extends Activity implements RadioGroup.OnCheckedChan
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         this.view_initialize();
+        this.setListener();
 
     }//onCreate finished
 
@@ -57,7 +64,7 @@ public class SignUpActivity extends Activity implements RadioGroup.OnCheckedChan
             mRb[i] = findViewById(RADIOID[i]);
         }
 
-        medt_id = findViewById(R.id.edt_id);
+        medt_id = findViewById(R.id.edt_sign_up_id);
         medt_sign_up_password = findViewById(R.id.edt_sign_up_password);
         medt_sign_up_password_ok = findViewById(R.id.edt_sign_up_password_ok);
         medt_business_number = findViewById(R.id.edt_business_number);
@@ -74,11 +81,20 @@ public class SignUpActivity extends Activity implements RadioGroup.OnCheckedChan
 
         switch (view.getId()){
             case R.id.btn_duplicate:
+                if(medt_id.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "사용할 아이디를 입력하세요.",Toast.LENGTH_SHORT).show();
+                }else duplicateCheck();
                 break;
             case R.id.iv_back_arrow:
                 finish();
                 break;
             case R.id.btn_verify:
+                mbtn_verify.setBackgroundResource(R.drawable.btn_duplicate_ok);
+                mbtn_verify.setText(getResources().getString(R.string.btn_verify_ok));
+                mbtn_verify.setTextColor(getResources().getColor(R.color.white));
+                mbtn_verify.setClickable(false);
+                medt_business_number.setBackground(null);
+                medt_post_detail.requestFocus();
                 break;
             case R.id.btn_post:
                 break;
@@ -114,4 +130,86 @@ public class SignUpActivity extends Activity implements RadioGroup.OnCheckedChan
         }
     }
 
-}//LoginActivity finished
+    private void duplicateCheck(){
+        showProgressDialog();
+        final MainService mainService = new MainService(this, medt_id.getText().toString());
+        mainService.getTest();
+    }
+
+    @Override
+    public void DuplicateSuccess(String text) {
+        hideProgressDialog();
+        showCustomToast(text);
+        mbtn_duplicate.setBackgroundResource(R.drawable.btn_duplicate_ok);
+        mbtn_duplicate.setText(getResources().getString(R.string.btn_duplicate_ok));
+        mbtn_duplicate.setTextColor(getResources().getColor(R.color.white));
+        mbtn_duplicate.setClickable(false);
+        medt_id.clearFocus();
+        medt_id.setBackground(null);
+        //비밀번호 입력란으로 focus 이동
+        medt_sign_up_password.requestFocus();
+    }
+
+    @Override
+    public void DuplicateFailure(String message) {
+        hideProgressDialog();
+        showCustomToast(message);
+    }
+
+    public void setListener(){
+
+        medt_id.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                mbtn_duplicate.setBackgroundResource(R.drawable.btn_duplicate);
+                mbtn_duplicate.setText(getResources().getString(R.string.btn_duplicate));
+                mbtn_duplicate.setTextColor(getResources().getColor(R.color.normal));
+                mbtn_duplicate.setClickable(true);
+            }
+        });
+
+        medt_sign_up_password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    medt_sign_up_password.setBackground(null);
+                    medt_sign_up_password_ok.requestFocus();
+                }
+                return false;
+            }
+        });
+
+        medt_sign_up_password_ok.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if(actionId == EditorInfo.IME_ACTION_NEXT){
+                    medt_sign_up_password_ok.setBackground(null);
+                    medt_business_number.requestFocus();
+                }
+                return false;
+            }
+        });
+
+        medt_post_detail.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    medt_post_detail.setBackground(null);
+                    medt_post_detail.clearFocus();
+                }
+                return false;
+            }
+        });
+    }
+
+}//SignUpActivity finished
