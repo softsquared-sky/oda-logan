@@ -13,13 +13,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.interfaces.MainActivityView;
+import my.project.project_oda.src.main.interfaces.SignUpActivityView;
 import my.project.project_oda.src.main.models.SignUpForm;
 import my.project.project_oda.src.BaseActivity;
 import static my.project.project_oda.src.ApplicationClass.*;
 
-public class SignUpActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, MainActivityView {
+public class SignUpActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, SignUpActivityView {
 
     private RadioButton mRb[];
     private RadioGroup mRgLine1;
@@ -38,6 +39,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private Button mbtn_post;
 
     SignUpForm form;
+    int catering;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,15 +101,18 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             case R.id.btn_post:
                 break;
             case R.id.tv_sign_up:
-                int catering;
                 if(mRgLine1.getCheckedRadioButtonId() != -1){
-                    catering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId()));
+                    catering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId()))+1;
                     Log.d(TAG, "Line1:"+catering);
                 }else if(mRgLine2.getCheckedRadioButtonId() != -1){
-                    catering = mRgLine2.indexOfChild(mRgLine2.findViewById(mRgLine2.getCheckedRadioButtonId())) + 5;
+                    catering = mRgLine2.indexOfChild(mRgLine2.findViewById(mRgLine2.getCheckedRadioButtonId())) + 6;
                     Log.d(TAG, "Line2:"+catering);
                 }
-                finish();
+
+                if(medt_sign_up_password.getText().toString().equals(medt_sign_up_password_ok.getText().toString())) {
+                    signUp(catering);
+                }else Toast.makeText(getApplicationContext(),"비밀번호가 일치하지 않습니다.",Toast.LENGTH_SHORT).show();
+
                 break;
         }
     }//onClick finished
@@ -136,10 +141,18 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         mainService.getTest();
     }
 
+    private void signUp(int business){
+        showProgressDialog();
+        final MainService signUpService = new MainService(this, medt_id.getText().toString(), medt_sign_up_password_ok.getText().toString(),
+                business, medt_post.getText().toString()+" "+medt_post_detail.getText().toString() );
+        signUpService.signUp();
+    }
+
+    //중복확인 성공, 실패
     @Override
-    public void DuplicateSuccess(String text) {
+    public void DuplicateSuccess(int code,String text) {
         hideProgressDialog();
-        showCustomToast(text);
+        if(code ==150){
         mbtn_duplicate.setBackgroundResource(R.drawable.btn_duplicate_ok);
         mbtn_duplicate.setText(getResources().getString(R.string.btn_duplicate_ok));
         mbtn_duplicate.setTextColor(getResources().getColor(R.color.white));
@@ -148,10 +161,28 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         medt_id.setBackground(null);
         //비밀번호 입력란으로 focus 이동
         medt_sign_up_password.requestFocus();
+        showCustomToast2("사용가능한 ID 입니다.");
+        }else if(code == 100){
+            showCustomToast2("중복된 ID가 존재합니다.");
+        }
     }
 
     @Override
     public void DuplicateFailure(String message) {
+        hideProgressDialog();
+        showCustomToast(message);
+    }
+
+    //회원가입 성공, 실패
+    @Override
+    public void SignUpSuccess(String text) {
+        showProgressDialog();
+        showCustomToast2(text);
+        finish();
+    }
+
+    @Override
+    public void SignUpFailure(String message) {
         hideProgressDialog();
         showCustomToast(message);
     }

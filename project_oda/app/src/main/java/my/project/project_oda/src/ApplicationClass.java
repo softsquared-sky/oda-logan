@@ -16,18 +16,19 @@ public class ApplicationClass extends Application {
     public static MediaType MEDIA_TYPE_JSON = MediaType.parse("application/json; charset=uft-8");
     public static MediaType MEDIA_TYPE_JPEG = MediaType.parse("image/jpeg");
 
-    // 테스트 서버 주소, 나중에 바꿔야 함
+    //서버 주소
     public static String BASE_URL = "http://13.209.41.173";
-    // 실서버 주소
-//    public static String BASE_URL = "https://template.softsquared.com/";
 
+    //공용 sharedpreference
     public static SharedPreferences sSharedPreferences = null;
 
     // SharedPreferences 키 값
-    public static String TAG = "로그";
+    public static String TAG = "ODA_APP";
 
     // JWT Token 값
     public static String X_ACCESS_TOKEN = "X-ACCESS-TOKEN";
+
+    public Context applicationContext = getApplicationContext();
 
     //날짜 형식
     public static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
@@ -42,6 +43,10 @@ public class ApplicationClass extends Application {
         if (sSharedPreferences == null) {
             sSharedPreferences = getApplicationContext().getSharedPreferences(TAG, Context.MODE_PRIVATE);
         }
+    }
+
+    public static SharedPreferences getSharedPreference(){
+        return sSharedPreferences;
     }
 
     public static Retrofit getRetrofit() {
