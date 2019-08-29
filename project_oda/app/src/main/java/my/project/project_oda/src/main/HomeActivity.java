@@ -1,62 +1,81 @@
 package my.project.project_oda.src.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import java.util.ArrayList;
-
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.models.Home_Item;
+import my.project.project_oda.src.BaseActivity;
+import my.project.project_oda.src.main.Fragment.Fragment_home;
+import my.project.project_oda.src.main.Fragment.Fragment_mypage;
 
-public class HomeActivity extends Activity {
+public class HomeActivity extends BaseActivity {
+
+    private FragmentManager mfragmentManager;
+    private Fragment_home mFhome;
+    private Fragment_mypage mFmypage;
+    private FragmentTransaction mtransaction;
+
+    private ImageView miv_main_home;
+    private ImageView miv_main_mypage;
+    private TextView mtv_main_home;
+    private  TextView mtv_main_mypage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
+        this.initialize();
+        this.setFragment();
+    }
+
+    public void initialize(){
+
+        miv_main_home = findViewById(R.id.iv_main_home);
+        miv_main_mypage = findViewById(R.id.iv_main_mypage);
+        mtv_main_home = findViewById(R.id.tv_main_home);
+        mtv_main_mypage = findViewById(R.id.tv_main_mypage);
+
     }
 
     public void onClick(View view){
+
+        mtransaction = mfragmentManager.beginTransaction();
+
         switch (view.getId()){
             case R.id.iv_home_search:
                 Intent intent = new Intent(this, SearchActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.linear_home:
+                mtransaction.replace(R.id.frame_main, mFhome).commitAllowingStateLoss();
+                miv_main_home.setImageResource(R.drawable.icon_home);
+                miv_main_mypage.setImageResource(R.drawable.shape);
+                mtv_main_home.setTextColor(getResources().getColor(R.color.splash_back));
+                mtv_main_mypage.setTextColor(getResources().getColor(R.color.normal));
+                break;
+            case R.id.linear_mypage:
+                mtransaction.replace(R.id.frame_main, mFmypage).commitAllowingStateLoss();
+                miv_main_home.setImageResource(R.drawable.icon_home_normal);
+                miv_main_mypage.setImageResource(R.drawable.shape_pressed);
+                mtv_main_home.setTextColor(getResources().getColor(R.color.normal));
+                mtv_main_mypage.setTextColor(getResources().getColor(R.color.splash_back));
+                break;
         }
     }
 
-    class ItemAdapter extends BaseAdapter{
-        ArrayList<Home_Item> items = new ArrayList<Home_Item>();
-        @Override
-        public int getCount() {
-            return items.size();
-        }
+    public void setFragment(){
 
-        public void addItem(Home_Item item){
-            items.add(item);
-        }
+        mfragmentManager = getSupportFragmentManager();
+        mFhome = new Fragment_home();
+        mFmypage = new Fragment_mypage();
+        mtransaction = mfragmentManager.beginTransaction();
+        mtransaction.replace(R.id.frame_main, mFhome).commitAllowingStateLoss();
 
-        @Override
-        public Home_Item getItem(int i) {
-            return items.get(i);
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return i;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            ItemViewer itemViewer = new ItemViewer(getApplicationContext());
-            itemViewer.setItem(items.get(i));
-            return itemViewer;
-        }
     }
 
 }

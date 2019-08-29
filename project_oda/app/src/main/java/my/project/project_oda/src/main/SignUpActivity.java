@@ -38,8 +38,14 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private Button mbtn_verify;
     private Button mbtn_post;
 
+    private TextView mtv_sign_up;
+
     SignUpForm form;
     int catering;
+    private Boolean isChecked;
+    private Boolean isPwnull;
+    private Boolean isSame;
+    private Boolean isTyped;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +83,14 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         mbtn_verify = findViewById(R.id.btn_verify);
         mbtn_post = findViewById(R.id.btn_post);
 
+        mtv_sign_up = findViewById(R.id.tv_sign_up);
+
+        catering = -1;
+        isChecked = false;
+        isPwnull = false;
+        isSame = false;
+        isTyped = false;
+
     }//view_initialize finished
 
     public void onClick(View view){
@@ -109,10 +123,32 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                     Log.d(TAG, "Line2:"+catering);
                 }
 
-                if(medt_sign_up_password.getText().toString().equals(medt_sign_up_password_ok.getText().toString())) {
-                    signUp(catering);
-                }else Toast.makeText(getApplicationContext(),"비밀번호가 일치하지 않습니다.",Toast.LENGTH_SHORT).show();
+                //패스워드가 null인지 체크
+                if(medt_sign_up_password.getText().toString().equals("")){
+                    isPwnull = true;
+                }else isPwnull = false;
 
+                //비밀번호 확인 체크
+                if(medt_sign_up_password.getText().toString().equals(medt_sign_up_password_ok.getText().toString())) {
+                    isSame = true;
+                }else isSame = false;
+
+                //요식업 체크
+                if(catering == -1){
+                    isTyped = false;
+                }else isTyped = true;
+
+                if (isChecked) {
+                    if (!isPwnull){
+                        if(isSame) {
+                            if(isTyped) {
+                                signUp(catering);
+                            }else showCustomToast2("요식업을 선택하십시오.");
+                        }else showCustomToast2("비밀번호가 일치하지 않습니다.");
+                    }else showCustomToast2("비밀번호란을 채우십시오.");
+                } else {
+                    showCustomToast2("아이디 중복확인을 하십시오.");
+                }
                 break;
         }
     }//onClick finished
@@ -161,9 +197,11 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         medt_id.setBackground(null);
         //비밀번호 입력란으로 focus 이동
         medt_sign_up_password.requestFocus();
-        showCustomToast2("사용가능한 ID 입니다.");
+        showCustomToast2(text);
+        isChecked = true;
         }else if(code == 100){
-            showCustomToast2("중복된 ID가 존재합니다.");
+            showCustomToast2(text);
+            isChecked = false;
         }
     }
 
@@ -175,10 +213,16 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
     //회원가입 성공, 실패
     @Override
-    public void SignUpSuccess(String text) {
-        showProgressDialog();
-        showCustomToast2(text);
-        finish();
+    public void SignUpSuccess(int code, String text) {
+
+        if(code != 200){
+            hideProgressDialog();
+            showCustomToast2(text);
+        }else {
+            hideProgressDialog();
+            showCustomToast2(text);
+            finish();
+        }
     }
 
     @Override
@@ -206,6 +250,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                 mbtn_duplicate.setText(getResources().getString(R.string.btn_duplicate));
                 mbtn_duplicate.setTextColor(getResources().getColor(R.color.normal));
                 mbtn_duplicate.setClickable(true);
+                isChecked = false;
             }
         });
 

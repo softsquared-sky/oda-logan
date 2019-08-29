@@ -45,13 +45,17 @@
             />
     </FrameLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <FrameLayout
+        android:id="@+id/frame_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/container"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp"
         app:layout_constraintTop_toBottomOf="@+id/top_bar"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar">
-    </androidx.viewpager.widget.ViewPager>
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/bottom_bar"
@@ -62,12 +66,16 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
+            android:id="@+id/linear_home"
             android:layout_width="1dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:onClick="onClick"
+            >
 
             <ImageView
+                android:id="@+id/iv_main_home"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="7dp"
@@ -75,6 +83,7 @@
                 android:layout_gravity="center"
                 />
             <TextView
+                android:id="@+id/tv_main_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_home"
@@ -102,6 +111,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/menu_cate"
                 android:layout_gravity="center"
+                android:textColor="@color/normal"
                 />
 
         </LinearLayout>
@@ -124,17 +134,22 @@
                 android:layout_height="wrap_content"
                 android:text="@string/menu_tip"
                 android:layout_gravity="center"
+                android:textColor="@color/normal"
                 />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linear_mypage"
             android:layout_width="1dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:onClick="onClick"
+            >
 
             <ImageView
+                android:id="@+id/iv_main_mypage"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="7dp"
@@ -142,10 +157,12 @@
                 android:layout_gravity="center"
                 />
             <TextView
+                android:id="@+id/tv_main_mypage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_myPage"
                 android:layout_gravity="center"
+                android:textColor="@color/normal"
                 />
 
         </LinearLayout>

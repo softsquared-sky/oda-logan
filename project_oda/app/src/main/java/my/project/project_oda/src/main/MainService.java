@@ -3,6 +3,9 @@ package my.project.project_oda.src.main;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+
+import com.google.gson.JsonObject;
+
 import org.json.JSONObject;
 
 import my.project.project_oda.src.ApplicationClass;
@@ -56,14 +59,14 @@ class MainService {
     //아이디 중복확인
     void getTest() {
 
-        final MainRetrofitInterface mainRetrofitInterface = getRetrofit_for_check().create(MainRetrofitInterface.class);
+        final MainRetrofitInterface mainRetrofitInterface = getRetrofit().create(MainRetrofitInterface.class);
         Log.d(TAG,"id: "+id);
         mainRetrofitInterface.getTest(id).enqueue(new Callback<CheckResponse>() {
             @Override
             public void onResponse(Call<CheckResponse> call, Response<CheckResponse> response) {
                 final CheckResponse checkResponse = response.body();
                 if (checkResponse == null) {
-                    mSignUpActivityView.DuplicateFailure("서버 연결 실패");
+                    mSignUpActivityView.DuplicateFailure("중복확인 응답 없음");
                     return;
                 }
 
@@ -85,7 +88,7 @@ class MainService {
             params = new JSONObject();
             params.put("id", id);
             params.put("pw", pw);
-            params.put("business", business);
+            params.put("type", business);
             params.put("address", address);
         } catch (Exception e) {
             Log.d(TAG, "error: "+e);
@@ -101,9 +104,9 @@ class MainService {
                     Log.d(TAG, "회원가입 실패");
                     return;
                 }
-                String message = "아이디: "+signUpResponse.getId() + ", " + signUpResponse.getMessage();
-                mSignUpActivityView.SignUpSuccess(message);
-                Log.d(TAG, "회원가입 성공");
+
+                String message = signUpResponse.getMessage();
+                mSignUpActivityView.SignUpSuccess(signUpResponse.getCode(), message);
                 Log.d(TAG, "code: "+signUpResponse.getCode());
             }
 
@@ -125,7 +128,7 @@ class MainService {
             Log.d(TAG, "error: "+e);
         }
 
-        final MainRetrofitInterface LoginRetrofitInterface = getRetrofit_for_check().create(MainRetrofitInterface.class);
+        final MainRetrofitInterface LoginRetrofitInterface = getRetrofit().create(MainRetrofitInterface.class);
         LoginRetrofitInterface.Login(RequestBody.create(MEDIA_TYPE_JSON, params.toString())).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
@@ -137,7 +140,13 @@ class MainService {
                 }
                 //로그인 성공
                 if(loginResponse.getIsSuccess()) {
-                    mLoginUpActivityView.LoginSuccess(loginResponse.getJwt(),loginResponse.getMessage());
+                    String jwt = loginResponse.getResult().get("jwt").getAsString();
+                    Log.d(TAG, "받아온 jwt값: "+jwt);
+                    //로그인시 받아오는 jwt를 sharedpreference에 저장
+                    SharedPreferences.Editor editor = sSharedPreferences.edit();
+                    editor.putString(X_ACCESS_TOKEN, jwt);
+                    editor.commit();
+                    mLoginUpActivityView.LoginSuccess(loginResponse.getMessage());
                 //로그인 실패
                 }else{
                     mLoginUpActivityView.LoginFailure(loginResponse.getMessage());

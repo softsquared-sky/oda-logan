@@ -6,7 +6,7 @@ public interface SignUpActivityView {
 
     void DuplicateFailure(String message);
 
-    void SignUpSuccess(String text);
+    void SignUpSuccess(int code, String text);
 
     void SignUpFailure(String message);
 

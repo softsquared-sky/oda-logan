@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import my.project.project_oda.R;
-import my.project.project_oda.src.ApplicationClass;
 import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.main.interfaces.LoginActivityView;
 import static my.project.project_oda.src.ApplicationClass.*;
@@ -19,14 +18,18 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
     private EditText medt_login_password;
     private CheckBox mchbox_auto;
 
-    SharedPreferences sf;
-    SharedPreferences.Editor editor;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.initialize();
+
+        if(sSharedPreferences.getBoolean("auto",false)){
+            String id = sSharedPreferences.getString("id", "");
+            String pw = sSharedPreferences.getString("pw", "");
+            login(id, pw);
+            showCustomToast2(id+"로 자동 로그인");
+        }
 
     }//onCreate finished
 
@@ -35,12 +38,6 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         medt_login_id = findViewById(R.id.edt_login_id);
         medt_login_password = findViewById(R.id.edt_login_password);
         mchbox_auto = findViewById(R.id.chbox_auto);
-
-        //ApplicationClass mApp =((ApplicationClass)getApplicationContext());
-        //sf = mApp.getSharedPreference();
-        //editor = sf.edit();
-
-        //editor = sSharedPreferences.edit();
 
     }//initialzie finished
 
@@ -51,7 +48,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
                 //Intent LoginIntent = new Intent(this, HomeActivity.class);
                 //startActivity(LoginIntent);
                 //finish();
-                login();
+                login(medt_login_id.getText().toString(), medt_login_password.getText().toString());
                 break;
             case R.id.btn_sign_up:
                 Intent SignUpintent = new Intent(this, SignUpActivity.class);
@@ -60,23 +57,36 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         }
     }//onClick finished
 
-    private void login(){
+    private void login(String id, String pw) {
         showProgressDialog();
-        final MainService loginService = new MainService(this, medt_login_id.getText().toString(), medt_login_password.getText().toString());
+        final MainService loginService = new MainService(this, id, pw);
         loginService.LogIn();
+
     }
 
     @Override
-    public void LoginSuccess(String jwt,String text) {
+    public void LoginSuccess(String text) {
         hideProgressDialog();
+        Intent homeIntent = new Intent(this, HomeActivity.class);
+        startActivity(homeIntent);
         showCustomToast(text);
-        //로그인시 받아오는 jwt를 sharedpreference에 저장
-        //editor.putString(X_ACCESS_TOKEN, jwt);
-        //editor.commit();
-        Log.d(TAG, jwt+"");
-        Intent LoginIntent = new Intent(this, HomeActivity.class);
-        startActivity(LoginIntent);
-        Log.d(TAG, "로그인 성공 Home으로!");
+        Log.d(TAG, "받은 text: " + text);
+
+        //자동 로그인 체크
+        if(mchbox_auto.isChecked()){
+            SharedPreferences.Editor editor = sSharedPreferences.edit();
+            editor.putString("id", medt_login_id.getText().toString());
+            editor.putString("pw",medt_login_password.getText().toString());
+            editor.putBoolean("auto", true);
+            editor.apply();
+        }else{
+            SharedPreferences.Editor editor = sSharedPreferences.edit();
+            editor.putString("id", null);
+            editor.putString("pw", null);
+            editor.putBoolean("auto",false);
+            editor.apply();
+        }
+        //다시 로그인 액티비티로 돌아갈 수 있게 할지 정하기
         //finish();
     }
 
@@ -84,5 +94,22 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
     public void LoginFailure(String text) {
         hideProgressDialog();
         showCustomToast2(text);
+        Log.d(TAG, "로그인 실패!");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        medt_login_id.setText(null);
+        medt_login_password.setText(null);
+        medt_login_password.clearFocus();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        SharedPreferences.Editor editor = sSharedPreferences.edit();
+        editor.putBoolean("auto", false);
+        editor.apply();
     }
 }//LoginActivity finished

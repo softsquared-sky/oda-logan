@@ -25,7 +25,7 @@ public interface MainRetrofitInterface {
     Call<SignUpResponse> signUp(@Body RequestBody params);
 
     //로그인용
-    @POST("/user/{id}")
+    @POST("/user/token")
     Call<LoginResponse> Login(@Body RequestBody params);
 
 }

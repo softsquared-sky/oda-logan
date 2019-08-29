@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import my.project.project_oda.R;
 import my.project.project_oda.src.main.models.Recent_Item;
 
-public class RecentAdapter extends BaseAdapter implements Filterable {
+public class RecentAdapter extends BaseAdapter implements Filterable{
 
     private Context mContext;
     private ArrayList<Recent_Item> listitem;
@@ -49,7 +49,7 @@ public class RecentAdapter extends BaseAdapter implements Filterable {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup viewGroup) {
+    public View getView(final int position, View convertView, ViewGroup viewGroup) {
         View v = convertView;
 
         if (v == null) {
@@ -62,25 +62,14 @@ public class RecentAdapter extends BaseAdapter implements Filterable {
 
         Recent_Item item = (Recent_Item) getItem(position);
         mViewHolder.keyword.setText(item.getKeyword());
-
-        v.setOnTouchListener(new View.OnTouchListener(){
+        mViewHolder.iv_close.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
+            public void onClick(View view) {
+                filteredItem.remove(position);
+                notifyDataSetChanged();
             }
         });
-
-
-
         return v;
-    }
-
-    @Override
-    public Filter getFilter() {
-        if (listFilter == null) {
-            listFilter = new ListFilter();
-        }
-        return listFilter;
     }
 
     public class ViewHolder {
@@ -91,6 +80,14 @@ public class RecentAdapter extends BaseAdapter implements Filterable {
             keyword = convertView.findViewById(R.id.tv_search_recent_list_keyword);
             iv_close = convertView.findViewById(R.id.iv_search_recent_list_close);
         }
+    }
+
+    @Override
+    public Filter getFilter() {
+        if (listFilter == null) {
+            listFilter = new ListFilter();
+        }
+        return listFilter;
     }
 
     private class ListFilter extends Filter {

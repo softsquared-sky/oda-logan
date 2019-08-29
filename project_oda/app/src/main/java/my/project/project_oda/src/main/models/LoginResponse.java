@@ -1,5 +1,6 @@
 package my.project.project_oda.src.main.models;
 
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import my.project.project_oda.config.XAccessTokenInterceptor;
 
@@ -13,8 +14,8 @@ public class LoginResponse {
     @SerializedName("isSuccess")
     private boolean isSuccess;
 
-    @SerializedName("jwt")
-    private  String jwt;
+    @SerializedName("result")
+    private JsonObject result;
 
     public int getCode() {
         return code;
@@ -28,7 +29,7 @@ public class LoginResponse {
         return isSuccess;
     }
 
-    public String getJwt() {
-        return jwt;
+    public JsonObject getResult() {
+        return result;
     }
 }
