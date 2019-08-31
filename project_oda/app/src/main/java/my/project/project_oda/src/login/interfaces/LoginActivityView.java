@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main.interfaces;
+package my.project.project_oda.src.login.interfaces;
 
 public interface LoginActivityView {
 

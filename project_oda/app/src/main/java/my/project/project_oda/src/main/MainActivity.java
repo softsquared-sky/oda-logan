@@ -10,10 +10,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
-import my.project.project_oda.src.main.Fragment.Fragment_home;
-import my.project.project_oda.src.main.Fragment.Fragment_mypage;
+import my.project.project_oda.src.main.home.fragments.Fragment_home;
+import my.project.project_oda.src.main.mypage.fragments.Fragment_mypage;
+import my.project.project_oda.src.search.SearchActivity;
 
-public class HomeActivity extends BaseActivity {
+public class MainActivity extends BaseActivity {
 
     private FragmentManager mfragmentManager;
     private Fragment_home mFhome;

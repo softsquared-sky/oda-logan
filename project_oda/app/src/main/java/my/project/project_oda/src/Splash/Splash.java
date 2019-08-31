@@ -5,9 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import my.project.project_oda.src.main.HomeActivity;
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.LoginActivity;
+import my.project.project_oda.src.login.LoginActivity;
 
 public class Splash extends Activity {
 

@@ -13,28 +13,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee13dd60-e11e-4928-8ac6-4e379c04dc66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_mypage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginRetrofitInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainActivityView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/SignUpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/SignUpRetrofitInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/config/XAccessTokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/config/XAccessTokenInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_recent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_recent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/Splash/Splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/Splash/Splash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/Fragment_home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_mypage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/mypage/fragments/Fragment_mypage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_popular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/fragments/Fragment_popular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_recent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/fragments/Fragment_recent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/ItemViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/RecentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/RecentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/LoginActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/LoginActivityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SearchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/SearchActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/SignUpActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/RecentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/adapters/RecentAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/SectionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/adapters/SectionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/LoginActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginActivityView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainRetrofitInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainRetrofitInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/SignUpActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/SignUpActivityView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/SignUpActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/SignUpActivityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/CheckResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/CheckResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/Home_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/Home_Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/models/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/Recent_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/models/Recent_Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/SignUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/SignUpForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/SignUpResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/SignUpResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_search_popular.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_search_popular.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_search_recent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_search_recent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/home_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/home_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/search_recent_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/search_recent_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,104 +64,11 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/recentstory/adapter.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="323">
+                  <state>
                     <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/recentstory/news_feed_Activity.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="2983">
-                    <caret line="184" column="44" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/src/main/MainActivity.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="95">
-                    <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/src/BaseActivity.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="209">
-                    <caret line="17" selection-start-line="17" selection-end-line="17" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/src/ApplicationClass.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="836">
-                    <caret line="57" column="45" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="54" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../백업/5주차/app/src/main/java/my/api/culture/MainActivity.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="2033">
-                    <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../백업/5주차/app/src/main/java/my/api/culture/festival.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="437">
-                    <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/../../../../백업/5주차/app/src/main/java/my/api/culture/appActivity.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="19">
-                    <caret line="176" column="72" selection-start-line="176" selection-start-column="66" selection-end-line="176" selection-end-column="72" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/AndroidManifest.xml">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="323">
-                    <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/config/XAccessTokenInterceptor.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="304">
-                    <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -164,79 +88,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/Splash/Splash.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="236">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2052">
-              <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_mypage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="35" column="81" selection-start-line="35" selection-start-column="81" selection-end-line="35" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3097">
-              <caret line="163" column="47" selection-start-line="163" selection-start-column="47" selection-end-line="163" selection-end-column="47" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_recent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="202" column="34" selection-start-line="202" selection-start-column="34" selection-end-line="202" selection-end-column="34" />
+            <state relative-caret-position="288">
+              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -245,10 +109,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+            <state relative-caret-position="243">
+              <caret line="101" column="53" lean-forward="true" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginActivityView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginRetrofitInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -257,8 +140,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/models/LoginResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="195" column="44" selection-start-line="195" selection-start-column="44" selection-end-line="195" selection-end-column="44" />
+              <folding>
+                <element signature="e#6752#6778#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -270,6 +203,7 @@
       <find>Context</find>
       <find>catering</find>
       <find>json</find>
+      <find>signup</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -278,64 +212,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/ItemViewer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/ItemAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment_popular.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_search_popular.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/drawable/search_bar.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment_recent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/recent_adapter.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/search_recent_item.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/Recent_Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SectionAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/RecentAdapter.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/DefaultResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/DuplicateResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/res/drawable/btn_duplicate_ok.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SearchActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/service/SignUpService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/DuplicateCheckService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/service/DuplicateCheckService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/SignUpResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainActivityView.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/../../../../백업/3주차/recentstory/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/home_list_item.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_search_recent.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/RecentAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainRetrofitInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/SignUpActivityView.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/LoginResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/LoginActivityView.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/config/XAccessTokenInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_recent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_home.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_mypage.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/models/LoginResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginRetrofitInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/SearchActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/models/Recent_Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/Home_Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/fragments/Fragment_home.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/SignUpResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/SignUpForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/CheckResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/SignUpActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/MainRetrofitInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/SignUpService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/SignUpRetrofitInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/adapters/RecentAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/adapters/SectionAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/fragments/Fragment_recent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/SignUpActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainRetrofitInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/fragments/Fragment_mypage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/fragments/Fragment_home.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/interfaces/MainActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/Home_Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/MainService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/Fragment_home.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_search_popular.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_search_recent.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/home_list_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/search_recent_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/Splash/Splash.java" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="width" value="1853" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="1854" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -345,14 +279,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
@@ -394,25 +331,7 @@
               <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Fragment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
@@ -433,18 +352,14 @@
             </path>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="xml" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -455,16 +370,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="my.project.project_oda.src.main.Fragment" />
-      <recent name="my.project.project_oda.src.main.adapters" />
-      <recent name="my.project.project_oda.src.main.interfaces" />
-      <recent name="my.project.project_oda.src.main.models" />
-      <recent name="my.project.project_oda.src.main" />
+      <recent name="my.project.project_oda.src.main.home.fragments" />
+      <recent name="my.project.project_oda.src.main.home.models" />
+      <recent name="my.project.project_oda.src.signup" />
+      <recent name="my.project.project_oda.src.signup.interfaces" />
+      <recent name="my.project.project_oda.src.signup.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\res\drawable" />
-      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\res\layout" />
       <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\main" />
+      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\main\home" />
+      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\main\home\interfaces" />
+      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\search\fragments" />
+      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\search\adapters" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -555,11 +472,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1482" height="831" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1483" height="832" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18495077" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1848208" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -568,106 +484,135 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.3299566" />
-      <window_info anchor="bottom" x="45" y="-991" width="1460" height="809" id="Logcat" order="1" type="FLOATING" weight="0.3299566" />
+      <window_info anchor="bottom" x="7" y="-987" width="965" height="849" id="Logcat" order="1" type="FLOATING" weight="0.3299566" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32474965" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32855093" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32331902" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32761088" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.34834623" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.34785664" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/SectionAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/LoginActivityView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/Home_Item.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/fragments/Fragment_home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/CheckResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="1091">
+          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/SignUpForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/fragments/Fragment_popular.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="76">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/layout/activity_news_feed.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/fragments/Fragment_recent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2413">
-          <caret line="127" column="52" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
+        <state relative-caret-position="-513">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_search.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/models/Recent_Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/SearchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+        <state relative-caret-position="224">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/SignUpActivityView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/home_list_item.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/interfaces/SignUpRetrofitInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/ItemViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="285">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_search_recent.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/SignUpService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="152">
+          <caret line="50" column="88" lean-forward="true" selection-start-line="50" selection-start-column="88" selection-end-line="50" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/CheckResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/SignUpForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/models/SignUpResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/Home_Item.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -676,334 +621,284 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/recentstory/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainRetrofitInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/RecentAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainActivityView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1250#1251#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1342#1343#0" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1895#2052#0" expanded="true" />
-            <element signature="e#2051#2052#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/Recent_Item.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/Fragment_home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/xml/network_security_config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/adapters/SectionAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="e#347#365#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="589">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/adapters/RecentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1178">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signup/SignUpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2570">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainRetrofitInterface.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/MainActivityView.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/SignUpActivityView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/MainService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/mypage/fragments/Fragment_mypage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="76">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/LoginResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_search_popular.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_search_recent.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/home_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/search_recent_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/Fragment_home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/Home_Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/models/SignUpResponse.java">
+    <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/recentstory/adapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/interfaces/LoginActivityView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SearchActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/config/XAccessTokenInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_home.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
+        <state relative-caret-position="-437">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-hdpi/icon_home.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-hdpi/shape.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-92">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/Splash/Splash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="456">
+          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/HomeActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+        <state relative-caret-position="236">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginActivityView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/interfaces/LoginRetrofitInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/models/LoginResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/adapters/HomeItemAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="195" column="44" selection-start-line="195" selection-start-column="44" selection-end-line="195" selection-end-column="44" />
+          <folding>
+            <element signature="e#6752#6778#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+        <state relative-caret-position="243">
+          <caret line="101" column="53" lean-forward="true" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_mypage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="35" column="81" selection-start-line="35" selection-start-column="81" selection-end-line="35" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3097">
-          <caret line="163" column="47" selection-start-line="163" selection-start-column="47" selection-end-line="163" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/Fragment/Fragment_recent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/recentstory/adapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/3주차/recentstory/news_feed_Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2983">
-          <caret line="184" column="44" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/src/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/src/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/src/ApplicationClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="57" column="45" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/5주차/app/src/main/java/my/api/culture/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2033">
-          <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/5주차/app/src/main/java/my/api/culture/festival.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../android/templete/app/src/main/java/com/softsquared/template/config/XAccessTokenInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../백업/5주차/app/src/main/java/my/api/culture/appActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="176" column="72" selection-start-line="176" selection-start-column="66" selection-end-line="176" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="202" column="34" selection-start-line="202" selection-start-column="34" selection-end-line="202" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
 </project>

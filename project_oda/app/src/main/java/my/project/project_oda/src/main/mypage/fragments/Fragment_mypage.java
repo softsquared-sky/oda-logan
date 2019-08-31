@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main.Fragment;
+package my.project.project_oda.src.main.mypage.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,17 +15,15 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.ArrayList;
 
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.adapters.RecentAdapter;
-import my.project.project_oda.src.main.models.Recent_Item;
 
 public class Fragment_mypage extends Fragment {
-
+/*
     ArrayList<Recent_Item>array_recent;
     ListView mlv_recent_keyword;
     Context mContext;
     RecentAdapter recentAdapter;
     ViewPager viewPager;
-
+*/
     /*
     public Fragment_mypage(Context context){
         mContext = context;

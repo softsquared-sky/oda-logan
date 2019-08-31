@@ -1,11 +1,10 @@
-package my.project.project_oda.src.main.Fragment;
+package my.project.project_oda.src.main.home.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -16,15 +15,11 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.ArrayList;
 
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.adapters.RecentAdapter;
-import my.project.project_oda.src.main.models.Recent_Item;
 
 public class Fragment_home extends Fragment {
 
-    ArrayList<Recent_Item> array_recent;
     ListView mlv_recent_keyword;
     Context mContext;
-    RecentAdapter recentAdapter;
     ViewPager viewPager;
 
     /*

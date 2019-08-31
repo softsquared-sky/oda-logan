@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main.interfaces;
+package my.project.project_oda.src.signup.interfaces;
 
 public interface SignUpActivityView {
 

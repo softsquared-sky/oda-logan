@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main.Fragment;
+package my.project.project_oda.src.search.fragments;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -19,10 +19,12 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.adapters.RecentAdapter;
-import my.project.project_oda.src.main.models.Recent_Item;
-import static my.project.project_oda.src.ApplicationClass.*;
+import my.project.project_oda.src.search.adapters.RecentAdapter;
+import my.project.project_oda.src.search.models.Recent_Item;
+
+import static my.project.project_oda.src.ApplicationClass.sSharedPreferences;
 
 public class Fragment_recent extends Fragment {
 

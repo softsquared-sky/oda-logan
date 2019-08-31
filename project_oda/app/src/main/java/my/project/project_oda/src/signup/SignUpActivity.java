@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main;
+package my.project.project_oda.src.signup;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,10 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.interfaces.SignUpActivityView;
-import my.project.project_oda.src.main.models.SignUpForm;
 import my.project.project_oda.src.BaseActivity;
-import static my.project.project_oda.src.ApplicationClass.*;
+import my.project.project_oda.src.signup.interfaces.SignUpActivityView;
+import my.project.project_oda.src.signup.models.SignUpForm;
+
+import static my.project.project_oda.src.ApplicationClass.TAG;
 
 public class SignUpActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, SignUpActivityView {
 
@@ -171,16 +172,18 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         }
     }
 
-    private void duplicateCheck(){
+    //중복확인 함수
+    private void duplicateCheck() {
         showProgressDialog();
-        final MainService mainService = new MainService(this, medt_id.getText().toString());
+        final SignUpService mainService = new SignUpService(this, medt_id.getText().toString());
         mainService.getTest();
     }
 
-    private void signUp(int business){
+    //회원가입 함수
+    private void signUp(int business) {
         showProgressDialog();
-        final MainService signUpService = new MainService(this, medt_id.getText().toString(), medt_sign_up_password_ok.getText().toString(),
-                business, medt_post.getText().toString()+" "+medt_post_detail.getText().toString() );
+        final SignUpService signUpService = new SignUpService(this, medt_id.getText().toString(), medt_sign_up_password_ok.getText().toString(),
+                business, medt_post.getText().toString() + " " + medt_post_detail.getText().toString());
         signUpService.signUp();
     }
 

@@ -1,8 +1,9 @@
-package my.project.project_oda.src.main.models;
+package my.project.project_oda.src.login.models;
 
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 
-public class SignUpResponse {
+public class LoginResponse {
     @SerializedName("code")
     private int code;
 
@@ -12,8 +13,8 @@ public class SignUpResponse {
     @SerializedName("isSuccess")
     private boolean isSuccess;
 
-    @SerializedName("id")
-    private String id;
+    @SerializedName("result")
+    private JsonObject result;
 
     public int getCode() {
         return code;
@@ -27,7 +28,7 @@ public class SignUpResponse {
         return isSuccess;
     }
 
-    public String getId() {
-        return id;
+    public JsonObject getResult() {
+        return result;
     }
 }

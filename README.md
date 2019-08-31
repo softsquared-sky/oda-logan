@@ -9,3 +9,5 @@
 8.28 Login(API 연동 완료, jwt sSharedPreference에 담아야함), Sign Up(서버 연결 완료, 중복확인 버튼 재검토 필요)
 
 8.29 Login(완료, 자동로그인 구현ok), Sign Up(중복확인버튼 검토 완료), Search(검색 내용 sharedPreference저장완료, x클릭시 리스트에서 사라짐ok), Main(하단 홈과 마이페이지 fragment 작동 완료, 홈 fragment에 gridview 넣어야함, 마이페이지 fragment UI작업 해야함)
+
+8.31 기능별 패키지 분리, Home(10%)

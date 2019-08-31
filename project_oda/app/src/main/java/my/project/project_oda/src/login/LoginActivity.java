@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main;
+package my.project.project_oda.src.login;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,8 +9,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
-import my.project.project_oda.src.main.interfaces.LoginActivityView;
-import static my.project.project_oda.src.ApplicationClass.*;
+import my.project.project_oda.src.login.interfaces.LoginActivityView;
+import my.project.project_oda.src.main.MainActivity;
+import my.project.project_oda.src.signup.SignUpActivity;
+
+import static my.project.project_oda.src.ApplicationClass.TAG;
+import static my.project.project_oda.src.ApplicationClass.sSharedPreferences;
 
 public class LoginActivity extends BaseActivity implements LoginActivityView {
 
@@ -45,7 +49,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
         switch (view.getId()){
             case R.id.btn_login:
-                //Intent LoginIntent = new Intent(this, HomeActivity.class);
+                //Intent LoginIntent = new Intent(this, MainActivity.class);
                 //startActivity(LoginIntent);
                 //finish();
                 login(medt_login_id.getText().toString(), medt_login_password.getText().toString());
@@ -59,15 +63,14 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
     private void login(String id, String pw) {
         showProgressDialog();
-        final MainService loginService = new MainService(this, id, pw);
+        final LoginService loginService = new LoginService(this, id, pw);
         loginService.LogIn();
-
     }
 
     @Override
     public void LoginSuccess(String text) {
         hideProgressDialog();
-        Intent homeIntent = new Intent(this, HomeActivity.class);
+        Intent homeIntent = new Intent(this, MainActivity.class);
         startActivity(homeIntent);
         showCustomToast(text);
         Log.d(TAG, "받은 text: " + text);

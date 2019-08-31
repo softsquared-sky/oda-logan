@@ -1,16 +1,15 @@
-package my.project.project_oda.src.main.adapters;
+package my.project.project_oda.src.search.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import my.project.project_oda.src.main.Fragment.Fragment_popular;
-import my.project.project_oda.src.main.Fragment.Fragment_recent;
+import my.project.project_oda.src.search.fragments.Fragment_popular;
+import my.project.project_oda.src.search.fragments.Fragment_recent;
 
 public class SectionAdapter extends FragmentStatePagerAdapter {
 

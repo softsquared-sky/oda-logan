@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main.Fragment;
+package my.project.project_oda.src.search.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

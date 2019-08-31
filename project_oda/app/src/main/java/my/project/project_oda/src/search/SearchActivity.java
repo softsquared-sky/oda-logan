@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main;
+package my.project.project_oda.src.search;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,14 +7,13 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.Fragment.Fragment_popular;
-import my.project.project_oda.src.main.Fragment.Fragment_recent;
-import my.project.project_oda.src.main.adapters.SectionAdapter;
+import my.project.project_oda.src.search.adapters.SectionAdapter;
+import my.project.project_oda.src.search.fragments.Fragment_popular;
+import my.project.project_oda.src.search.fragments.Fragment_recent;
 
 public class SearchActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
 

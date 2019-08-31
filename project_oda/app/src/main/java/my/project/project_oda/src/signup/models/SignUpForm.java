@@ -1,4 +1,4 @@
-package my.project.project_oda.src.main.models;
+package my.project.project_oda.src.signup.models;
 
 public class SignUpForm {
 
