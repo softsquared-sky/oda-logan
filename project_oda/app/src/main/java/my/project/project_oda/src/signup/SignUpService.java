@@ -1,10 +1,9 @@
 package my.project.project_oda.src.signup;
 
-import android.content.SharedPreferences;
 import android.util.Log;
 
 import org.json.JSONObject;
-
+import my.project.project_oda.R;
 import my.project.project_oda.src.signup.interfaces.SignUpActivityView;
 import my.project.project_oda.src.signup.interfaces.SignUpRetrofitInterface;
 import my.project.project_oda.src.signup.models.CheckResponse;
@@ -13,44 +12,32 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static my.project.project_oda.src.ApplicationClass.MEDIA_TYPE_JSON;
-import static my.project.project_oda.src.ApplicationClass.TAG;
-import static my.project.project_oda.src.ApplicationClass.getRetrofit;
+import static my.project.project_oda.src.ApplicationClass.*;
 
 class SignUpService {
     private SignUpActivityView mSignUpActivityView;
-    private String id;
-    private String pw;
-    private int business;
-    private String address;
-
-    JSONObject params;
-    SharedPreferences sf;
-    SharedPreferences.Editor editor;
+    private String mId;
+    private JSONObject mParams;
 
     //생성자
     //아이디 중복확인
-    SignUpService(final SignUpActivityView mainActivityView, String id) {
-        this.mSignUpActivityView = mainActivityView;
-        this.id = id;
+    SignUpService(final SignUpActivityView signUpActivityView, String id) {
+        this.mSignUpActivityView = signUpActivityView;
+        this.mId = id;
     }
 
     //회원가입
-    SignUpService(final SignUpActivityView mainActivityView, String id, String pw, int business, String address){
-        this.mSignUpActivityView = mainActivityView;
-        this.id = id;
-        this.pw = pw;
-        this.business = business;
-        this.address = address;
+    SignUpService(final SignUpActivityView signUpActivityView, JSONObject params) {
+        this.mSignUpActivityView = signUpActivityView;
+        this.mParams = params;
     }
 
     //아이디 중복확인
-    void getTest() {
+    void getDuplicate() {
 
         final SignUpRetrofitInterface mainRetrofitInterface = getRetrofit().create(SignUpRetrofitInterface.class);
-        Log.d(TAG,"id: "+id);
-        mainRetrofitInterface.getTest(id).enqueue(new Callback<CheckResponse>() {
+        Log.d(TAG, "id: " + mId);
+        mainRetrofitInterface.getDuplicate(mId).enqueue(new Callback<CheckResponse>() {
             @Override
             public void onResponse(Call<CheckResponse> call, Response<CheckResponse> response) {
                 final CheckResponse checkResponse = response.body();
@@ -59,7 +46,7 @@ class SignUpService {
                     return;
                 }
 
-                mSignUpActivityView.DuplicateSuccess(checkResponse.getCode(),checkResponse.getMessage());
+                mSignUpActivityView.DuplicateSuccess(checkResponse.getCode(), checkResponse.getMessage());
                 Log.d(TAG, "중복확인 성공");
             }
 
@@ -72,31 +59,30 @@ class SignUpService {
     }
 
     //회원가입
-    void signUp() {
+    void postSignUp() {
         try {
-            params = new JSONObject();
-            params.put("id", id);
-            params.put("pw", pw);
-            params.put("type", business);
-            params.put("address", address);
-        } catch (Exception e) {
-            Log.d(TAG, "error: "+e);
-        }
+            Log.d(TAG, "id: "+mParams.get("id"));
+        }catch (Exception e){
 
+        }
         final SignUpRetrofitInterface signUpRetrofitInterface = getRetrofit().create(SignUpRetrofitInterface.class);
-        signUpRetrofitInterface.signUp(RequestBody.create(MEDIA_TYPE_JSON, params.toString())).enqueue(new Callback<SignUpResponse>() {
+        signUpRetrofitInterface.postSignUp(RequestBody.create(MEDIA_TYPE_JSON, mParams.toString())).enqueue(new Callback<SignUpResponse>() {
             @Override
             public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {
+                if(response == null){
+
+                    return;
+                }
                 final SignUpResponse signUpResponse = response.body();
                 if (signUpResponse == null) {
                     mSignUpActivityView.SignUpFailure(null);
-                    Log.d(TAG, "회원가입 실패");
+                    //Log.d(TAG, "회원가입 실패");
                     return;
                 }
 
                 String message = signUpResponse.getMessage();
                 mSignUpActivityView.SignUpSuccess(signUpResponse.getCode(), message);
-                Log.d(TAG, "code: "+signUpResponse.getCode());
+                //Log.d(TAG, "code: " + signUpResponse.getCode());
             }
 
             @Override

@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+
+import com.google.gson.JsonObject;
+
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.login.interfaces.LoginActivityView;
@@ -14,11 +17,12 @@ import my.project.project_oda.src.main.MainActivity;
 import my.project.project_oda.src.signup.SignUpActivity;
 
 import static my.project.project_oda.src.ApplicationClass.TAG;
+import static my.project.project_oda.src.ApplicationClass.X_ACCESS_TOKEN;
 import static my.project.project_oda.src.ApplicationClass.sSharedPreferences;
 
 public class LoginActivity extends BaseActivity implements LoginActivityView {
 
-    private EditText medt_login_id;
+    private EditText mEdtLoginId;
     private EditText medt_login_password;
     private CheckBox mchbox_auto;
 
@@ -28,18 +32,11 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         setContentView(R.layout.activity_login);
         this.initialize();
 
-        if(sSharedPreferences.getBoolean("auto",false)){
-            String id = sSharedPreferences.getString("id", "");
-            String pw = sSharedPreferences.getString("pw", "");
-            login(id, pw);
-            showCustomToast2(id+"로 자동 로그인");
-        }
-
     }//onCreate finished
 
     public void initialize(){
 
-        medt_login_id = findViewById(R.id.edt_login_id);
+        mEdtLoginId = findViewById(R.id.edt_login_id);
         medt_login_password = findViewById(R.id.edt_login_password);
         mchbox_auto = findViewById(R.id.chbox_auto);
 
@@ -52,7 +49,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
                 //Intent LoginIntent = new Intent(this, MainActivity.class);
                 //startActivity(LoginIntent);
                 //finish();
-                login(medt_login_id.getText().toString(), medt_login_password.getText().toString());
+                login(mEdtLoginId.getText().toString(), medt_login_password.getText().toString());
                 break;
             case R.id.btn_sign_up:
                 Intent SignUpintent = new Intent(this, SignUpActivity.class);
@@ -68,7 +65,12 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
     }
 
     @Override
-    public void LoginSuccess(String text) {
+    public void LoginSuccess(String text, String jwt) {
+        Log.d(TAG, "받아온 jwt값: " + jwt);
+        //로그인시 받아오는 jwt를 sharedpreference에 저장
+        SharedPreferences.Editor editor = sSharedPreferences.edit();
+        editor.putString(X_ACCESS_TOKEN, jwt);
+
         hideProgressDialog();
         Intent homeIntent = new Intent(this, MainActivity.class);
         startActivity(homeIntent);
@@ -77,20 +79,13 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
         //자동 로그인 체크
         if(mchbox_auto.isChecked()){
-            SharedPreferences.Editor editor = sSharedPreferences.edit();
-            editor.putString("id", medt_login_id.getText().toString());
-            editor.putString("pw",medt_login_password.getText().toString());
             editor.putBoolean("auto", true);
-            editor.apply();
         }else{
-            SharedPreferences.Editor editor = sSharedPreferences.edit();
-            editor.putString("id", null);
-            editor.putString("pw", null);
             editor.putBoolean("auto",false);
-            editor.apply();
         }
+        editor.apply();
         //다시 로그인 액티비티로 돌아갈 수 있게 할지 정하기
-        //finish();
+        finish();
     }
 
     @Override
@@ -103,7 +98,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
     @Override
     public void onStop() {
         super.onStop();
-        medt_login_id.setText(null);
+        mEdtLoginId.setText(null);
         medt_login_password.setText(null);
         medt_login_password.clearFocus();
     }

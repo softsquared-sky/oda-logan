@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import my.project.project_oda.src.search.fragments.Fragment_popular;
-import my.project.project_oda.src.search.fragments.Fragment_recent;
+import my.project.project_oda.src.search.fragments.fragmentPopular;
+import my.project.project_oda.src.search.fragments.fragmentRecent;
 
 public class SectionAdapter extends FragmentStatePagerAdapter {
 
@@ -41,9 +41,9 @@ public class SectionAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getItemPosition(@NonNull Object object) {
-        if(object instanceof Fragment_recent){
+        if(object instanceof fragmentRecent){
             return 0;
-        }else if(object instanceof Fragment_popular){
+        }else if(object instanceof fragmentPopular){
             return 1;
         }
         return POSITION_NONE;

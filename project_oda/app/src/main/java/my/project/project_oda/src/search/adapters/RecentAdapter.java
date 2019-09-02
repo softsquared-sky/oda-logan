@@ -52,7 +52,7 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
         View v = convertView;
 
         if (v == null) {
-            v = mLayoutInflater.inflate(R.layout.search_recent_item, null);
+            v = mLayoutInflater.inflate(R.layout.item_search_recent, null);
             mViewHolder = new ViewHolder(v);
             v.setTag(mViewHolder);
         } else {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <FrameLayout
@@ -24,8 +24,8 @@
                     android:id="@+id/iv_home_picture"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/tool_picture"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tool_picture" />
 
                 <ImageView
                     android:id="@+id/arrow_left"
@@ -33,7 +33,7 @@
                     android:layout_height="24dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="17dp"
-                    android:src="@drawable/chevron_left" />
+                    android:src="@drawable/ic_left" />
 
                 <ImageView
                     android:id="@+id/arrow_right"
@@ -41,7 +41,7 @@
                     android:layout_height="24dp"
                     android:layout_gravity="center_vertical|right"
                     android:layout_marginEnd="17dp"
-                    android:src="@drawable/chevron_right" />
+                    android:src="@drawable/ic_right" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -52,9 +52,9 @@
                     android:shadowColor="#80000000"
                     android:shadowDy="2"
                     android:shadowRadius="4"
+                    android:text="@string/home_look_detail"
                     android:textColor="#ffffff"
-                    android:textSize="12sp"
-                    tools:text="자세히 보기  &gt;" />
+                    android:textSize="12sp" />
 
             </FrameLayout>
 
@@ -73,14 +73,14 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/tv_fast_buy"
+                    android:id="@+id/tv_num_item_selected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="5dp"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    tools:text="0개" />
+                    android:text="@string/num_item_selected" />
 
                 <View
                     android:layout_width="1dp"
@@ -88,6 +88,7 @@
                     android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/chbox_home_select_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -95,6 +96,7 @@
                     android:clickable="false" />
 
                 <TextView
+                    android:id="@+id/tv_select_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -105,12 +107,36 @@
 
             </LinearLayout>
 
-            <GridView
-                android:id="@+id/gv_home"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:numColumns="3"></GridView>
+                android:layout_height="match_parent">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="2dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:numColumns="3" />
+
+            </FrameLayout>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_home_nothing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_textview_background"
+        android:layout_marginTop="240dp"
+        android:paddingTop="51dp"
+        android:text="@string/home_nothing"
+        android:textAlignment="center"
+        android:textColor="@color/normal"
+        android:textSize="15sp"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,8 +20,4 @@ class MainService {
     private int business;
     private String address;
 
-    JSONObject params;
-    SharedPreferences sf;
-    SharedPreferences.Editor editor;
-
 }

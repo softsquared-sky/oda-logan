@@ -13,10 +13,10 @@ public interface SignUpRetrofitInterface {
 
     //아이디 중복확인용
     @GET("/id")
-    Call<CheckResponse> getTest(@Query("id") String id);
+    Call<CheckResponse> getDuplicate(@Query("id") String id);
 
     //회원가입용
     @POST("/user")
-    Call<SignUpResponse> signUp(@Body RequestBody params);
+    Call<SignUpResponse> postSignUp(@Body RequestBody params);
 
 }

@@ -12,7 +12,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.google.gson.JsonObject;
+import org.json.JSONObject;
 
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
@@ -28,18 +30,18 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private RadioGroup mRgLine2;
     private int[] RADIOID = {R.id.rb_0, R.id.rb_1, R.id.rb_2, R.id.rb_3, R.id.rb_4, R.id.rb_5, R.id.rb_7, R.id.rb_7};
 
-    private EditText medt_id;
-    private EditText medt_sign_up_password;
-    private EditText medt_sign_up_password_ok;
-    private EditText medt_business_number;
-    private EditText medt_post;
-    private EditText medt_post_detail;
+    private EditText mEdtId;
+    private EditText mEdtSignUpPassword;
+    private EditText mEdtSignUpPasswordOk;
+    private EditText mEdtBusinessNumber;
+    private EditText mEdtPost;
+    private EditText mEdtPostDetail;
 
-    private Button mbtn_duplicate;
-    private Button mbtn_verify;
-    private Button mbtn_post;
+    private Button mBtnDuplicate;
+    private Button mBtnVerify;
+    private Button mBtnPost;
 
-    private TextView mtv_sign_up;
+    private TextView mTvSignUp;
 
     SignUpForm form;
     int catering;
@@ -47,6 +49,16 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private Boolean isPwnull;
     private Boolean isSame;
     private Boolean isTyped;
+
+    private final int SUCCESS = 200;
+    public enum DuplicateCode {
+        YES(100), NO(150);
+        private final int value;
+        DuplicateCode(int value){
+            this.value = value;
+        }
+        public int getValue(){return value;}
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +69,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
     }//onCreate finished
 
-    public void view_initialize(){
+    public void view_initialize() {
 
         mRgLine1 = findViewById(R.id.rg_1);
         mRgLine1.clearCheck();
@@ -69,22 +81,22 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         mRgLine2.setOnCheckedChangeListener(this);
 
         mRb = new RadioButton[8];
-        for(int i =0; i< RADIOID.length; i++) {
+        for (int i = 0; i < RADIOID.length; i++) {
             mRb[i] = findViewById(RADIOID[i]);
         }
 
-        medt_id = findViewById(R.id.edt_sign_up_id);
-        medt_sign_up_password = findViewById(R.id.edt_sign_up_password);
-        medt_sign_up_password_ok = findViewById(R.id.edt_sign_up_password_ok);
-        medt_business_number = findViewById(R.id.edt_business_number);
-        medt_post = findViewById(R.id.edt_post);
-        medt_post_detail = findViewById(R.id.edt_post_detail);
+        mEdtId = findViewById(R.id.edt_sign_up_id);
+        mEdtSignUpPassword = findViewById(R.id.edt_sign_up_password);
+        mEdtSignUpPasswordOk = findViewById(R.id.edt_sign_up_password_ok);
+        mEdtBusinessNumber = findViewById(R.id.edt_business_number);
+        mEdtPost = findViewById(R.id.edt_post);
+        mEdtPostDetail = findViewById(R.id.edt_post_detail);
 
-        mbtn_duplicate = findViewById(R.id.btn_duplicate);
-        mbtn_verify = findViewById(R.id.btn_verify);
-        mbtn_post = findViewById(R.id.btn_post);
+        mBtnDuplicate = findViewById(R.id.btn_duplicate);
+        mBtnVerify = findViewById(R.id.btn_verify);
+        mBtnPost = findViewById(R.id.btn_post);
 
-        mtv_sign_up = findViewById(R.id.tv_sign_up);
+        mTvSignUp = findViewById(R.id.tv_sign_up);
 
         catering = -1;
         isChecked = false;
@@ -94,62 +106,60 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
     }//view_initialize finished
 
-    public void onClick(View view){
+    public void onClick(View view) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btn_duplicate:
-                if(medt_id.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "사용할 아이디를 입력하세요.",Toast.LENGTH_SHORT).show();
-                }else duplicateCheck();
+                if (mEdtId.getText().toString().equals("")) {
+                    showCustomToast(getString(R.string.EdtId));
+                } else duplicateCheck();
                 break;
             case R.id.iv_back_arrow:
                 finish();
                 break;
             case R.id.btn_verify:
-                mbtn_verify.setBackgroundResource(R.drawable.btn_duplicate_ok);
-                mbtn_verify.setText(getResources().getString(R.string.btn_verify_ok));
-                mbtn_verify.setTextColor(getResources().getColor(R.color.white));
-                mbtn_verify.setClickable(false);
-                medt_business_number.setBackground(null);
-                medt_post_detail.requestFocus();
+                mBtnVerify.setBackgroundResource(R.drawable.btn_duplicate_ok);
+                mBtnVerify.setText(getResources().getString(R.string.btn_verify_ok));
+                mBtnVerify.setTextColor(getResources().getColor(R.color.white));
+                mBtnVerify.setClickable(false);
+                mEdtBusinessNumber.setBackground(null);
+                mEdtPostDetail.requestFocus();
                 break;
             case R.id.btn_post:
                 break;
             case R.id.tv_sign_up:
-                if(mRgLine1.getCheckedRadioButtonId() != -1){
-                    catering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId()))+1;
-                    Log.d(TAG, "Line1:"+catering);
-                }else if(mRgLine2.getCheckedRadioButtonId() != -1){
+                if (mRgLine1.getCheckedRadioButtonId() != -1) {
+                    catering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId())) + 1;
+                    Log.d(TAG, "Line1:" + catering);
+                } else if (mRgLine2.getCheckedRadioButtonId() != -1) {
                     catering = mRgLine2.indexOfChild(mRgLine2.findViewById(mRgLine2.getCheckedRadioButtonId())) + 6;
-                    Log.d(TAG, "Line2:"+catering);
+                    Log.d(TAG, "Line2:" + catering);
                 }
 
                 //패스워드가 null인지 체크
-                if(medt_sign_up_password.getText().toString().equals("")){
+                if (mEdtSignUpPassword.getText().toString().equals("")) {
                     isPwnull = true;
-                }else isPwnull = false;
+                } else isPwnull = false;
 
                 //비밀번호 확인 체크
-                if(medt_sign_up_password.getText().toString().equals(medt_sign_up_password_ok.getText().toString())) {
+                if (mEdtSignUpPassword.getText().toString().equals(mEdtSignUpPasswordOk.getText().toString())) {
                     isSame = true;
-                }else isSame = false;
+                } else isSame = false;
 
                 //요식업 체크
-                if(catering == -1){
+                if (catering == -1) {
                     isTyped = false;
-                }else isTyped = true;
+                } else isTyped = true;
 
                 if (isChecked) {
-                    if (!isPwnull){
-                        if(isSame) {
-                            if(isTyped) {
+                    if (!isPwnull) {
+                        if (isSame) {
+                            if (isTyped) {
                                 signUp(catering);
-                            }else showCustomToast2("요식업을 선택하십시오.");
-                        }else showCustomToast2("비밀번호가 일치하지 않습니다.");
-                    }else showCustomToast2("비밀번호란을 채우십시오.");
-                } else {
-                    showCustomToast2("아이디 중복확인을 하십시오.");
-                }
+                            } else showCustomToast2(getString(R.string.CheckCatering));
+                        } else showCustomToast2(getString(R.string.NotMatchPassword));
+                    } else showCustomToast2(getString(R.string.FillPassword));
+                } else  showCustomToast2(getString(R.string.CheckDuplicate));
                 break;
         }
     }//onClick finished
@@ -157,14 +167,14 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
 
-        if(radioGroup == mRgLine1){
-            if(checkedId != -1){
+        if (radioGroup == mRgLine1) {
+            if (checkedId != -1) {
                 mRgLine2.setOnCheckedChangeListener(null);
                 mRgLine2.clearCheck();
                 mRgLine2.setOnCheckedChangeListener(this);
             }
-        }else if (radioGroup == mRgLine2){
-            if(checkedId != -1) {
+        } else if (radioGroup == mRgLine2) {
+            if (checkedId != -1) {
                 mRgLine1.setOnCheckedChangeListener(null);
                 mRgLine1.clearCheck();
                 mRgLine1.setOnCheckedChangeListener(this);
@@ -175,34 +185,45 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     //중복확인 함수
     private void duplicateCheck() {
         showProgressDialog();
-        final SignUpService mainService = new SignUpService(this, medt_id.getText().toString());
-        mainService.getTest();
+        final SignUpService mainService = new SignUpService(this, mEdtId.getText().toString());
+        mainService.getDuplicate();
     }
 
     //회원가입 함수
     private void signUp(int business) {
+
+        JSONObject params = new JSONObject();
+        try {
+            params.put("id", mEdtId.getText().toString());
+            params.put("pw", mEdtSignUpPasswordOk.getText().toString());
+            params.put("type", business);
+            params.put("address", mEdtPost.getText().toString() + " " + mEdtPostDetail.getText().toString());
+        } catch (Exception e) {
+         //   Log.d(TAG, "error: " + e);
+            return;
+        }
         showProgressDialog();
-        final SignUpService signUpService = new SignUpService(this, medt_id.getText().toString(), medt_sign_up_password_ok.getText().toString(),
-                business, medt_post.getText().toString() + " " + medt_post_detail.getText().toString());
-        signUpService.signUp();
+        final SignUpService signUpService = new SignUpService(this, params);
+       // Log.d(TAG, params.getJ);
+        signUpService.postSignUp();
     }
 
     //중복확인 성공, 실패
     @Override
-    public void DuplicateSuccess(int code,String text) {
+    public void DuplicateSuccess(int code, String text) {
         hideProgressDialog();
-        if(code ==150){
-        mbtn_duplicate.setBackgroundResource(R.drawable.btn_duplicate_ok);
-        mbtn_duplicate.setText(getResources().getString(R.string.btn_duplicate_ok));
-        mbtn_duplicate.setTextColor(getResources().getColor(R.color.white));
-        mbtn_duplicate.setClickable(false);
-        medt_id.clearFocus();
-        medt_id.setBackground(null);
-        //비밀번호 입력란으로 focus 이동
-        medt_sign_up_password.requestFocus();
-        showCustomToast2(text);
-        isChecked = true;
-        }else if(code == 100){
+        if (code == DuplicateCode.NO.value) {
+            mBtnDuplicate.setBackgroundResource(R.drawable.btn_duplicate_ok);
+            mBtnDuplicate.setText(getResources().getString(R.string.btn_duplicate_ok));
+            mBtnDuplicate.setTextColor(getResources().getColor(R.color.white));
+            mBtnDuplicate.setClickable(false);
+            mEdtId.clearFocus();
+            mEdtId.setBackground(null);
+            //비밀번호 입력란으로 focus 이동
+            mEdtSignUpPassword.requestFocus();
+            showCustomToast2(text);
+            isChecked = true;
+        } else if (code == DuplicateCode.YES.value) {
             showCustomToast2(text);
             isChecked = false;
         }
@@ -218,10 +239,10 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     @Override
     public void SignUpSuccess(int code, String text) {
 
-        if(code != 200){
+        if (code != SUCCESS) {
             hideProgressDialog();
             showCustomToast2(text);
-        }else {
+        } else {
             hideProgressDialog();
             showCustomToast2(text);
             finish();
@@ -234,9 +255,9 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         showCustomToast(message);
     }
 
-    public void setListener(){
+    public void setListener() {
 
-        medt_id.addTextChangedListener(new TextWatcher() {
+        mEdtId.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -249,42 +270,42 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
             @Override
             public void afterTextChanged(Editable editable) {
-                mbtn_duplicate.setBackgroundResource(R.drawable.btn_duplicate);
-                mbtn_duplicate.setText(getResources().getString(R.string.btn_duplicate));
-                mbtn_duplicate.setTextColor(getResources().getColor(R.color.normal));
-                mbtn_duplicate.setClickable(true);
+                mBtnDuplicate.setBackgroundResource(R.drawable.btn_duplicate);
+                mBtnDuplicate.setText(getResources().getString(R.string.btn_duplicate));
+                mBtnDuplicate.setTextColor(getResources().getColor(R.color.normal));
+                mBtnDuplicate.setClickable(true);
                 isChecked = false;
             }
         });
 
-        medt_sign_up_password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mEdtSignUpPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_NEXT){
-                    medt_sign_up_password.setBackground(null);
-                    medt_sign_up_password_ok.requestFocus();
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    mEdtSignUpPassword.setBackground(null);
+                    mEdtSignUpPasswordOk.requestFocus();
                 }
                 return false;
             }
         });
 
-        medt_sign_up_password_ok.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mEdtSignUpPasswordOk.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_NEXT){
-                    medt_sign_up_password_ok.setBackground(null);
-                    medt_business_number.requestFocus();
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    mEdtSignUpPasswordOk.setBackground(null);
+                    mEdtBusinessNumber.requestFocus();
                 }
                 return false;
             }
         });
 
-        medt_post_detail.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mEdtPostDetail.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if(actionId == EditorInfo.IME_ACTION_DONE){
-                    medt_post_detail.setBackground(null);
-                    medt_post_detail.clearFocus();
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    mEdtPostDetail.setBackground(null);
+                    mEdtPostDetail.clearFocus();
                 }
                 return false;
             }

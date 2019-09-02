@@ -33,10 +33,56 @@
     <string name="welcome2">회원가입에 필요한 정보를 기입해주세요.</string>
 
     <string name="search_keyword">&#160;&#160;검색어를 입력해주세요</string>
+    <string name="home_look_detail">자세히 보기  &gt;</string>
+    <string name="home_nothing">아직 주문하신 상품이 없습니다\n주문을 하시면 주문패턴을 분석하여\n바로주문의 목록을 채워 드립니다</string>
+    <string name="num_item_selected">0개</string>
+    <string name="oda_price">오다가</string>
 
     <string name="menu_home">홈</string>
     <string name="menu_cate">카테고리</string>
     <string name="menu_tip">꿀팁</string>
     <string name="menu_myPage">마이페이지</string>
+
+    <string name="DuplicateNoResponse">중복확인 응답 없음</string>
+
+    <string name="EdtId">사용할 아이디를 입력하세요.</string>
+    <string name="CheckCatering">요식업을 선택하십시오.</string>
+    <string name="NotMatchPassword">비밀번호가 일치하지 않습니다.</string>
+    <string name="FillPassword">비밀번호란을 채우십시오.</string>
+    <string name="CheckDuplicate">아이디 중복확인을 하십시오.</string>
+
+    <string name="product">상품상세</string>
+    <string name="product_detail">상품 상세</string>
+    <string name="product_title_tools">[해발500포크]냉장삼겹살수육용/찌개용/목심수육용(500g)</string>
+    <string name="product_price_tools">14,500원</string>
+    <string name="product_must_info">상품필수정보</string>
+    <string name="product_per_wrap">포장 단위별 용량, 수량, 크기</string>
+    <string name="product_per_wrap_tools">500g</string>
+    <string name="product_grade">축산법에 따른 등급표시</string>
+    <string name="product_grade_tools">해당없음</string>
+    <string name="product_resume">축산물이력제 표시유무</string>
+    <string name="product_resume_tools">이력관리에 따른 표시있음</string>
+    <string name="product_handling">보관방법 또는 취급방법</string>
+    <string name="product_handling_tools">-2~10도 이하 냉장보관</string>
+    <string name="product_origin">원산지</string>
+    <string name="product_origin_tools">국내산</string>
+    <string name="product_clean">식품위생법에 따른 수입신고 필함 여부</string>
+    <string name="product_clean_tools">해당사항 없음</string>
+
+    <string name="product_review">상품 후기</string>
+    <string name="review_write">상품후기 작성하기</string>
+    <string name="review_item_title_tools">육질이 부드럽네요.</string>
+    <string name="review_writer_tools">17/09/21 djs****님</string>
+    <string name="review_content_tools">사실 직접 보고 산건 아니어서 좀 걱정스러웠는데 생각보다 육질이 꽤 부드러워서 만족스러웠어요.</string>
+
+    <string name="product_QnA">상품 QnA</string>
+
+    <string name="contentDescription_product_search">상품상세 페이지 돋보기 버튼</string>
+    <string name="contentDescription_product_back">상품상세 페이지 뒤로가기 버튼</string>
+    <string name="contentDescription_product_cart">상품상세 페이지 장바구니 버튼</string>
+    <string name="contentDescription_product_main_image">상품상세 페이지 메인 이미지</string>
+
+    <string name="product_put_cart">장바구니 담기</string>
+    <string name="product_order">주문요청하기</string>
 
 </resources>

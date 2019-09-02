@@ -26,16 +26,15 @@ import my.project.project_oda.src.search.models.Recent_Item;
 
 import static my.project.project_oda.src.ApplicationClass.sSharedPreferences;
 
-public class Fragment_recent extends Fragment {
+public class fragmentRecent extends Fragment {
 
-    ArrayList<Recent_Item>array_recent;
+    ArrayList<Recent_Item> array_recent;
     ListView mlv_recent_keyword;
     Context mContext;
     RecentAdapter recentAdapter;
-    ViewPager viewPager;
     Gson gson;
 
-    public Fragment_recent(Context context){
+    public fragmentRecent(Context context) {
         mContext = context;
     }
 
@@ -47,11 +46,11 @@ public class Fragment_recent extends Fragment {
 
         gson = new Gson();
         String json = sSharedPreferences.getString("recent", "");
-        Type type = new TypeToken<ArrayList<Recent_Item>>(){
+        Type type = new TypeToken<ArrayList<Recent_Item>>() {
         }.getType();
-        if(gson.fromJson(json,type) != null){
-            array_recent = gson.fromJson(json,type);
-        }else{
+        if (gson.fromJson(json, type) != null) {
+            array_recent = gson.fromJson(json, type);
+        } else {
         }
 
         mlv_recent_keyword = view.findViewById(R.id.lv_search_recent);
@@ -65,20 +64,20 @@ public class Fragment_recent extends Fragment {
 
             }
         });
-        return  view;
+        return view;
     }
 
-    public void addKeyword(String keyword){
+    public void addKeyword(String keyword) {
 
         //이전에 검색한 적 있으면 지우고 최상단으로 올림
         removeKeyword(keyword);
-        array_recent.add(0,new Recent_Item(keyword));
+        array_recent.add(0, new Recent_Item(keyword));
         recentAdapter.notifyDataSetChanged();
     }
 
-    public void removeKeyword(String keyword){
-        for( int i=0; i<array_recent.size(); i++){
-            if(array_recent.get(i).getKeyword().equals(keyword)){
+    public void removeKeyword(String keyword) {
+        for (int i = 0; i < array_recent.size(); i++) {
+            if (array_recent.get(i).getKeyword().equals(keyword)) {
                 array_recent.remove(i);
             }
         }

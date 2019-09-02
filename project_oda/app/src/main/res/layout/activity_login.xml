@@ -4,110 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.main.LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".src.login.LoginActivity">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="215dp">
+        android:layout_height="match_parent">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/login_top_background"
-            android:scaleType="fitXY"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="93dp"
-            android:layout_height="93dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:src="@drawable/group" />
-    </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="215dp">
 
-    <EditText
-        android:id="@+id/edt_login_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="17dp"
-        android:hint="@string/id"
-        android:singleLine="true"
-        android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_login_top_background" />
 
-    <EditText
-        android:id="@+id/edt_login_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="17dp"
-        android:hint="@string/password"
-        android:password="true"
-        android:singleLine="true"
-        android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="93dp"
+                    android:layout_height="93dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:src="@drawable/ic_oda" />
+            </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+            <EditText
+                android:id="@+id/edt_login_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="17dp"
+                android:hint="@string/id"
+                android:singleLine="true"
+                android:textSize="14sp" />
 
-        <CheckBox
-            android:id="@+id/chbox_auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:shadowColor="@color/normal"
-            android:onClick="onClick"
-             />
+            <EditText
+                android:id="@+id/edt_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="17dp"
+                android:hint="@string/password"
+                android:password="true"
+                android:singleLine="true"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/auto_login"
-            android:textColor="@color/normal"
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
+                <CheckBox
+                    android:id="@+id/chbox_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:onClick="onClick"
+                    android:shadowColor="@color/normal" />
 
-        <TextView
-            android:id="@+id/tv_search_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/search_password"
-            android:layout_marginEnd="17dp"
-            android:textColor="@color/normal"
-            android:onClick="onClick"
-            />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auto_login"
+                    android:textColor="@color/normal" />
 
-    </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="290dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="47dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_login"
-        android:text="@string/btn_login"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        />
+                <TextView
+                    android:id="@+id/tv_search_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="17dp"
+                    android:onClick="onClick"
+                    android:text="@string/search_password"
+                    android:textColor="@color/normal" />
 
-    <Button
-        android:id="@+id/btn_sign_up"
-        android:layout_width="290dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="21dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_sign_up"
-        android:text="@string/btn_sign_up"
-        android:textColor="@color/splash_back"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="290dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="47dp"
+                android:background="@drawable/btn_login"
+                android:onClick="onClick"
+                android:text="@string/btn_login"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="290dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="21dp"
+                android:background="@drawable/btn_sign_up"
+                android:onClick="onClick"
+                android:text="@string/btn_sign_up"
+                android:textColor="@color/splash_back"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

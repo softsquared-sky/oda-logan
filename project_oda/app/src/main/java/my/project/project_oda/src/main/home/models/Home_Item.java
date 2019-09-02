@@ -5,15 +5,13 @@ public class Home_Item {
     private String imageUrl;
     private String title;
     private int price;
+    private boolean isChecked;
 
-    public Home_Item(){
-
-    }
-
-    public Home_Item(String imageUrl, String title, int price){
+    public Home_Item(String imageUrl, String title, int price, boolean isChecked){
         this.imageUrl = imageUrl;
         this. title = title;
         this. price = price;
+        this.isChecked = isChecked;
     }
 
     public int getPrice() {
@@ -38,5 +36,13 @@ public class Home_Item {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
     }
 }

@@ -28,7 +28,7 @@
             android:id="@+id/iv_home_search"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/search"
+            android:src="@drawable/ic_search"
             android:layout_marginEnd="62dp"
             android:layout_gravity="right|center_vertical"
             android:onClick="onClick"
@@ -38,7 +38,7 @@
             android:id="@+id/iv_home_cart"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/shopping_cart"
+            android:src="@drawable/ic_cart"
             android:layout_marginEnd="17dp"
             android:layout_gravity="right|center_vertical"
             android:onClick="onClick"
@@ -79,7 +79,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="7dp"
-                android:src="@drawable/icon_home"
+                android:src="@drawable/ic_home"
                 android:layout_gravity="center"
                 />
             <TextView
@@ -104,7 +104,7 @@
                 android:layout_height="24dp"
                 android:layout_marginTop="7dp"
                 android:layout_gravity="center"
-                android:src="@drawable/group_4"
+                android:src="@drawable/ic_group"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="7dp"
-                android:src="@drawable/fill_213"
+                android:src="@drawable/ic_tip"
                 android:layout_gravity="center"
                 />
             <TextView
@@ -153,7 +153,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="7dp"
-                android:src="@drawable/shape"
+                android:src="@drawable/ic_my_page_normal"
                 android:layout_gravity="center"
                 />
             <TextView
@@ -184,6 +184,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:elevation="0dp"
+            android:backgroundTint="@color/checkbox"
             android:src="@android:color/transparent"
             />
 

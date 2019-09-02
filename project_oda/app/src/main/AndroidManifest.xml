@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="my.project.project_oda">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".src.ApplicationClass"
@@ -17,18 +17,19 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n"
+        android:screenOrientation="portrait"
         >
-        <activity android:name=".src.main.MainActivity">
-        </activity>
-        <activity android:name=".src.login.LoginActivity">
-        </activity>
-        <activity android:name=".src.search.SearchActivity">
-        </activity>
-        <activity android:name=".src.signup.SignUpActivity">
-        </activity>
         <activity
-            android:name=".src.Splash.Splash"
-            android:screenOrientation="portrait"
+            android:name=".src.main.MainActivity"
+            android:theme="@style/homeTheme" />
+        <activity android:name=".src.login.LoginActivity"/>
+        <activity android:name=".src.search.SearchActivity"/>
+        <activity android:name=".src.signup.SignUpActivity"/>
+        <activity
+            android:name=".src.product.ProductActivity"
+            android:theme="@style/homeTheme" />
+        <activity
+            android:name=".src.splash.splash"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

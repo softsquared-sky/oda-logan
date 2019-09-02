@@ -11,3 +11,5 @@
 8.29 Login(완료, 자동로그인 구현ok), Sign Up(중복확인버튼 검토 완료), Search(검색 내용 sharedPreference저장완료, x클릭시 리스트에서 사라짐ok), Main(하단 홈과 마이페이지 fragment 작동 완료, 홈 fragment에 gridview 넣어야함, 마이페이지 fragment UI작업 해야함)
 
 8.31 기능별 패키지 분리, Home(10%)
+
+9.2 Components name 변경, Main의 Home Fragment에 RecyclerView 적용, 각 아이템 클릭 시 상품상세내용 실행, 상품상세내용화면 뷰페이져 적용, 그 중 상품상세 API테스트 완료, 상품 리뷰 아이템 완성 어댑터 구현, 작성 API연동 남음, QNA는 화면만 만들고 API 없는것으로 하였기때문에 더미 데이터를 넣을 예정 

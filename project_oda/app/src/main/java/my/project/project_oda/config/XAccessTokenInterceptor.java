@@ -18,7 +18,7 @@ public class XAccessTokenInterceptor implements Interceptor {
         final Request.Builder builder = chain.request().newBuilder();
         final String jwtToken = sSharedPreferences.getString(X_ACCESS_TOKEN, null);
         if (jwtToken != null) {
-            Log.d(TAG,"헤더에 붙여지는 jwtToken값: " + jwtToken);
+            //Log.d(TAG,"헤더에 붙여지는 jwtToken값: " + jwtToken);
             builder.addHeader("X-ACCESS-TOKEN", jwtToken);
         }
         return chain.proceed(builder.build());
