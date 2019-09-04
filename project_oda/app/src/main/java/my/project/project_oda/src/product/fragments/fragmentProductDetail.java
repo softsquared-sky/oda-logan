@@ -29,6 +29,8 @@ public class fragmentProductDetail extends Fragment {
     private TextView mTvProductHandling;
     private TextView mTvProductOrigin;
     private TextView mTvProductClean;
+    private ImageView mIvProductImage1;
+    private ImageView mIvProductImage2;
     private LinearLayout mLinearProductImage;
 
     public fragmentProductDetail(Context context) {
@@ -52,6 +54,8 @@ public class fragmentProductDetail extends Fragment {
         mTvProductOrigin = view.findViewById(R.id.tv_product_origin);
         mTvProductClean = view.findViewById(R.id.tv_product_clean);
         mLinearProductImage = view.findViewById(R.id.linear_product);
+        mIvProductImage1 = view.findViewById(R.id.iv_product_image_1);
+        mIvProductImage2 = view.findViewById(R.id.iv_product_image_2);
 
         mTvProductPerWrap.setText(getArguments().getString("qpp"));
         mTvProductGrade.setText(getString(R.string.product_grade_tools));
@@ -59,7 +63,9 @@ public class fragmentProductDetail extends Fragment {
         mTvProductHandling.setText(getArguments().getString("storeMethod"));
         mTvProductOrigin.setText(getArguments().getString("origin"));
         mTvProductClean.setText(getString(R.string.product_clean_tools));
-
+        Glide.with(mContext).load(getArguments().getString("image1")).into(mIvProductImage1);
+        Glide.with(mContext).load(getArguments().getString("image2")).into(mIvProductImage2);
+/*
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
         for (int i = 0; i < getArguments().getInt("size"); i++) {
@@ -69,7 +75,7 @@ public class fragmentProductDetail extends Fragment {
             ivProductDetail.setScaleType(ImageView.ScaleType.FIT_XY);
             mLinearProductImage.addView(ivProductDetail);
         }
-
+*/
         return view;
     }
 }

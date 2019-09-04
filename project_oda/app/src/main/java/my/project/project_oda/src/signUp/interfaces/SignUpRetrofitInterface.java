@@ -1,7 +1,7 @@
-package my.project.project_oda.src.signup.interfaces;
+package my.project.project_oda.src.signUp.interfaces;
 
-import my.project.project_oda.src.signup.models.CheckResponse;
-import my.project.project_oda.src.signup.models.SignUpResponse;
+import my.project.project_oda.src.signUp.models.CheckResponse;
+import my.project.project_oda.src.signUp.models.SignUpResponse;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;

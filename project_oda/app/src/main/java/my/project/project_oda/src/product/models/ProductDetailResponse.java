@@ -14,7 +14,7 @@ public class ProductDetailResponse {
     private boolean isSuccess;
 
     @SerializedName("result")
-    private JsonObject result;
+    private Result result;
 
     public int getCode() {
         return code;
@@ -28,7 +28,7 @@ public class ProductDetailResponse {
         return isSuccess;
     }
 
-    public JsonObject getResult() {
+    public Result getResult() {
         return result;
     }
 }

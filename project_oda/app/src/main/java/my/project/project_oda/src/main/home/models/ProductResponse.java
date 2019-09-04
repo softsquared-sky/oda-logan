@@ -2,9 +2,11 @@ package my.project.project_oda.src.main.home.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class ProductResponse {
     @SerializedName("result")
-    private Result result;
+    private List<Result> result;
 
     @SerializedName("isSuccess")
     private boolean isSuccess;
@@ -25,5 +27,9 @@ public class ProductResponse {
 
     public boolean isSuccess() {
         return isSuccess;
+    }
+
+    public List<Result> getResult() {
+        return result;
     }
 }

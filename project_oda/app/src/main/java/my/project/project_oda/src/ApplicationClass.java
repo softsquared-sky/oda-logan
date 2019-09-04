@@ -8,6 +8,7 @@ import my.project.project_oda.config.XAccessTokenInterceptor;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -32,10 +33,18 @@ public class ApplicationClass extends Application {
     public static String TAG = "ODA_APP";
 
     // JWT Token 값
-    public static String X_ACCESS_TOKEN = "X-ACCESS-TOKEN";
+    public static final String X_ACCESS_TOKEN = "X-ACCESS-TOKEN";
 
     //날짜 형식
-    public static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
+    public static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd", Locale.KOREA);
+
+    public static  String curTime(){
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+        String now_txt = format.format(date);
+        return now_txt;
+    }
 
     // Retrofit 인스턴스
     public static Retrofit retrofit;

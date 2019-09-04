@@ -1,8 +1,8 @@
-package my.project.project_oda.src.signup.models;
+package my.project.project_oda.src.signUp.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class SignUpResponse {
+public class CheckResponse {
     @SerializedName("code")
     private int code;
 
@@ -11,9 +11,6 @@ public class SignUpResponse {
 
     @SerializedName("isSuccess")
     private boolean isSuccess;
-
-    @SerializedName("id")
-    private String id;
 
     public int getCode() {
         return code;
@@ -25,9 +22,5 @@ public class SignUpResponse {
 
     public boolean getIsSuccess() {
         return isSuccess;
-    }
-
-    public String getId() {
-        return id;
     }
 }

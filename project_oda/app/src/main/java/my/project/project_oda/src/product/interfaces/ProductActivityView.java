@@ -1,12 +1,15 @@
 package my.project.project_oda.src.product.interfaces;
 
-import com.google.gson.JsonObject;
-
-import my.project.project_oda.src.product.models.ProductDetailResponse;
+import java.util.List;
+import my.project.project_oda.src.product.models.Result;
+import my.project.project_oda.src.product.models.ReviewResult;
 
 public interface ProductActivityView {
 
-    public void getProductDetailSuccess(JsonObject response);
-    public void getProductDetailFailure(String message);
+    void getProductDetailSuccess(Result result);
+    void getProductDetailFailure(String message);
+
+    void getReviewSuccess(List<ReviewResult> response);
+    void getReviewFailure(String message);
 
 }

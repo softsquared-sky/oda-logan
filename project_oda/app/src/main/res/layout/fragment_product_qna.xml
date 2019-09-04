@@ -3,14 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/product_QnA"
-        android:layout_gravity="center_vertical"
+        android:text="@string/QnA_write"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/review_write_color"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="11dp"
+        android:layout_marginBottom="11dp"
         android:gravity="center"
+        android:background="@drawable/tv_review_write"
         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

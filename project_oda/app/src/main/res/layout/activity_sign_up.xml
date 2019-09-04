@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".src.signup.SignUpActivity">
+    tools:context=".src.signUp.SignUpActivity">
 
     <RelativeLayout
         android:id="@+id/topbar"
@@ -80,7 +80,7 @@
                     android:id="@+id/btn_duplicate"
                     android:layout_width="78dp"
                     android:layout_height="20dp"
-                    android:layout_gravity="right"
+                    android:layout_gravity="end"
                     android:layout_marginTop="33dp"
                     android:layout_marginEnd="20dp"
                     android:background="@drawable/btn_duplicate"

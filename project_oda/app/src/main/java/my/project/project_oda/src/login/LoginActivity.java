@@ -8,13 +8,11 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.google.gson.JsonObject;
-
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.login.interfaces.LoginActivityView;
 import my.project.project_oda.src.main.MainActivity;
-import my.project.project_oda.src.signup.SignUpActivity;
+import my.project.project_oda.src.signUp.SignUpActivity;
 
 import static my.project.project_oda.src.ApplicationClass.TAG;
 import static my.project.project_oda.src.ApplicationClass.X_ACCESS_TOKEN;
@@ -34,7 +32,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
     }//onCreate finished
 
-    public void initialize(){
+    public void initialize() {
 
         mEdtLoginId = findViewById(R.id.edt_login_id);
         medt_login_password = findViewById(R.id.edt_login_password);
@@ -42,9 +40,9 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
     }//initialzie finished
 
-    public void onClick(View view){
+    public void onClick(View view) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btn_login:
                 //Intent LoginIntent = new Intent(this, MainActivity.class);
                 //startActivity(LoginIntent);
@@ -78,10 +76,10 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         Log.d(TAG, "받은 text: " + text);
 
         //자동 로그인 체크
-        if(mchbox_auto.isChecked()){
+        if (mchbox_auto.isChecked()) {
             editor.putBoolean("auto", true);
-        }else{
-            editor.putBoolean("auto",false);
+        } else {
+            editor.putBoolean("auto", false);
         }
         editor.apply();
         //다시 로그인 액티비티로 돌아갈 수 있게 할지 정하기

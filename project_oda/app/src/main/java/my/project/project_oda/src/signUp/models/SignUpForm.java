@@ -1,4 +1,4 @@
-package my.project.project_oda.src.signup.models;
+package my.project.project_oda.src.signUp.models;
 
 public class SignUpForm {
 
@@ -7,10 +7,6 @@ public class SignUpForm {
     private String business_number;
     private String post;
     private int catering;
-
-    public SignUpForm(){
-
-    }
 
     public SignUpForm(String id, String password, String business_number, String post, int catering){
         this.id = id;

@@ -19,27 +19,27 @@ import my.project.project_oda.src.search.models.Recent_Item;
 public class RecentAdapter extends BaseAdapter implements Filterable{
 
     private Context mContext;
-    private ArrayList<Recent_Item> listitem;
-    private ArrayList<Recent_Item> filteredItem;
-    Filter listFilter;
+    private ArrayList<Recent_Item> mListItem;
+    private ArrayList<Recent_Item> mFilteredItem;
+    Filter mListFilter;
     private ViewHolder mViewHolder;
     LayoutInflater mLayoutInflater;
 
-    public RecentAdapter(Context mContext, ArrayList<Recent_Item> listitem) {
-        this.listitem = listitem;
+    public RecentAdapter(Context mContext, ArrayList<Recent_Item> mListItem) {
+        this.mListItem = mListItem;
         this.mContext = mContext;
-        this.filteredItem = listitem;
+        this.mFilteredItem = mListItem;
         mLayoutInflater = LayoutInflater.from(this.mContext);
     }
 
     @Override
     public int getCount() {
-        return filteredItem.size();
+        return mFilteredItem.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return filteredItem.get(i);
+        return mFilteredItem.get(i);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
         mViewHolder.iv_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                filteredItem.remove(position);
+                mFilteredItem.remove(position);
                 notifyDataSetChanged();
             }
         });
@@ -83,26 +83,26 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
 
     @Override
     public Filter getFilter() {
-        if (listFilter == null) {
-            listFilter = new ListFilter();
+        if (mListFilter == null) {
+            mListFilter = new mListFilter();
         }
-        return listFilter;
+        return mListFilter;
     }
 
-    private class ListFilter extends Filter {
+    private class mListFilter extends Filter {
 
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
 
             if (constraint == null || constraint.length() == 0) {
-                results.values = listitem;
-                results.count = listitem.size();
+                results.values = mListItem;
+                results.count = mListItem.size();
             } else {
 
                 ArrayList<Recent_Item> itemList = new ArrayList<>();
 
-                for (Recent_Item item : listitem) {
+                for (Recent_Item item : mListItem) {
                     if (item.getKeyword().toUpperCase().contains(constraint.toString().toUpperCase())) {
                         itemList.add(item);
                         Log.d("로그",item.getKeyword()+"filtered");
@@ -117,7 +117,7 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
 
-            filteredItem = (ArrayList<Recent_Item>)results.values;
+            mFilteredItem = (ArrayList<Recent_Item>)results.values;
 
             if(results.count > 0){
                 notifyDataSetChanged();

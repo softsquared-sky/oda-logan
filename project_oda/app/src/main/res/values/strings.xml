@@ -76,6 +76,7 @@
     <string name="review_content_tools">사실 직접 보고 산건 아니어서 좀 걱정스러웠는데 생각보다 육질이 꽤 부드러워서 만족스러웠어요.</string>
 
     <string name="product_QnA">상품 QnA</string>
+    <string name="QnA_write">QnA 작성하기</string>
 
     <string name="contentDescription_product_search">상품상세 페이지 돋보기 버튼</string>
     <string name="contentDescription_product_back">상품상세 페이지 뒤로가기 버튼</string>
@@ -85,4 +86,33 @@
     <string name="product_put_cart">장바구니 담기</string>
     <string name="product_order">주문요청하기</string>
 
+    <string name="mypage_coupon">쿠폰</string>
+    <string name="mypage_calculate">정산대기</string>
+    <string name="mypage_statistics">주문통계</string>
+    <string name="mypage_order_list">배송주문내역</string>
+    <string name="mypage_total_num">총 123개</string>
+
+    <string-array name="alignment">
+        <item>최신순</item>
+        <item>가격순</item>
+    </string-array>
+
+    <string name="setting">설정</string>
+    <string name="push">푸쉬알림</string>
+    <string name="account">회원정보 수정</string>
+    <string name="center">고객센터</string>
+
+    <string name="cart">장바구니</string>
+    <string name="cart_products">장바구니 상품</string>
+    <string name="cart_empty">장바구니가 비어있습니다</string>
+    <string name="cart_select_sum">선택상품 예상 오다가</string>
+    <string name="cart_order_request">주문 요청하기</string>
+    <string name="cart_sum">0원</string>
+    <string name="cart_total_sum">총 예상 오다가</string>
+    <string name="cart_total">0원</string>
+    <string name="cart_item_title_tools">경기도 농장직배송 특란 1판 30구</string>
+    <string name="cart_item_minus">-</string>
+    <string name="cart_item_plus">+</string>
+    <string name="cart_item_num">0</string>
+    <string name="cart_item_price_tools">14,500원</string>
 </resources>

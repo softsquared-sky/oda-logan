@@ -9,7 +9,7 @@
     >
 
     <ImageView
-        android:id="@+id/item_review_image"
+        android:id="@+id/iv_item_review_image"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
@@ -27,41 +27,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/tv_item_review_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textColor="@color/catering"
                 android:textStyle="bold"
-                tools:text="@string/review_item_title_tools"/>
-
-            <View
-                android:layout_weight="1"
-                android:layout_width="1dp"
-                android:layout_height="0dp"/>
+                tools:text="@string/review_content_tools"/>
 
             <TextView
                 android:id="@+id/tv_item_review_writer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 tools:text="@string/review_writer_tools"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="17dp"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@color/catering"
                 />
 
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_item_review_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:layout_marginTop="6dp"
             android:layout_marginEnd="17dp"
             android:textSize="14sp"
+            android:ellipsize="end"
             tools:text="@string/review_content_tools"
             android:textColor="@color/catering"
             />

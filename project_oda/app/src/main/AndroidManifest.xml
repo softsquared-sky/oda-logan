@@ -24,7 +24,10 @@
             android:theme="@style/homeTheme" />
         <activity android:name=".src.login.LoginActivity"/>
         <activity android:name=".src.search.SearchActivity"/>
-        <activity android:name=".src.signup.SignUpActivity"/>
+        <activity android:name=".src.signUp.SignUpActivity"/>
+        <activity android:name=".src.setting.SettingActivity"/>
+        <activity android:name=".src.cart.CartActivity"
+            android:theme="@style/homeTheme"/>
         <activity
             android:name=".src.product.ProductActivity"
             android:theme="@style/homeTheme" />

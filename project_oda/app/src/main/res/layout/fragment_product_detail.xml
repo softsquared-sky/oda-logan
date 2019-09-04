@@ -1,235 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10sp"
+    android:layout_marginEnd="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/must_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_must_info"
+        android:textColor="@color/catering"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/must_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:text="@string/product_must_info"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="15sp"
-            android:textSize="14sp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/product_per_wrap"
             android:textColor="@color/catering"
-            android:textStyle="bold"
-            />
+            android:textSize="12sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_product_per_wrap"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/must_info"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10sp"
-            android:orientation="vertical"
-            >
+            android:layout_marginStart="222dp"
+            android:textColor="@color/catering"
+            android:textSize="12sp"
+            tools:text="@string/product_per_wrap_tools" />
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+    </FrameLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/product_per_wrap"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/catering"
-                            android:textSize="12sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/boarder" />
 
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
 
-                        <TextView
-                            android:id="@+id/tv_product_per_wrap"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/catering"
-                            android:textSize="12sp"
-                            android:layout_marginStart="222dp"
-                            tools:text="@string/product_per_wrap_tools" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/product_grade"
+            android:textColor="@color/catering"
+            android:textSize="12sp" />
 
-                </FrameLayout>
+        <TextView
+            android:id="@+id/tv_product_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="222dp"
+            android:textColor="@color/catering"
+            android:textSize="12sp"
+            tools:text="@string/product_grade_tools" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:layout_height="1dp"
-                    android:background="@color/boarder"
-                    />
+    </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/boarder" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/product_grade"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/catering"
-                            android:textSize="12sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
 
-                        <TextView
-                            android:id="@+id/tv_product_grade"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/catering"
-                            android:layout_marginStart="222dp"
-                            android:textSize="12sp"
-                            tools:text="@string/product_grade_tools" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/product_resume"
+            android:textColor="@color/catering"
+            android:textSize="12sp" />
 
-                </FrameLayout>
+        <TextView
+            android:id="@+id/tv_product_resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="222dp"
+            android:textColor="@color/catering"
+            android:textSize="12sp"
+            tools:text="@string/product_resume_tools" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:layout_height="1dp"
-                    android:background="@color/boarder"
-                    />
+    </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/boarder" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/product_resume"
-                            android:textColor="@color/catering"
-                            android:layout_gravity="center_vertical"
-                            android:textSize="12sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
 
-                        <TextView
-                            android:id="@+id/tv_product_resume"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/catering"
-                            android:layout_marginStart="222dp"
-                            android:textSize="12sp"
-                            tools:text="@string/product_resume_tools" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/product_handling"
+            android:textColor="@color/catering"
+            android:textSize="12sp" />
 
-                </FrameLayout>
+        <TextView
+            android:id="@+id/tv_product_handling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="222dp"
+            android:textColor="@color/catering"
+            android:textSize="12sp"
+            tools:text="@string/product_handling_tools" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:layout_height="1dp"
-                    android:background="@color/boarder"
-                    />
+    </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/boarder" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/product_handling"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/catering"
-                            android:textSize="12sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
 
-                        <TextView
-                            android:id="@+id/tv_product_handling"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/catering"
-                            android:layout_marginStart="222dp"
-                            android:textSize="12sp"
-                            tools:text="@string/product_handling_tools" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/product_origin"
+            android:textColor="@color/catering"
+            android:textSize="12sp" />
 
-                </FrameLayout>
+        <TextView
+            android:id="@+id/tv_product_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="222dp"
+            android:textColor="@color/catering"
+            android:textSize="12sp"
+            tools:text="@string/product_origin_tools" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:layout_height="1dp"
-                    android:background="@color/boarder"
-                    />
+    </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/boarder" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/product_origin"
-                            android:textColor="@color/catering"
-                            android:textSize="12sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
 
-                        <TextView
-                            android:id="@+id/tv_product_origin"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/catering"
-                            android:layout_marginStart="222dp"
-                            android:textSize="12sp"
-                            tools:text="@string/product_origin_tools" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/product_clean"
+            android:textColor="@color/catering"
+            android:textSize="12sp" />
 
-                </FrameLayout>
+        <TextView
+            android:id="@+id/tv_product_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="222dp"
+            android:textColor="@color/catering"
+            android:textSize="12sp"
+            tools:text="@string/product_clean_tools" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:layout_height="1dp"
-                    android:background="@color/boarder"
-                    />
+    </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/boarder" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/product_clean"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/catering"
-                            android:textSize="12sp" />
+    <LinearLayout
+        android:id="@+id/linear_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12sp"
+        android:layout_marginEnd="19dp"
+        android:weightSum="3"
+        android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tv_product_clean"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/catering"
-                            android:layout_marginStart="222dp"
-                            android:textSize="12sp"
-                            tools:text="@string/product_clean_tools" />
+        <ImageView
+            android:id="@+id/iv_product_image_1"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/longscroll" />
 
-                </FrameLayout>
+        <ImageView
+            android:id="@+id/iv_product_image_2"
+            android:layout_width="match_parent"
+            android:layout_height="1024dp"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/longscroll" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="7dp"
-                    android:layout_height="1dp"
-                    android:background="@color/boarder"
-                    />
+    </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/linear_product"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12sp"
-                    android:layout_marginStart="19dp"
-                    android:layout_marginEnd="19dp"
-                    android:orientation="vertical">
-                </LinearLayout>
-
-        </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

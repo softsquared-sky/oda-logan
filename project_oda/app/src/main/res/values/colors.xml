@@ -11,6 +11,7 @@
     <color name="sign_up">#809b9b9b</color>
     <color name="order">#806fccd7</color>
     <color name="boarder">#1e000000</color>
+    <color name="setting_text">#de000000</color>
     <color name="checkbox">#ff7876</color>
     <color name="review_write_color">#303030</color>
     <color name="halfTransparent">#80000000</color>

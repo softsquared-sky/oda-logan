@@ -2,10 +2,8 @@ package my.project.project_oda.src.splash;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-
 import my.project.project_oda.R;
 import my.project.project_oda.src.login.LoginActivity;
 import my.project.project_oda.src.main.MainActivity;

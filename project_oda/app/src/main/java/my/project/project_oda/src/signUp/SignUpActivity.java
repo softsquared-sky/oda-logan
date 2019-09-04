@@ -1,4 +1,4 @@
-package my.project.project_oda.src.signup;
+package my.project.project_oda.src.signUp;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,14 +12,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
-import com.google.gson.JsonObject;
 import org.json.JSONObject;
-
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
-import my.project.project_oda.src.signup.interfaces.SignUpActivityView;
-import my.project.project_oda.src.signup.models.SignUpForm;
+import my.project.project_oda.src.signUp.interfaces.SignUpActivityView;
 
 import static my.project.project_oda.src.ApplicationClass.TAG;
 
@@ -28,7 +24,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private RadioButton mRb[];
     private RadioGroup mRgLine1;
     private RadioGroup mRgLine2;
-    private int[] RADIOID = {R.id.rb_0, R.id.rb_1, R.id.rb_2, R.id.rb_3, R.id.rb_4, R.id.rb_5, R.id.rb_7, R.id.rb_7};
+    private final int[] mRadioId = {R.id.rb_0, R.id.rb_1, R.id.rb_2, R.id.rb_3, R.id.rb_4, R.id.rb_5, R.id.rb_7, R.id.rb_7};
 
     private EditText mEdtId;
     private EditText mEdtSignUpPassword;
@@ -39,12 +35,9 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
     private Button mBtnDuplicate;
     private Button mBtnVerify;
-    private Button mBtnPost;
-
-    private TextView mTvSignUp;
-
-    SignUpForm form;
-    int catering;
+    //private Button mBtnPost;
+    //private TextView mTvSignUp;
+    int mCatering;
     private Boolean isChecked;
     private Boolean isPwnull;
     private Boolean isSame;
@@ -81,8 +74,8 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         mRgLine2.setOnCheckedChangeListener(this);
 
         mRb = new RadioButton[8];
-        for (int i = 0; i < RADIOID.length; i++) {
-            mRb[i] = findViewById(RADIOID[i]);
+        for (int i = 0; i < mRadioId.length; i++) {
+            mRb[i] = findViewById(mRadioId[i]);
         }
 
         mEdtId = findViewById(R.id.edt_sign_up_id);
@@ -94,11 +87,10 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
         mBtnDuplicate = findViewById(R.id.btn_duplicate);
         mBtnVerify = findViewById(R.id.btn_verify);
-        mBtnPost = findViewById(R.id.btn_post);
+        //mBtnPost = findViewById(R.id.btn_post);
+        //mTvSignUp = findViewById(R.id.tv_sign_up);
 
-        mTvSignUp = findViewById(R.id.tv_sign_up);
-
-        catering = -1;
+        mCatering = -1;
         isChecked = false;
         isPwnull = false;
         isSame = false;
@@ -129,11 +121,11 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                 break;
             case R.id.tv_sign_up:
                 if (mRgLine1.getCheckedRadioButtonId() != -1) {
-                    catering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId())) + 1;
-                    Log.d(TAG, "Line1:" + catering);
+                    mCatering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId())) + 1;
+                    Log.d(TAG, "Line1:" + mCatering);
                 } else if (mRgLine2.getCheckedRadioButtonId() != -1) {
-                    catering = mRgLine2.indexOfChild(mRgLine2.findViewById(mRgLine2.getCheckedRadioButtonId())) + 6;
-                    Log.d(TAG, "Line2:" + catering);
+                    mCatering = mRgLine2.indexOfChild(mRgLine2.findViewById(mRgLine2.getCheckedRadioButtonId())) + 6;
+                    Log.d(TAG, "Line2:" + mCatering);
                 }
 
                 //패스워드가 null인지 체크
@@ -147,7 +139,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                 } else isSame = false;
 
                 //요식업 체크
-                if (catering == -1) {
+                if (mCatering == -1) {
                     isTyped = false;
                 } else isTyped = true;
 
@@ -155,7 +147,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                     if (!isPwnull) {
                         if (isSame) {
                             if (isTyped) {
-                                signUp(catering);
+                                signUp(mCatering);
                             } else showCustomToast2(getString(R.string.CheckCatering));
                         } else showCustomToast2(getString(R.string.NotMatchPassword));
                     } else showCustomToast2(getString(R.string.FillPassword));

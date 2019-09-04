@@ -8,18 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-
 import my.project.project_oda.R;
 import my.project.project_oda.src.search.adapters.RecentAdapter;
 import my.project.project_oda.src.search.models.Recent_Item;
@@ -28,11 +23,11 @@ import static my.project.project_oda.src.ApplicationClass.sSharedPreferences;
 
 public class fragmentRecent extends Fragment {
 
-    ArrayList<Recent_Item> array_recent;
-    ListView mlv_recent_keyword;
-    Context mContext;
-    RecentAdapter recentAdapter;
-    Gson gson;
+    private ArrayList<Recent_Item> mRecentList;
+    //private ListView ivRecentKeyword;
+    private Context mContext;
+    private RecentAdapter mRecentAdapter;
+    private Gson mGson;
 
     public fragmentRecent(Context context) {
         mContext = context;
@@ -42,21 +37,21 @@ public class fragmentRecent extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search_recent, container, false);
 
-        array_recent = new ArrayList<>();
+        ListView ivRecentKeyword;
+        mRecentList = new ArrayList<>();
 
-        gson = new Gson();
+        mGson = new Gson();
         String json = sSharedPreferences.getString("recent", "");
         Type type = new TypeToken<ArrayList<Recent_Item>>() {
         }.getType();
-        if (gson.fromJson(json, type) != null) {
-            array_recent = gson.fromJson(json, type);
-        } else {
+        if (mGson.fromJson(json, type) != null) {
+            mRecentList = mGson.fromJson(json, type);
         }
 
-        mlv_recent_keyword = view.findViewById(R.id.lv_search_recent);
-        recentAdapter = new RecentAdapter(mContext, array_recent);
-        mlv_recent_keyword.setAdapter(recentAdapter);
-        mlv_recent_keyword.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ivRecentKeyword = view.findViewById(R.id.lv_search_recent);
+        mRecentAdapter = new RecentAdapter(mContext, mRecentList);
+        ivRecentKeyword.setAdapter(mRecentAdapter);
+        ivRecentKeyword.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -71,14 +66,15 @@ public class fragmentRecent extends Fragment {
 
         //이전에 검색한 적 있으면 지우고 최상단으로 올림
         removeKeyword(keyword);
-        array_recent.add(0, new Recent_Item(keyword));
-        recentAdapter.notifyDataSetChanged();
+        mRecentList.add(0, new Recent_Item(keyword));
+        mRecentAdapter.notifyDataSetChanged();
     }
 
     public void removeKeyword(String keyword) {
-        for (int i = 0; i < array_recent.size(); i++) {
-            if (array_recent.get(i).getKeyword().equals(keyword)) {
-                array_recent.remove(i);
+        for (int i = 0; i < mRecentList.size(); i++) {
+            if (mRecentList.get(i).getKeyword().equals(keyword)) {
+                mRecentList.remove(i);
+                break;
             }
         }
     }
@@ -87,7 +83,7 @@ public class fragmentRecent extends Fragment {
     public void onPause() {
         super.onPause();
         SharedPreferences.Editor editor = sSharedPreferences.edit();
-        String json = gson.toJson(array_recent);
+        String json = mGson.toJson(mRecentList);
         editor.putString("recent", json);
         editor.apply();
     }

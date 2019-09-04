@@ -1,13 +1,13 @@
-package my.project.project_oda.src.signup;
+package my.project.project_oda.src.signUp;
 
 import android.util.Log;
 
 import org.json.JSONObject;
-import my.project.project_oda.R;
-import my.project.project_oda.src.signup.interfaces.SignUpActivityView;
-import my.project.project_oda.src.signup.interfaces.SignUpRetrofitInterface;
-import my.project.project_oda.src.signup.models.CheckResponse;
-import my.project.project_oda.src.signup.models.SignUpResponse;
+
+import my.project.project_oda.src.signUp.interfaces.SignUpActivityView;
+import my.project.project_oda.src.signUp.interfaces.SignUpRetrofitInterface;
+import my.project.project_oda.src.signUp.models.CheckResponse;
+import my.project.project_oda.src.signUp.models.SignUpResponse;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -12,4 +12,7 @@
 
 8.31 기능별 패키지 분리, Home(10%)
 
-9.2 Components name 변경, Main의 Home Fragment에 RecyclerView 적용, 각 아이템 클릭 시 상품상세내용 실행, 상품상세내용화면 뷰페이져 적용, 그 중 상품상세 API테스트 완료, 상품 리뷰 아이템 완성 어댑터 구현, 작성 API연동 남음, QNA는 화면만 만들고 API 없는것으로 하였기때문에 더미 데이터를 넣을 예정 
+9.2 Components name 변경, Main의 Home Fragment에 RecyclerView 적용, 각 아이템 클릭 시 상품상세내용 실행, 상품상세내용화면 뷰페이져 적용, 그 중 상품상세 API테스트 완료, 상품 리뷰 아이템 완성 어댑터 구현, 작성 API연동 남음, QNA는 화면만 만들고 API 없는것으로 하였기때문에 더미 데이터를 넣을 예정
+
+9.4 MyPage Fragment UI(10%), Setting Activity(ok, 따로 API없음), ViewPager 속에 상품정보도 포함시켜야함, Product Detail 정보를 가져오는 service를 ProductActivity가 아니라  fragment에서 실행하는 형태로 바꾸기, Main의 바로결제 관련 service, interfaces작성해둠,  Main에서 더미 데이터 추가, 임의 상품 가져오는 service, models, interfaces 작성해둠, 오늘 건드린 UI들 다시 margin등 맞추기
+
