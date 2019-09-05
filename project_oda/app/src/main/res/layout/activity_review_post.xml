@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_review_post_top"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/splash_back"
+            android:gravity="center"
+            android:text="@string/review_post"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_review_post"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="17dp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_post" />
+
+        <ImageView
+            android:id="@+id/iv_review_post_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_arrow_back" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/home_bottom_bar" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edt_review_post_title"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:background="@drawable/home_bottom_bar"
+                android:hint="@string/review_post_title_tools" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edt_review_post_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="21dp"
+                android:paddingStart="16dp"
+                android:paddingTop="9dp"
+                android:textSize="16sp"
+                android:background="@drawable/home_bottom_bar"
+                android:gravity="top"
+                android:hint="@string/review_post_content_tools" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_review_post_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/home_bottom_bar"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_review_post_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_camera" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/boarder"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_review_post_album"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_album" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/boarder"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_review_post_record"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_record" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/boarder"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_review_post_attach"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="start|center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="29dp"
+                android:src="@drawable/ic_attach" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

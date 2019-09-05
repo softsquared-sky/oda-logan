@@ -1,4 +1,4 @@
-package my.project.project_oda.src.product.fragments;
+package my.project.project_oda.src.product.qna;
 
 import android.content.Context;
 import android.os.Bundle;

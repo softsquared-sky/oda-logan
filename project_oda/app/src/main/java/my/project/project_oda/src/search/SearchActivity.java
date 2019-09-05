@@ -1,6 +1,7 @@
 package my.project.project_oda.src.search;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import my.project.project_oda.R;
+import my.project.project_oda.src.cart.CartActivity;
 import my.project.project_oda.src.search.adapters.SectionAdapter;
 import my.project.project_oda.src.search.fragments.fragmentPopular;
 import my.project.project_oda.src.search.fragments.fragmentRecent;
@@ -44,6 +46,9 @@ public class SearchActivity extends AppCompatActivity implements ViewPager.OnPag
         switch (view.getId()) {
             case R.id.iv_search_back:
                 finish();
+                break;
+            case R.id.iv_search_cart:
+                startActivity(new Intent(this, CartActivity.class));
                 break;
         }
     }

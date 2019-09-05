@@ -1,4 +1,4 @@
-package my.project.project_oda.src.product.models;
+package my.project.project_oda.src.product.detail.models;
 
 import com.google.gson.annotations.SerializedName;
 

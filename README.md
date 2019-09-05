@@ -16,3 +16,6 @@
 
 9.4 MyPage Fragment UI(10%), Setting Activity(ok, 따로 API없음), ViewPager 속에 상품정보도 포함시켜야함, Product Detail 정보를 가져오는 service를 ProductActivity가 아니라  fragment에서 실행하는 형태로 바꾸기, Main의 바로결제 관련 service, interfaces작성해둠,  Main에서 더미 데이터 추가, 임의 상품 가져오는 service, models, interfaces 작성해둠, 오늘 건드린 UI들 다시 margin등 맞추기
 
+9.5 ViewPager에 상품 기본 정보 이식 완료, 스크롤 잘 먹음, 상품상세 api부분들 전부 각 fragment로 서비스 분리완료, Main 전체 선택, 각 아이템 선택관련 텍스트 변경 완료, 자동 로그인  토큰의 유효성을 기준으로 작동되게 바꿈, 후기작성 액티비티 새로 만듬
+    후기 작성 버튼 클릭 안먹는 현상 해결해야함, 상품상세 하단의 장바구니, 주문요청 api연동, 각 버튼 클릭시 width 들어나고 수량 선택하는 라인 추가되는 기능 구현해야함
+

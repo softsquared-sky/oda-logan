@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,10 +14,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import my.project.project_oda.R;
-import my.project.project_oda.src.main.home.models.Home_Item;
-import my.project.project_oda.src.product.models.ReviewItem;
-
-import static my.project.project_oda.src.ApplicationClass.myFormatter;
+import my.project.project_oda.src.product.review.models.ReviewItem;
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
 
@@ -97,7 +93,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         }
         String newId = reviewItem.getReviewId().substring(0, reviewItem.getReviewId().length()/2) + star;
         holder.tv_writer.setText(reviewItem.getReviewDate()+" "+newId+"님");
-        Glide.with(mContext).load(reviewItem.getReviewImage()).placeholder(R.drawable.ic_logo).into(holder.iv_image);
+        Glide.with(mContext).load(reviewItem.getReviewImage()).placeholder(R.drawable.ic_app_icon).into(holder.iv_image);
 
     }
 

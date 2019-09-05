@@ -1,5 +1,9 @@
 <resources>
     <string name="oda">오다</string>
+    <string name="network_fail">서버 연결 실패</string>
+    <string name="network_no_response">응답 없음</string>
+    <string name="network_auto_login">자동 로그인</string>
+    <string name="network_auto_login_fail">자동 로그인 토큰이 만료되었습니다.</string>
     <string name="app_name">project_oda</string>
     <string name="loading">로딩중...</string>
     <string name="password">비밀번호</string>
@@ -29,6 +33,7 @@
     <string name="floating_buy_now">바로\n주문</string>
     <string name="go_fast">바로 주문하기 선택상품 </string>
     <string name="business_number">사업자 번호를 입력해주세요.</string>
+    <string name="post_information">우편번호를 입력해주세요.</string>
     <string name="welcome1">오다에 오신 것을 환영합니다</string>
     <string name="welcome2">회원가입에 필요한 정보를 기입해주세요.</string>
 
@@ -115,4 +120,12 @@
     <string name="cart_item_plus">+</string>
     <string name="cart_item_num">0</string>
     <string name="cart_item_price_tools">14,500원</string>
+
+    <string name="egg">계란</string>
+    <string name="more">더보기</string>
+
+    <string name="review_post">후기등록</string>
+    <string name="review_post_title_tools">제목을 입력해주세요</string>
+    <string name="review_post_content_tools">내용을 입력해주세요</string>
+
 </resources>

@@ -27,7 +27,6 @@ public class ApplicationClass extends Application {
     //공용 sharedpreference
     public static SharedPreferences sSharedPreferences = null;
 
-
     public static DecimalFormat myFormatter = new DecimalFormat("###,###");
     // SharedPreferences 키 값
     public static String TAG = "ODA_APP";

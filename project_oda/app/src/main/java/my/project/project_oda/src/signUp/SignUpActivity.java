@@ -12,7 +12,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
 import org.json.JSONObject;
+
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.signUp.interfaces.SignUpActivityView;
@@ -35,7 +37,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
     private Button mBtnDuplicate;
     private Button mBtnVerify;
-    //private Button mBtnPost;
+    private Button mBtnPost;
     //private TextView mTvSignUp;
     int mCatering;
     private Boolean isChecked;
@@ -44,13 +46,18 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private Boolean isTyped;
 
     private final int SUCCESS = 200;
+
     public enum DuplicateCode {
         YES(100), NO(150);
         private final int value;
-        DuplicateCode(int value){
+
+        DuplicateCode(int value) {
             this.value = value;
         }
-        public int getValue(){return value;}
+
+        public int getValue() {
+            return value;
+        }
     }
 
     @Override
@@ -87,7 +94,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
         mBtnDuplicate = findViewById(R.id.btn_duplicate);
         mBtnVerify = findViewById(R.id.btn_verify);
-        //mBtnPost = findViewById(R.id.btn_post);
+        mBtnPost = findViewById(R.id.btn_post);
         //mTvSignUp = findViewById(R.id.tv_sign_up);
 
         mCatering = -1;
@@ -110,14 +117,26 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                 finish();
                 break;
             case R.id.btn_verify:
-                mBtnVerify.setBackgroundResource(R.drawable.btn_duplicate_ok);
-                mBtnVerify.setText(getResources().getString(R.string.btn_verify_ok));
-                mBtnVerify.setTextColor(getResources().getColor(R.color.white));
-                mBtnVerify.setClickable(false);
-                mEdtBusinessNumber.setBackground(null);
-                mEdtPostDetail.requestFocus();
+                if(!mEdtBusinessNumber.getText().toString().equals("")) {
+                    mBtnVerify.setBackgroundResource(R.drawable.btn_duplicate_ok);
+                    mBtnVerify.setText(getResources().getString(R.string.btn_verify_ok));
+                    mBtnVerify.setTextColor(getResources().getColor(R.color.white));
+                    mBtnVerify.setClickable(false);
+                    mEdtBusinessNumber.setBackground(null);
+                    mEdtPostDetail.requestFocus();
+                }else{
+                    showCustomToast(getString(R.string.business_number));
+                    mEdtBusinessNumber.requestFocus();
+                }
                 break;
             case R.id.btn_post:
+                if(mEdtPost.getText().toString().equals("")){
+                    showCustomToast(getString(R.string.post_information));
+                }else{
+                    mBtnPost.setVisibility(View.GONE);
+                    mEdtPost.setBackground(null);
+                    mEdtPostDetail.requestFocus();
+                }
                 break;
             case R.id.tv_sign_up:
                 if (mRgLine1.getCheckedRadioButtonId() != -1) {
@@ -149,9 +168,15 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                             if (isTyped) {
                                 signUp(mCatering);
                             } else showCustomToast2(getString(R.string.CheckCatering));
-                        } else showCustomToast2(getString(R.string.NotMatchPassword));
-                    } else showCustomToast2(getString(R.string.FillPassword));
-                } else  showCustomToast2(getString(R.string.CheckDuplicate));
+                        } else {
+                            showCustomToast2(getString(R.string.NotMatchPassword));
+                            mEdtSignUpPasswordOk.requestFocus();
+                        }
+                    } else {
+                        showCustomToast2(getString(R.string.FillPassword));
+                        mEdtSignUpPassword.requestFocus();
+                    }
+                } else showCustomToast2(getString(R.string.CheckDuplicate));
                 break;
         }
     }//onClick finished
@@ -191,12 +216,12 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             params.put("type", business);
             params.put("address", mEdtPost.getText().toString() + " " + mEdtPostDetail.getText().toString());
         } catch (Exception e) {
-         //   Log.d(TAG, "error: " + e);
+            //   Log.d(TAG, "error: " + e);
             return;
         }
         showProgressDialog();
         final SignUpService signUpService = new SignUpService(this, params);
-       // Log.d(TAG, params.getJ);
+        // Log.d(TAG, params.getJ);
         signUpService.postSignUp();
     }
 
@@ -275,7 +300,6 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_NEXT) {
                     mEdtSignUpPassword.setBackground(null);
-                    mEdtSignUpPasswordOk.requestFocus();
                 }
                 return false;
             }
@@ -286,7 +310,6 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_NEXT) {
                     mEdtSignUpPasswordOk.setBackground(null);
-                    mEdtBusinessNumber.requestFocus();
                 }
                 return false;
             }
@@ -297,7 +320,6 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     mEdtPostDetail.setBackground(null);
-                    mEdtPostDetail.clearFocus();
                 }
                 return false;
             }

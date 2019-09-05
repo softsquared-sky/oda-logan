@@ -1,9 +1,8 @@
-package my.project.project_oda.src.product.models;
+package my.project.project_oda.src.splash.model;
 
-import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 
-public class ProductDetailResponse {
+public class SplashResponse {
     @SerializedName("code")
     private int code;
 
@@ -12,9 +11,6 @@ public class ProductDetailResponse {
 
     @SerializedName("isSuccess")
     private boolean isSuccess;
-
-    @SerializedName("result")
-    private Result result;
 
     public int getCode() {
         return code;
@@ -28,7 +24,4 @@ public class ProductDetailResponse {
         return isSuccess;
     }
 
-    public Result getResult() {
-        return result;
-    }
 }

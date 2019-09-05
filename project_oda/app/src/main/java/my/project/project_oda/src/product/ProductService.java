@@ -1,96 +1,69 @@
 package my.project.project_oda.src.product;
 
 import android.util.Log;
-
 import org.json.JSONObject;
-import my.project.project_oda.src.product.models.ProductDetailResponse;
 import my.project.project_oda.src.product.interfaces.ProductActivityView;
 import my.project.project_oda.src.product.interfaces.ProductRetrofitInterface;
-import my.project.project_oda.src.product.models.ProductReviewResponse;
+import my.project.project_oda.src.product.models.BasketResponse;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import static my.project.project_oda.src.ApplicationClass.TAG;
-import static my.project.project_oda.src.ApplicationClass.getRetrofit;
+
+import static my.project.project_oda.src.ApplicationClass.*;
 
 class ProductService {
 
     private ProductActivityView mProductActivityView;
+    private JSONObject mProductNumberBody;
     private int mProductNumber;
 
-    ProductService(final ProductActivityView productActivityView, int mProductNumber ) {
+    //기본조회 생성자
+    ProductService(final ProductActivityView productActivityView, int productNumber) {
         this.mProductActivityView = productActivityView;
-        this.mProductNumber = mProductNumber;
+        this.mProductNumber = productNumber;
     }
 
-    //상품상세
-    void getProductDetail() {
+    //장바구니 생성자
+    ProductService(final ProductActivityView productActivityView, JSONObject mProductNumberBody) {
+        this.mProductActivityView = productActivityView;
+        this.mProductNumberBody = mProductNumberBody;
+    }
 
+    //상품기본정보 조회
+    void getProductBasic() {
+
+    }
+
+    //장바구니 담기
+    void postBasket() {
         final ProductRetrofitInterface productRetrofitInterface = getRetrofit().create(ProductRetrofitInterface.class);
-        productRetrofitInterface.getProductDetail(mProductNumber).enqueue(new Callback<ProductDetailResponse>() {
+        productRetrofitInterface.postBasket(RequestBody.create(MEDIA_TYPE_JSON, mProductNumberBody.toString())).enqueue(new Callback<BasketResponse>() {
             @Override
-            public void onResponse(Call<ProductDetailResponse> call, Response<ProductDetailResponse> response) {
-                if (response == null) {
-                    mProductActivityView.getProductDetailFailure("fail");
-                    return;
-                }
+            public void onResponse(Call<BasketResponse> call, Response<BasketResponse> response) {
 
-                final ProductDetailResponse detailResponse = response.body();
-                if (detailResponse == null) {
-                    mProductActivityView.getProductDetailFailure("응답 없음");
+                final BasketResponse basketResponse = response.body();
+                if (basketResponse == null) {
+                    mProductActivityView.postBasketFailure("응답 없음");
                     //Log.d(TAG, "응답 없음");
                     return;
                 }
-                //정보 받기 성공
-                if (detailResponse.getIsSuccess()) {
-                    mProductActivityView.getProductDetailSuccess(detailResponse.getResult());
-                //정보 받기 실패
+                //담기 성공
+                if (basketResponse.getIsSuccess()) {
+                    mProductActivityView.postBasketSuccess(basketResponse.getMessage());
+                //담기 실패
                 } else {
-                    mProductActivityView.getProductDetailFailure(detailResponse.getMessage());
+                    mProductActivityView.postBasketFailure(basketResponse.getMessage());
                 }
             }
 
             @Override
-            public void onFailure(Call<ProductDetailResponse> call, Throwable t) {
-                mProductActivityView.getProductDetailFailure("서버 연결 실패");
-                Log.d(TAG, "Failure");
-            }
-        });
-    }
-
-    //상품 후기 조회
-    void getProductReview(){
-
-        final ProductRetrofitInterface productRetrofitInterface = getRetrofit().create(ProductRetrofitInterface.class);
-        productRetrofitInterface.getProductReview(mProductNumber).enqueue(new Callback<ProductReviewResponse>() {
-            @Override
-            public void onResponse(Call<ProductReviewResponse> call, Response<ProductReviewResponse> response) {
-                if (response == null) {
-                    mProductActivityView.getReviewFailure("fail");
-                    return;
-                }
-
-                final ProductReviewResponse reviewResponse = response.body();
-                if (reviewResponse == null) {
-                    mProductActivityView.getReviewFailure("응답 없음");
-                    //Log.d(TAG, "응답 없음");
-                    return;
-                }
-                //조회 성공
-                if (reviewResponse.getIsSuccess()) {
-                    mProductActivityView.getReviewSuccess(reviewResponse.getResult());
-                //조회 실패
-                } else {
-                    mProductActivityView.getReviewFailure(reviewResponse.getMessage());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ProductReviewResponse> call, Throwable t) {
-                mProductActivityView.getReviewFailure("서버 연결 실패");
+            public void onFailure(Call<BasketResponse> call, Throwable t) {
+                mProductActivityView.postBasketFailure("서버 연결 실패");
                 Log.d(TAG, "Failure");
             }
         });
 
     }
+
 }

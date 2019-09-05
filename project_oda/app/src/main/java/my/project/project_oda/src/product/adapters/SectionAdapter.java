@@ -6,7 +6,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
-import my.project.project_oda.src.product.fragments.*;
+
+import my.project.project_oda.src.product.detail.fragmentProductDetail;
+import my.project.project_oda.src.product.qna.fragmentProductQnA;
+import my.project.project_oda.src.product.review.fragmentProductReview;
 
 public class SectionAdapter extends FragmentStatePagerAdapter {
 

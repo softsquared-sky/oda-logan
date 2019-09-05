@@ -15,7 +15,7 @@ import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.cart.CartActivity;
 import my.project.project_oda.src.login.LoginActivity;
-import my.project.project_oda.src.main.home.fragments.Fragment_home;
+import my.project.project_oda.src.main.home.fragments.FragmentHome;
 import my.project.project_oda.src.main.interfaces.MainActivityView;
 import my.project.project_oda.src.main.mypage.fragments.Fragment_mypage;
 import my.project.project_oda.src.search.SearchActivity;
@@ -24,7 +24,7 @@ import my.project.project_oda.src.setting.SettingActivity;
 public class MainActivity extends BaseActivity implements MainActivityView {
 
     private FragmentManager mFragmentManager;
-    private Fragment_home mFragmentHome;
+    private FragmentHome mFragmentHome;
     private Fragment_mypage mFragmentMyPage;
     private FragmentTransaction mTransaction;
 
@@ -109,7 +109,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
     public void setFragment() {
 
         mFragmentManager = getSupportFragmentManager();
-        mFragmentHome = new Fragment_home();
+        mFragmentHome = new FragmentHome();
         mFragmentMyPage = new Fragment_mypage();
         mTransaction = mFragmentManager.beginTransaction();
         mTransaction.replace(R.id.frame_main, mFragmentHome).commitAllowingStateLoss();

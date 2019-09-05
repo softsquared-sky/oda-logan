@@ -1,11 +1,11 @@
-package my.project.project_oda.src.product.models;
+package my.project.project_oda.src.product.review.reviewPost.models;
 
-import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
 import java.util.List;
 
-public class ProductReviewResponse {
+public class ProductPostReviewResponse {
     @SerializedName("code")
     private int code;
 
@@ -15,8 +15,8 @@ public class ProductReviewResponse {
     @SerializedName("isSuccess")
     private boolean isSuccess;
 
-    @SerializedName("result")
-    private List<ReviewResult> result;
+    @SerializedName("date")
+    private Date date;
 
     public int getCode() {
         return code;
@@ -30,7 +30,7 @@ public class ProductReviewResponse {
         return isSuccess;
     }
 
-    public List<ReviewResult> getResult() {
-        return result;
+    public Date getDate() {
+        return date;
     }
 }

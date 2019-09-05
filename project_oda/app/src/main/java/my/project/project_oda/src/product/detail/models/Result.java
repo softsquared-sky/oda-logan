@@ -1,4 +1,4 @@
-package my.project.project_oda.src.product.models;
+package my.project.project_oda.src.product.detail.models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -15,7 +15,7 @@ public class Result {
     private String origin;
 
     @SerializedName("imageResult")
-    private List<imageResult> imageResult;
+    private List<my.project.project_oda.src.product.detail.models.imageResult> imageResult;
 
     public String getQpp() {
         return qpp;

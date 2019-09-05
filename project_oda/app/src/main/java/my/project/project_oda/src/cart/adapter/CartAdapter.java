@@ -12,13 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 import my.project.project_oda.R;
 import my.project.project_oda.src.cart.models.CartItem;
-import my.project.project_oda.src.product.models.ReviewItem;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 

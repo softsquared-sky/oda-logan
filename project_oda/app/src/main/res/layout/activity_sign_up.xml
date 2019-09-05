@@ -36,6 +36,7 @@
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
@@ -43,7 +44,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -73,6 +74,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="17dp"
                     android:hint="@string/id"
+                    android:inputType="text"
                     android:singleLine="true"
                     android:textSize="16sp" />
 
@@ -127,6 +129,7 @@
                     android:layout_marginTop="9dp"
                     android:layout_marginEnd="17dp"
                     android:hint="@string/business_number"
+                    android:inputType="text"
                     android:singleLine="true"
                     android:textSize="16sp" />
 
@@ -156,7 +159,7 @@
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginEnd="17dp"
-                    android:focusable="false"
+                    android:inputType="text"
                     android:singleLine="true"
                     android:textSize="14sp" />
 
@@ -183,6 +186,7 @@
                 android:layout_marginTop="9dp"
                 android:layout_marginEnd="17dp"
                 android:hint="@string/edt_post_detail"
+                android:inputType="text"
                 android:singleLine="true"
                 android:textSize="16sp" />
 
@@ -275,19 +279,19 @@
                     android:text="@string/catering_7" />
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/tv_sign_up"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:background="@color/sign_up"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="onClick"
-                android:text="@string/sign_up"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                />
-
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/sign_up"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="onClick"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

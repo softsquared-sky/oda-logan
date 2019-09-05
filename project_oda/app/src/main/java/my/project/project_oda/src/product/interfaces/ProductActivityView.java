@@ -1,15 +1,12 @@
 package my.project.project_oda.src.product.interfaces;
 
-import java.util.List;
-import my.project.project_oda.src.product.models.Result;
-import my.project.project_oda.src.product.models.ReviewResult;
+import my.project.project_oda.src.product.detail.models.Result;
 
 public interface ProductActivityView {
 
-    void getProductDetailSuccess(Result result);
-    void getProductDetailFailure(String message);
+   void getProductBasicSuccess(String message);
+   void getProductBasicFailure(String message);
 
-    void getReviewSuccess(List<ReviewResult> response);
-    void getReviewFailure(String message);
-
+   void postBasketSuccess(String message);
+   void postBasketFailure(String message);
 }
