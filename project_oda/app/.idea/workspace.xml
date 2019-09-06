@@ -3,7 +3,7 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <target>android-29</target>
+        <target>android-28</target>
       </config>
     </shared>
   </component>
@@ -12,63 +12,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee13dd60-e11e-4928-8ac6-4e379c04dc66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/SpacesItemDecoration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/DetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/interfaces/DetailFragmentView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/interfaces/DetailRetrofitInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/BasketResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/interfaces/ReviewFragmentView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/interfaces/ReviewRetrofitInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/ReviewPostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/interfaces/ReviewPostActivityView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/interfaces/ReviewPostRetrofitInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/models/ProductPostReviewResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/reviewPostActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/interfaces/SplashActivityView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/interfaces/SplashRetrofitInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/model/SplashResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splashService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/item_home_list_footer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/values/dimen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/adapter/OrderAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/interfaces/OrderActivityView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/interfaces/OrderRetrofitInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/models/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/models/OrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/product_bottom_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_order.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/item_order_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/HeightWrappingViewPager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/cart/adapter/CartAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/cart/adapter/CartAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/adapter/HomeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/adapter/HomeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/Fragment_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/ReviewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/ReviewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/SectionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/SectionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/fragments/fragmentProductDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/fragmentProductDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/fragments/fragmentProductQnA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/qna/fragmentProductQnA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/fragments/fragmentProductReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/ReviewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/adapter/ReviewAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductActivityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductActivityView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductRetrofitInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductRetrofitInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/ProductDetailResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/models/ProductDetailResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/ProductReviewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ProductReviewResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/models/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/ReviewItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ReviewItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/ReviewResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ReviewResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/imageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/models/imageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/SearchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/search/SearchActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signUp/SignUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signUp/SignUpActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/app_icon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_app_icon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/tool_picture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_product.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_product_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_product_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_product_review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_product_review.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/item_home_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/item_home_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,42 +49,21 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="95">
-                    <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-                    <folding>
-                      <element signature="e#1463#1467#0" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="625">
+                    <caret line="158" column="55" selection-start-line="158" selection-start-column="55" selection-end-line="158" selection-end-column="55" />
                   </state>
                 </provider>
               </entry>
             </file>
             <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/RecentStory/app/src/main/res/layout/activity_add_news.xml">
+              <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="665">
-                    <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/2/app/src/main/java/my/api/culture/appActivity.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="424">
-                    <caret line="531" column="55" selection-start-line="531" selection-start-column="12" selection-end-line="531" selection-end-column="23" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../../android/2/app/src/main/java/my/api/culture/festadapter.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="450">
-                    <caret line="71" column="33" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="33" />
+                  <state relative-caret-position="228">
+                    <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
                   </state>
                 </provider>
               </entry>
@@ -135,113 +83,86 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/interfaces/SplashActivityView.java">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_order.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splash.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+            <state relative-caret-position="217">
+              <caret line="336" column="42" selection-start-line="336" selection-start-column="42" selection-end-line="336" selection-end-column="42" />
               <folding>
-                <element signature="e#1419#1462#0" expanded="true" />
+                <element signature="e#1060#1083#0" expanded="true" />
+                <element signature="e#1958#1986#0" expanded="true" />
+                <element signature="e#2547#2580#0" expanded="true" />
+                <element signature="e#3941#3972#0" expanded="true" />
+                <element signature="e#4823#4841#0" expanded="true" />
+                <element signature="e#5783#5821#0" expanded="true" />
+                <element signature="e#7119#7148#0" expanded="true" />
+                <element signature="e#7629#7654#0" expanded="true" />
+                <element signature="e#8549#8574#0" expanded="true" />
+                <element signature="e#10222#10250#0" expanded="true" />
+                <element signature="e#10996#11027#0" expanded="true" />
+                <element signature="e#11438#11464#0" expanded="true" />
+                <element signature="e#11875#11901#0" expanded="true" />
+                <element signature="e#12312#12340#0" expanded="true" />
+                <element signature="e#12829#12860#0" expanded="true" />
+                <element signature="e#14124#14157#0" expanded="true" />
+                <element signature="e#14674#14710#0" expanded="true" />
+                <element signature="e#15530#15560#0" expanded="true" />
+                <element signature="e#16279#16313#0" expanded="true" />
+                <element signature="e#17002#17036#0" expanded="true" />
+                <element signature="e#17873#17912#0" expanded="true" />
+                <element signature="e#18471#18499#0" expanded="true" />
+                <element signature="e#19134#19170#0" expanded="true" />
+                <element signature="e#19726#19754#0" expanded="true" />
+                <element signature="e#20390#20425#0" expanded="true" />
+                <element signature="e#21029#21057#0" expanded="true" />
+                <element signature="e#21594#21621#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="61" column="70" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2409#2467#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/dimen.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/SpacesItemDecoration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="180">
+              <caret line="263" selection-start-line="263" selection-end-line="263" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#159#160#0" expanded="true" />
-                <element signature="e#191#192#0" expanded="true" />
+                <element signature="e#2323#2936#0" expanded="true" />
+                <element signature="e#2935#2936#0" expanded="true" />
+                <element signature="e#2990#3615#0" expanded="true" />
+                <element signature="e#3614#3615#0" expanded="true" />
+                <element signature="e#3675#4324#0" expanded="true" />
+                <element signature="e#4323#4324#0" expanded="true" />
+                <element signature="e#4381#5094#0" expanded="true" />
+                <element signature="e#5093#5094#0" expanded="true" />
+                <element signature="e#5152#5781#0" expanded="true" />
+                <element signature="e#5780#5781#0" expanded="true" />
+                <element signature="e#5836#6459#0" expanded="true" />
+                <element signature="e#6458#6459#0" expanded="true" />
+                <element signature="e#6517#6988#0" expanded="true" />
+                <element signature="e#6987#6988#0" expanded="true" />
+                <element signature="e#7047#7512#0" expanded="true" />
+                <element signature="e#7511#7512#0" expanded="true" />
+                <element signature="e#7568#8031#0" expanded="true" />
+                <element signature="e#8030#8031#0" expanded="true" />
+                <element signature="e#8085#8710#0" expanded="true" />
+                <element signature="e#8709#8710#0" expanded="true" />
+                <element signature="e#8766#9229#0" expanded="true" />
+                <element signature="e#9228#9229#0" expanded="true" />
+                <element signature="e#9421#10305#0" expanded="true" />
+                <element signature="e#10304#10305#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_home_list_footer.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="152">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_home_list.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splashService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1644#1692#0" expanded="true" />
-                <element signature="e#2222#2263#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -255,7 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setonitem</find>
       <find>Context</find>
       <find>json</find>
       <find>signup</find>
@@ -285,6 +205,7 @@
       <find>mTvSignUp</find>
       <find>onCli</find>
       <find>tvItemSelected</find>
+      <find>focusa</find>
     </findStrings>
     <replaceStrings>
       <replace>mAdapter</replace>
@@ -308,24 +229,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/ProductPostReviewResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/fragments/fragmentProductReview.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ReviewFragmentView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/qna/fragmentProductQnA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/interfaces/ProductRetrofitInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ReviewItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ProductReviewResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/DetailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/interfaces/DetailFragmentView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/models/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/BasketResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductRetrofitInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductActivityView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/item_home_list_footer.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ReviewResult.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/interfaces/ReviewPostRetrofitInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/interfaces/ReviewPostActivityView.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/interfaces/ReviewFragmentView.java" />
@@ -333,39 +238,55 @@
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/ReviewService.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/ReviewPostService.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/fragmentProductDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_product_detail.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_product.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_product_review.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/reviewPostActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/interfaces/HomeRetrofitInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/ReviewAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/adapter/HomeAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signUp/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/model/SplashResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/interfaces/SplashRetrofitInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splashService.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/interfaces/SplashActivityView.java" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splash.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/item_home_list.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/SpacesItemDecoration.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/dimen.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/interfaces/OrderActivityView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/models/OrderResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/interfaces/OrderRetrofitInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_product_detail.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/adapter/HomeAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_order.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/product_bottom_bar.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_product.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/adapter/ReviewAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/models/OrderItem.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/item_order_list.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/adapter/OrderAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="422" />
-    <option name="y" value="67" />
-    <option name="width" value="979" />
+    <option name="x" value="420" />
+    <option name="y" value="65" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -376,6 +297,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -386,6 +310,11 @@
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -407,7 +336,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
@@ -415,17 +344,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
               <item name="adapter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -434,18 +353,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
               <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -454,8 +362,53 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -469,24 +422,13 @@
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="splash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="project_oda" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="splash" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
@@ -494,36 +436,33 @@
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
-            <path>
-              <item name="project_oda" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="samsung-sm_g930s-ce04160482a9281303" />
+    <property name="DEBUGGABLE_PROCESS" value="my.project.project_oda" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="ce04160482a9281303" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Android-ObservableScrollView" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="my.project.project_oda.src.order.models" />
+      <recent name="my.project.project_oda.src.order.adapter" />
+      <recent name="my.project.project_oda.src.order.interfaces" />
+      <recent name="my.project.project_oda.src.order" />
       <recent name="my.project.project_oda.src.main.home.models" />
-      <recent name="my.project.project_oda.src.splash.model" />
-      <recent name="my.project.project_oda.src.splash.interfaces" />
-      <recent name="my.project.project_oda.src.splash" />
-      <recent name="my.project.project_oda.src.product.review.reviewPost" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\res\layout" />
-      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\product\detail\interfaces" />
       <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\res\drawable" />
+      <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\product\detail\interfaces" />
       <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\main" />
       <recent name="C:\Users\user\Desktop\Git\oda\project_oda\app\src\main\java\my\project\project_oda\src\main\home" />
     </key>
@@ -626,6 +565,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18724832" />
@@ -637,13 +577,13 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32907802" />
-      <window_info anchor="bottom" x="134" y="-798" width="1639" height="610" id="Logcat" order="1" type="FLOATING" weight="0.3299566" />
+      <window_info anchor="bottom" x="157" y="-879" width="1639" height="707" id="Logcat" order="1" type="FLOATING" weight="0.3299566" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32907802" />
-      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.31914893" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3177305" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32624114" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -655,346 +595,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductActivityView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/DetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="44" column="88" selection-start-line="44" selection-start-column="79" selection-end-line="44" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-211">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ProductReviewResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ReviewResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="206" column="35" selection-start-line="206" selection-start-column="35" selection-end-line="206" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_cart.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="42" column="14" selection-start-line="36" selection-start-column="8" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/interfaces/ReviewPostRetrofitInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/interfaces/ReviewPostActivityView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/interfaces/ReviewFragmentView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/interfaces/ReviewRetrofitInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/models/ProductPostReviewResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/ReviewPostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/ReviewService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/detail/fragmentProductDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_product_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="293" column="57" selection-start-line="293" selection-start-column="57" selection-end-line="293" selection-end-column="57" />
-          <folding>
-            <element signature="e#452#499#0" expanded="true" />
-            <element signature="e#1118#1147#0" expanded="true" />
-            <element signature="e#1758#1777#0" expanded="true" />
-            <element signature="e#2179#2208#0" expanded="true" />
-            <element signature="e#676#703#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="82" column="47" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_product.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-          <folding>
-            <element signature="e#3190#3216#0" expanded="true" />
-            <element signature="e#3638#3661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/models/ReviewItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="121" selection-start-line="14" selection-start-column="111" selection-end-line="14" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/reviewPostActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_product_review.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/SectionAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding>
-            <element signature="e#1084#1085#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1781">
-          <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/Home_Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/interfaces/HomeRetrofitInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_app_icon.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/adapters/ReviewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="95" column="97" selection-start-line="95" selection-start-column="97" selection-end-line="95" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="59" selection-start-line="59" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="65" column="114" selection-start-line="65" selection-start-column="101" selection-end-line="65" selection-end-column="114" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4240#4271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/adapter/HomeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4520#4716#0" expanded="true" />
-            <element signature="e#4715#4716#0" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../android/RecentStory/app/src/main/res/layout/activity_add_news.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2121">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#11798#11815#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signUp/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1938">
-          <caret line="128" column="54" selection-start-line="128" selection-start-column="54" selection-end-line="128" selection-end-column="54" />
-          <folding>
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#3401#3426#0" expanded="true" />
-            <element signature="e#4192#4227#0" expanded="true" />
-            <element signature="e#4192#4228#0" expanded="true" />
-            <element signature="e#5419#5452#0" expanded="true" />
-            <element signature="e#5503#5539#0" expanded="true" />
-            <element signature="e#5586#5618#0" expanded="true" />
-            <element signature="e#5662#5696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/model/SplashResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/interfaces/SplashRetrofitInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1005,82 +609,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splashService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1644#1692#0" expanded="true" />
-            <element signature="e#2222#2263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding>
-            <element signature="e#1463#1467#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="608">
           <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/SpacesItemDecoration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="e#1419#1462#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_home_list_footer.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/splash/splashService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_home_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/models/SpacesItemDecoration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="551">
+          <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#159#160#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/ApplicationClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="61" column="70" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2409#2467#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1088,6 +655,419 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_cart_list.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="136" column="27" lean-forward="true" selection-start-line="96" selection-start-column="12" selection-end-line="136" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductActivityView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/interfaces/ProductRetrofitInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/models/BasketResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/login/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="27" column="95" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/interfaces/OrderRetrofitInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/models/OrderResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/interfaces/OrderActivityView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../android/RecentStory/app/src/main/res/layout/activity_add_news.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1691">
+          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../android/2/app/src/main/java/my/api/culture/appActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9101">
+          <caret line="531" column="55" selection-start-line="531" selection-start-column="12" selection-end-line="531" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../android/2/app/src/main/java/my/api/culture/festadapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="71" column="33" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/source/buildConfig/debug/my/project/project_oda/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_cart.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_order2.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-end-line="280" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_mypage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="121" column="14" lean-forward="true" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+          <folding>
+            <element signature="e#3907#3933#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_review_post.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/reviewPost/reviewPostActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="122" column="5" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/adapter/HomeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="108" column="46" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3819#4156#0" expanded="true" />
+            <element signature="e#4155#4156#0" expanded="true" />
+            <element signature="e#4249#4250#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/btn_chbox.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/main/home/fragments/FragmentHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2745#2799#0" expanded="true" />
+            <element signature="e#2850#2903#0" expanded="true" />
+            <element signature="e#2930#2986#0" expanded="true" />
+            <element signature="e#5042#6013#0" expanded="true" />
+            <element signature="e#6012#6013#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/ProductActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="98" column="42" lean-forward="true" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/signUp/SignUpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="305" column="11" selection-start-line="297" selection-start-column="8" selection-end-line="305" selection-end-column="11" />
+          <folding>
+            <element signature="e#10375#10726#0" expanded="true" />
+            <element signature="e#10725#10726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_order.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="336" column="42" selection-start-line="336" selection-start-column="42" selection-end-line="336" selection-end-column="42" />
+          <folding>
+            <element signature="e#1060#1083#0" expanded="true" />
+            <element signature="e#1958#1986#0" expanded="true" />
+            <element signature="e#2547#2580#0" expanded="true" />
+            <element signature="e#3941#3972#0" expanded="true" />
+            <element signature="e#4823#4841#0" expanded="true" />
+            <element signature="e#5783#5821#0" expanded="true" />
+            <element signature="e#7119#7148#0" expanded="true" />
+            <element signature="e#7629#7654#0" expanded="true" />
+            <element signature="e#8549#8574#0" expanded="true" />
+            <element signature="e#10222#10250#0" expanded="true" />
+            <element signature="e#10996#11027#0" expanded="true" />
+            <element signature="e#11438#11464#0" expanded="true" />
+            <element signature="e#11875#11901#0" expanded="true" />
+            <element signature="e#12312#12340#0" expanded="true" />
+            <element signature="e#12829#12860#0" expanded="true" />
+            <element signature="e#14124#14157#0" expanded="true" />
+            <element signature="e#14674#14710#0" expanded="true" />
+            <element signature="e#15530#15560#0" expanded="true" />
+            <element signature="e#16279#16313#0" expanded="true" />
+            <element signature="e#17002#17036#0" expanded="true" />
+            <element signature="e#17873#17912#0" expanded="true" />
+            <element signature="e#18471#18499#0" expanded="true" />
+            <element signature="e#19134#19170#0" expanded="true" />
+            <element signature="e#19726#19754#0" expanded="true" />
+            <element signature="e#20390#20425#0" expanded="true" />
+            <element signature="e#21029#21057#0" expanded="true" />
+            <element signature="e#21594#21621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/product_bottom_bar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_product_detail.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_review_list.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_home_list.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="59" column="34" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="59" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="158" column="55" selection-start-line="158" selection-start-column="55" selection-end-line="158" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/adapter/ReviewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/models/OrderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/adapter/OrderAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_order_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="e#1370#1413#0" expanded="true" />
+            <element signature="e#1739#1758#0" expanded="true" />
+            <element signature="e#2251#2294#0" expanded="true" />
+            <element signature="e#2643#2684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_product.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/product/review/fragmentProductReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/project/project_oda/src/order/OrderActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
+          <folding>
+            <element signature="e#2323#2936#0" expanded="true" />
+            <element signature="e#2935#2936#0" expanded="true" />
+            <element signature="e#2990#3615#0" expanded="true" />
+            <element signature="e#3614#3615#0" expanded="true" />
+            <element signature="e#3675#4324#0" expanded="true" />
+            <element signature="e#4323#4324#0" expanded="true" />
+            <element signature="e#4381#5094#0" expanded="true" />
+            <element signature="e#5093#5094#0" expanded="true" />
+            <element signature="e#5152#5781#0" expanded="true" />
+            <element signature="e#5780#5781#0" expanded="true" />
+            <element signature="e#5836#6459#0" expanded="true" />
+            <element signature="e#6458#6459#0" expanded="true" />
+            <element signature="e#6517#6988#0" expanded="true" />
+            <element signature="e#6987#6988#0" expanded="true" />
+            <element signature="e#7047#7512#0" expanded="true" />
+            <element signature="e#7511#7512#0" expanded="true" />
+            <element signature="e#7568#8031#0" expanded="true" />
+            <element signature="e#8030#8031#0" expanded="true" />
+            <element signature="e#8085#8710#0" expanded="true" />
+            <element signature="e#8709#8710#0" expanded="true" />
+            <element signature="e#8766#9229#0" expanded="true" />
+            <element signature="e#9228#9229#0" expanded="true" />
+            <element signature="e#9421#10305#0" expanded="true" />
+            <element signature="e#10304#10305#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

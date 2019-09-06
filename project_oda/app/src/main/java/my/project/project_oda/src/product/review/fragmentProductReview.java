@@ -1,9 +1,7 @@
 package my.project.project_oda.src.product.review;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
-import static my.project.project_oda.src.ApplicationClass.TAG;
-import my.project.project_oda.src.product.review.reviewPost.reviewPostActivity;
+
 import my.project.project_oda.R;
 import my.project.project_oda.src.product.ProductActivity;
-import my.project.project_oda.src.product.adapters.ReviewAdapter;
+import my.project.project_oda.src.product.review.adapter.ReviewAdapter;
 import my.project.project_oda.src.product.review.models.ReviewItem;
 import my.project.project_oda.src.product.review.models.ReviewResult;
 import my.project.project_oda.src.product.review.interfaces.ReviewFragmentView;
@@ -54,14 +51,11 @@ public class fragmentProductReview extends Fragment implements ReviewFragmentVie
 
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.tv_review_write:
-                startActivity(new Intent(getActivity(), reviewPostActivity.class));
-                Log.d(TAG, "눌림");
-                break;
+
         }
     }
 
-    void getProductReview() {
+    private void getProductReview() {
         ((ProductActivity) getActivity()).showProgressDialog();
         final ReviewService reviewService = new ReviewService(this, mProductNumber);
         reviewService.getProductReview();

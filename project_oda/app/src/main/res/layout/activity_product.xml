@@ -70,6 +70,76 @@
         android:layout_marginTop="112dp"
         android:layout_marginBottom="56dp" />
 
+
+    <LinearLayout
+        android:id="@+id/linear_product_select_num"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/product_bottom_bar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/linear_product_cart_order"
+        >
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:textColor="@color/catering"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/product_num"/>
+
+        <LinearLayout
+            android:layout_weight="0.7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/cart_item_num_selecter">
+
+            <TextView
+                android:id="@+id/tv_product_select_minus"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:textAlignment="center"
+                android:text="@string/cart_item_minus"
+                android:textColor="@color/catering"
+                android:onClick="onClick"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_product_select_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cart_item_num"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/cart_item_num"
+                android:textColor="@color/catering"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_product_select_plus"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:textAlignment="center"
+                android:text="@string/cart_item_plus"
+                android:textColor="@color/catering"
+                android:onClick="onClick"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linear_product_cart_order"
         android:layout_width="match_parent"

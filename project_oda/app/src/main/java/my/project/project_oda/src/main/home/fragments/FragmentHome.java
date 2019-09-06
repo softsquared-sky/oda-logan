@@ -67,9 +67,11 @@ public class FragmentHome extends Fragment implements HomeActivityView {
         //초기 데이터 보여주기 위함
         this.getProduct(getActivity().getResources().getString(R.string.egg));
         mLastTurn += 1;
-        this.getProduct(getActivity().getResources().getString(R.string.egg));
+        this.getProduct(getActivity().getResources().getString(R.string.berry));
         mLastTurn += 1;
-        this.getProduct(getActivity().getResources().getString(R.string.egg));
+        this.getProduct(getActivity().getResources().getString(R.string.rice));
+        mLastTurn += 1;
+        this.getProduct(getActivity().getResources().getString(R.string.cabbage));
 
         return view;
     }
@@ -128,6 +130,8 @@ public class FragmentHome extends Fragment implements HomeActivityView {
                         if (!item.isChecked()) {
                             item.setChecked(true);
                             mSelectCount += 1;
+                        }else{
+                            continue;
                         }
                     }
                     setItemNum(mSelectCount);
@@ -177,6 +181,7 @@ public class FragmentHome extends Fragment implements HomeActivityView {
         mHomeAdapter.notifyDataSetChanged();
         mTvNothing.setVisibility(View.GONE);
         mChboxSelectAll.setClickable(true);
+
         mTvSelectAll.setTextColor(getActivity().getResources().getColor(R.color.catering));
     }
 

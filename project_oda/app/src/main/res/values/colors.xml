@@ -15,5 +15,6 @@
     <color name="checkbox">#ff7876</color>
     <color name="review_write_color">#303030</color>
     <color name="halfTransparent">#80000000</color>
+    <color name="radioTime">#cccccc</color>
     <color name="home_textview_background">#ededed</color>
 </resources>

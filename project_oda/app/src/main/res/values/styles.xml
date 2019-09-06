@@ -29,7 +29,7 @@
         <item name="colorAccent">@color/checkbox</item>
     </style>
 
-    <style name="productTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="productTheme">
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

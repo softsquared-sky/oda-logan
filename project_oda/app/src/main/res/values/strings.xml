@@ -90,6 +90,7 @@
 
     <string name="product_put_cart">장바구니 담기</string>
     <string name="product_order">주문요청하기</string>
+    <string name="product_num">수량</string>
 
     <string name="mypage_coupon">쿠폰</string>
     <string name="mypage_calculate">정산대기</string>
@@ -122,10 +123,39 @@
     <string name="cart_item_price_tools">14,500원</string>
 
     <string name="egg">계란</string>
+    <string name="berry">딸기</string>
+    <string name="rice">쌀</string>
+    <string name="cabbage">양배추</string>
     <string name="more">더보기</string>
 
     <string name="review_post">후기등록</string>
     <string name="review_post_title_tools">제목을 입력해주세요</string>
     <string name="review_post_content_tools">내용을 입력해주세요</string>
+
+    <string name="order_request">주문요청</string>
+    <string name="order_request_btn">주문 요청하기</string>
+    <string name="order_request_info">수령정보</string>
+    <string name="order_request_name_hint">수령 지점명</string>
+    <string name="order_request_address">주소지</string>
+    <string name="order_request_address_detail">상세 주소지</string>
+    <string name="order_request_phone">연락처</string>
+    <string name="order_request_time">수령시간</string>
+    <string name="order_request_message">요청사항</string>
+    <string name="order_request_morning">아침</string>
+    <string name="order_request_am">오전</string>
+    <string name="order_request_pm">오후</string>
+    <string name="order_request_dawn">새벽</string>
+    <string name="order_request_set_basic">기본정보로 설정</string>
+    <string name="order_request_product_info">주문상품정보</string>
+    <string name="order_request_coupon">상품쿠폰</string>
+    <string name="order_request_coupon_num">0장</string>
+    <string name="order_request_coupon_btn">조회</string>
+    <string name="order_request_estimated_price">예상 주문 오다가</string>
+    <string name="order_request_coupon_price">쿠폰 적용</string>
+    <string name="order_request_total_price">총 예상 오다가</string>
+    <string name="order_request_zero">0원</string>
+    <string name="order_request_product_title_tools">[해발500포크]냉장삼겹살 수육용</string>
+    <string name="order_request_product_price_tools">9,000원</string>
+    <string name="order_request_product_num_tools">/ 3개</string>
 
 </resources>

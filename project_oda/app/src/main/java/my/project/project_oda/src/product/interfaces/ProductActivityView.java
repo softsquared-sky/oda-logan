@@ -9,4 +9,5 @@ public interface ProductActivityView {
 
    void postBasketSuccess(String message);
    void postBasketFailure(String message);
+
 }

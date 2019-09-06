@@ -100,17 +100,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         holder.chbox_home_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CheckBox chbox = (CheckBox) view;
-                mHomeList.get(position).setChecked(chbox.isChecked());
-            }
-        });
 
-        holder.chbox_home_item.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 if (holder.chbox_home_item.isChecked()) {
+                    mHomeList.get(position).setChecked(true);
                     mFragmentHome.setSelectItemNumPlus();
                 } else {
+                    mHomeList.get(position).setChecked(false);
                     mFragmentHome.setSelectItemNumMinus();
                 }
             }
