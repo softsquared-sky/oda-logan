@@ -4,11 +4,12 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.google.firebase.storage.FirebaseStorage;
+
 import my.project.project_oda.config.XAccessTokenInterceptor;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -27,6 +28,9 @@ public class ApplicationClass extends Application {
     //공용 sharedpreference
     public static SharedPreferences sSharedPreferences = null;
 
+    //FirebaseStorage
+    //public static FirebaseStorage sStorage = FirebaseStorage.getInstance('gs://project-oda-5b989.appspot.com');
+
     public static DecimalFormat myFormatter = new DecimalFormat("###,###");
     // SharedPreferences 키 값
     public static String TAG = "ODA_APP";
@@ -36,14 +40,6 @@ public class ApplicationClass extends Application {
 
     //날짜 형식
     public static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd", Locale.KOREA);
-
-    public static  String curTime(){
-        long now = System.currentTimeMillis();
-        Date date = new Date(now);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-        String now_txt = format.format(date);
-        return now_txt;
-    }
 
     // Retrofit 인스턴스
     public static Retrofit retrofit;

@@ -74,7 +74,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="17dp"
                     android:hint="@string/id"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:singleLine="true"
                     android:textSize="16sp" />
 
@@ -202,6 +202,8 @@
 
             <RadioGroup
                 android:id="@+id/rg_1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -279,19 +281,20 @@
                     android:text="@string/catering_7" />
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/tv_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/sign_up"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="8dp"
+                android:onClick="onClick"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/tv_sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/sign_up"
-        android:gravity="center_horizontal|center_vertical"
-        android:onClick="onClick"
-        android:text="@string/sign_up"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

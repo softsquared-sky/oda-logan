@@ -15,12 +15,13 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import my.project.project_oda.R;
+import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.cart.CartActivity;
 import my.project.project_oda.src.search.adapters.SectionAdapter;
 import my.project.project_oda.src.search.fragments.fragmentPopular;
 import my.project.project_oda.src.search.fragments.fragmentRecent;
 
-public class SearchActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+public class SearchActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
 
     Context mContext;
     private ViewPager mViewPager;

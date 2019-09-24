@@ -9,4 +9,7 @@ public interface HomeActivityView {
     void getProductSuccess(List<Result> resultList);
     void getProductFailure(String message);
 
+    void postDirectOrderSuccess(String message);
+    void postDirectOrderFailure(String message);
+
 }

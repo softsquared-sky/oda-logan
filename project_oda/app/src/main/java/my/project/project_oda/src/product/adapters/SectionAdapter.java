@@ -7,9 +7,10 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import my.project.project_oda.src.main.home.fragments.FragmentHome;
 import my.project.project_oda.src.product.detail.fragmentProductDetail;
 import my.project.project_oda.src.product.qna.fragmentProductQnA;
-import my.project.project_oda.src.product.review.fragmentProductReview;
+import my.project.project_oda.src.product.review.FragmentProductReview;
 
 public class SectionAdapter extends FragmentStatePagerAdapter {
 
@@ -19,6 +20,11 @@ public class SectionAdapter extends FragmentStatePagerAdapter {
     public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);
+    }
+
+    public void replaceFragment(Fragment fragment, String title, int index){
+        mFragmentList.set(index,fragment);
+        mFragmentTitleList.set(index,title);
     }
 
     public CharSequence getPageTitle(int position) {
@@ -43,7 +49,7 @@ public class SectionAdapter extends FragmentStatePagerAdapter {
     public int getItemPosition(@NonNull Object object) {
         if (object instanceof fragmentProductDetail) {
             return 0;
-        } else if (object instanceof fragmentProductReview) {
+        } else if (object instanceof FragmentProductReview) {
             return 1;
         } else if (object instanceof fragmentProductQnA) {
             return 2;

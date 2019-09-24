@@ -64,7 +64,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
     @Override
     public void LoginSuccess(String text, String jwt) {
-        Log.d(TAG, "받아온 jwt값: " + jwt);
+        //Log.d(TAG, "받아온 jwt값: " + jwt);
         //로그인시 받아오는 jwt를 sharedpreference에 저장
         SharedPreferences.Editor editor = sSharedPreferences.edit();
         editor.putString(X_ACCESS_TOKEN, jwt);
@@ -73,7 +73,6 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         Intent homeIntent = new Intent(this, MainActivity.class);
         startActivity(homeIntent);
         showCustomToast(text);
-        Log.d(TAG, "받은 text: " + text);
 
         //자동 로그인 체크
         if (mchbox_auto.isChecked()) {

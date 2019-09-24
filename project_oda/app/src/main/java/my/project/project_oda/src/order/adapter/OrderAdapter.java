@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import my.project.project_oda.R;
 import my.project.project_oda.src.order.models.OrderItem;
+import static my.project.project_oda.src.ApplicationClass.myFormatter;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
 
@@ -64,8 +65,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     public void onBindViewHolder(OrderAdapter.ViewHolder holder, final int position) {
         OrderItem orderItem = mOrderList.get(position);
         holder.tvTitle.setText(orderItem.getOrderTitle());
-        holder.tvPrice.setText(orderItem.getOrderPrice());
-        holder.tvNumOfProduct.setText(orderItem.getOrderNumOfProduct());
+        holder.tvPrice.setText(myFormatter.format(orderItem.getOrderPrice()).concat("원"));
+        holder.tvNumOfProduct.setText("/".concat(String.valueOf(orderItem.getOrderNumOfProduct())).concat("개"));
         Glide.with(mContext).load(orderItem.getOrderImage()).placeholder(R.drawable.ic_app_icon).into(holder.ivImage);
 
     }

@@ -1,8 +1,5 @@
 package my.project.project_oda.src.product.review.models;
 
-import com.google.gson.JsonObject;
-import com.google.gson.annotations.SerializedName;
-
 public class ReviewItem {
 
     private int pNum;

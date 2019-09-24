@@ -2,10 +2,9 @@ package my.project.project_oda.src.product;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -23,7 +22,7 @@ import my.project.project_oda.src.product.detail.fragmentProductDetail;
 import my.project.project_oda.src.product.interfaces.ProductActivityView;
 import my.project.project_oda.src.product.qna.fragmentProductQnA;
 import my.project.project_oda.src.product.adapters.SectionAdapter;
-import my.project.project_oda.src.product.review.fragmentProductReview;
+import my.project.project_oda.src.product.review.FragmentProductReview;
 import my.project.project_oda.src.product.review.reviewPost.reviewPostActivity;
 import my.project.project_oda.src.search.SearchActivity;
 
@@ -36,7 +35,7 @@ public class ProductActivity extends BaseActivity implements ViewPager.OnPageCha
     private ViewPager mViewPager;
     SectionAdapter mAdapter = new SectionAdapter(getSupportFragmentManager());
     fragmentProductDetail mFragmentProductDetail;
-    fragmentProductReview mFragmentProductReview;
+    FragmentProductReview mFragmentProductReview;
     fragmentProductQnA mFragmentProductQnA;
     TextView mTvProductPutCart;
     TextView mTvProductOrder;
@@ -95,7 +94,15 @@ public class ProductActivity extends BaseActivity implements ViewPager.OnPageCha
                 } else {
                     mOneClick = false;
                     Intent intent = new Intent(this, OrderActivity.class);
-                    intent.putExtra("itemCount", mTvProductSelectNumber.getText().toString());
+
+                    SharedPreferences.Editor editor = sSharedPreferences.edit();
+                    editor.putBoolean("fromBasket", false);
+                    editor.apply();
+                    intent.putExtra("title", getIntent().getExtras().getString("title"));
+                    intent.putExtra("pNum", getIntent().getExtras().getInt("productNumber"));
+                    intent.putExtra("price", getIntent().getExtras().getInt("price"));
+                    intent.putExtra("image", getIntent().getExtras().getString("url"));
+                    intent.putExtra("itemCount", Integer.parseInt(mTvProductSelectNumber.getText().toString()));
                     startActivity(intent);
                 }
                 break;
@@ -110,8 +117,10 @@ public class ProductActivity extends BaseActivity implements ViewPager.OnPageCha
                 }
                 break;
             case R.id.tv_review_write:
-                startActivity(new Intent(this, reviewPostActivity.class));
-                Log.d(TAG, "눌림");
+                Intent intent = new Intent(this, reviewPostActivity.class);
+                intent.putExtra("productNumber", getIntent().getIntExtra("productNumber", 0));
+                intent.putExtra("url", getIntent().getStringExtra("url"));
+                startActivity(intent);
                 break;
         }
     }
@@ -122,7 +131,7 @@ public class ProductActivity extends BaseActivity implements ViewPager.OnPageCha
         mOneClick = false;
         mSelectedNumber = 1;
         mFragmentProductDetail = new fragmentProductDetail(mContext, getIntent().getExtras().getInt("productNumber"));
-        mFragmentProductReview = new fragmentProductReview(mContext, getIntent().getExtras().getInt("productNumber"));
+        mFragmentProductReview = new FragmentProductReview(mContext, getIntent().getExtras().getInt("productNumber"));
         mFragmentProductQnA = new fragmentProductQnA(mContext);
         mTvProductPutCart = findViewById(R.id.tv_product_put_cart);
         mTvProductOrder = findViewById(R.id.tv_product_order);
@@ -168,7 +177,14 @@ public class ProductActivity extends BaseActivity implements ViewPager.OnPageCha
 
     @Override
     public void onPageSelected(int position) {
-
+        /*
+        switch (position) {
+            case 1:
+                FragmentProductReview fragmentProductReview = (FragmentProductReview) mAdapter.getItem(position);
+                fragmentProductReview.getProductReview();
+                break;
+        }
+        */
     }
 
     @Override
@@ -197,6 +213,14 @@ public class ProductActivity extends BaseActivity implements ViewPager.OnPageCha
     public void postBasketFailure(String message) {
         hideProgressDialog();
         showCustomToast(message);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        //FragmentProductReview fragmentProductReview = (FragmentProductReview) mAdapter.getItem(1);
+        //fragmentProductReview.getProductReview();
+        mAdapter.replaceFragment(new FragmentProductReview(mContext, getIntent().getExtras().getInt("productNumber")),getString(R.string.product_review),1);
     }
 }
 

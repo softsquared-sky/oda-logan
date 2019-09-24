@@ -15,14 +15,17 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import my.project.project_oda.R;
+import my.project.project_oda.src.cart.CartActivity;
 import my.project.project_oda.src.cart.models.CartItem;
+
+import static my.project.project_oda.src.ApplicationClass.*;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
-    Context mContext;
+    private Context mContext;
     private ArrayList<CartItem> mCartList;
-    int mNum;
-    String mCount;
+    private CartActivity mCartActivity;
+    private boolean mIsCart;
 
     public interface OnItemClickListener {
         void onItemClick(View v, int pos);
@@ -75,9 +78,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     }
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
-    public CartAdapter(Context mContext, ArrayList<CartItem> mCartList) {
+    public CartAdapter(Context mContext, ArrayList<CartItem> mCartList, CartActivity cartActivity, boolean mIsCart) {
         this.mContext = mContext;
         this.mCartList = mCartList;
+        this.mCartActivity = cartActivity;
+        this.mIsCart = mIsCart;
     }
 
     // onCreateViewHolder() - 아이템 뷰를 위한 뷰홀더 객체 생성하여 리턴.
@@ -95,36 +100,72 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     // onBindViewHolder() - position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
     @Override
     public void onBindViewHolder(final CartAdapter.ViewHolder holder, final int position) {
-        CartItem cartItem = mCartList.get(position);
+        final CartItem cartItem = mCartList.get(position);
         holder.tv_title.setText(cartItem.getpName());
-        holder.tv_price.setText(cartItem.getPrice());
+        holder.tv_price.setText(myFormatter.format(cartItem.getPrice()).concat("원"));
         Glide.with(mContext).load(cartItem.getImage()).placeholder(R.drawable.ic_logo).into(holder.iv_image);
+        holder.chbox.setChecked(cartItem.isChecked());
+
         holder.iv_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //계산
+                mCartActivity.setTotalPriceMinus(cartItem.getPrice() * cartItem.getCount());
+
+                if (cartItem.isChecked()) {
+                    mCartActivity.setSelectedPriceMinus(cartItem.getPrice() * cartItem.getCount());
+                }
+                //제거
                 mCartList.remove(position);
                 notifyDataSetChanged();
+                if (mCartList.size() == 0) {
+                    if (mIsCart) {
+                        mCartActivity.hideBasket();
+                    } else {
+                        mCartActivity.hideDirectOrder();
+                    }
+                }
             }
         });
 
-        mNum = Integer.parseInt(holder.tv_num.getText().toString());
         holder.tv_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mCount = String.valueOf(mNum + 1);
-                mNum += 1;
-                holder.tv_num.setText(mCount);
+                cartItem.setCount(cartItem.getCount() + 1);
+                holder.tv_num.setText(String.valueOf(cartItem.getCount()));
+                mCartActivity.setTotalPricePlus(cartItem.getPrice());
+                if (cartItem.isChecked()) {
+                    mCartActivity.setSelectedPricePlus(cartItem.getPrice());
+                }
             }
         });
 
         holder.tv_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mNum >0 ) {
-                    mCount = String.valueOf(mNum - 1);
-                    mNum -= 1;
-                    holder.tv_num.setText(mCount);
-                }else{}
+                if (cartItem.getCount() > 0) {
+                    cartItem.setCount(cartItem.getCount() - 1);
+                    holder.tv_num.setText(String.valueOf(cartItem.getCount()));
+                    mCartActivity.setTotalPriceMinus(cartItem.getPrice());
+                    if (cartItem.isChecked()) {
+                        mCartActivity.setSelectedPriceMinus(cartItem.getPrice());
+                    }
+                }
+            }
+        });
+
+        holder.chbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (holder.chbox.isChecked()) {
+                    mCartActivity.setSelectedPricePlus(cartItem.getPrice() * cartItem.getCount());
+                    mCartList.get(position).setChecked(true);
+                    notifyDataSetChanged();
+                } else {
+                    mCartActivity.setSelectedPriceMinus(cartItem.getPrice() * cartItem.getCount());
+                    mCartList.get(position).setChecked(false);
+                    notifyDataSetChanged();
+                }
             }
         });
 

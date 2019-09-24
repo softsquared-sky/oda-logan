@@ -42,6 +42,7 @@
                 android:layout_marginEnd="17dp"
                 android:hint="@string/id"
                 android:singleLine="true"
+                android:inputType="textEmailAddress"
                 android:textSize="14sp" />
 
             <EditText
@@ -52,7 +53,7 @@
                 android:layout_marginTop="33dp"
                 android:layout_marginEnd="17dp"
                 android:hint="@string/password"
-                android:password="true"
+                android:inputType="textPassword"
                 android:singleLine="true"
                 android:textSize="14sp" />
 

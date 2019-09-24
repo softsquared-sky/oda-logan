@@ -10,14 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import com.bumptech.glide.Glide;
+
 import my.project.project_oda.R;
 import my.project.project_oda.src.product.ProductActivity;
 import my.project.project_oda.src.product.detail.interfaces.DetailFragmentView;
 import my.project.project_oda.src.product.detail.models.Result;
+
 import static my.project.project_oda.src.ApplicationClass.TAG;
 import static my.project.project_oda.src.ApplicationClass.myFormatter;
 
@@ -37,7 +41,6 @@ public class fragmentProductDetail extends Fragment implements DetailFragmentVie
     private TextView mTvProductDetailTitle;
     private TextView mTvProductDetailPrice;
     private int mProductNumber;
-
 
 
     public fragmentProductDetail(Context context, int pNum) {
@@ -71,21 +74,11 @@ public class fragmentProductDetail extends Fragment implements DetailFragmentVie
         basicInformation();
         getProductBasic();
 
-/*
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
-        for (int i = 0; i < getArguments().getInt("size"); i++) {
-            ImageView ivProductDetail = new ImageView(mContext);
-            Glide.with(mContext).load(getArguments().getString(i+"image")).into(ivProductDetail);
-            ivProductDetail.setLayoutParams(layoutParams);
-            ivProductDetail.setScaleType(ImageView.ScaleType.FIT_XY);
-            mLinearProductImage.addView(ivProductDetail);
-        }
-*/
         return view;
     }
 
-    void basicInformation(){
+    void basicInformation() {
+
         Intent intent = getActivity().getIntent();
         //intent null 체크
         if (intent == null) {
@@ -108,7 +101,7 @@ public class fragmentProductDetail extends Fragment implements DetailFragmentVie
         mTvProductDetailPrice.setText(myFormatter.format(price).concat("원"));
     }
 
-    void getProductBasic(){
+    private void getProductBasic() {
         ((ProductActivity) getActivity()).showProgressDialog();
         final DetailService detailService = new DetailService(this, mProductNumber);
         detailService.getProductDetail();
@@ -117,11 +110,10 @@ public class fragmentProductDetail extends Fragment implements DetailFragmentVie
     @Override
     public void getProductDetailSuccess(Result result) {
 
-
         Glide.with(mContext).load(result.getImageResult().get(0).getImageUrl()).into(mIvProductImage1);
-        Glide.with(mContext).load(result.getImageResult().get(0).getImageUrl()).into(mIvProductImage2);
+        Glide.with(mContext).load(result.getImageResult().get(1).getImageUrl()).into(mIvProductImage2);
 
-        ((ProductActivity)getActivity()).hideProgressDialog();
+        ((ProductActivity) getActivity()).hideProgressDialog();
         mTvProductPerWrap.setText(result.getQpp());
         mTvProductGrade.setText(getString(R.string.product_grade_tools));
         mTvProductResume.setText(getString(R.string.product_resume_tools));
@@ -132,7 +124,7 @@ public class fragmentProductDetail extends Fragment implements DetailFragmentVie
 
     @Override
     public void getProductDetailFailure(String message) {
-        ((ProductActivity)getActivity()).hideProgressDialog();
+        ((ProductActivity) getActivity()).hideProgressDialog();
         ((ProductActivity) getActivity()).showCustomToast(message);
     }
 

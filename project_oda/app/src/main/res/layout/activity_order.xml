@@ -242,6 +242,8 @@
                     android:text="@string/order_request_time"
                     android:textColor="@color/normal"
                     android:textSize="16sp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -257,8 +259,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
                         android:text="@string/order_request_morning" />
 
                     <RadioButton
@@ -499,7 +499,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_sign_up"
+                android:id="@+id/tv_order_request"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@color/splash_back"

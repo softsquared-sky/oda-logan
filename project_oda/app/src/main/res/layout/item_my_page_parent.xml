@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_bottom_bar"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_my_page_serial"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/boarder"
+        android:text="@string/my_page_list_parent_header"
+        android:textSize="14sp"
+        android:textColor="@color/catering"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <ImageView
+            android:id="@+id/iv_item_my_page_parent_image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:src="@drawable/ic_app_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="13dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_my_page_parent_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/catering"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="@string/cart_item_title_tools" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/oda_price"
+                        android:textColor="@color/catering"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_item_my_page_parent_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2.5dp"
+                        android:textColor="@color/splash_back"
+                        android:textSize="16sp"
+                        tools:text="@string/cart_item_price_tools" />
+
+                    <TextView
+                        android:id="@+id/tv_item_my_page_parent_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/catering"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="@string/order_request_product_num_tools" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_my_page_parent_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_close"
+                    android:textColor="@color/catering"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="@string/my_page_list_parent_delivery" />
+
+                <Button
+                    android:id="@+id/btn_my_page_parent_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_duplicate"
+                    android:onClick="onClick"
+                    android:text="@string/my_page_list_parent_delivery_btn"
+                    android:textColor="@color/normal"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_my_page_parent_expand_fold"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:text="@string/my_page_list_parent_expand"
+        android:textSize="14sp"
+        android:textColor="@color/catering"
+        android:gravity="center"
+        android:background="@drawable/my_page_bottom"/>
+
+</LinearLayout>

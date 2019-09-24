@@ -14,6 +14,8 @@
     <string name="btn_login">로그인</string>
     <string name="btn_sign_up">회원가입</string>
     <string name="btn_duplicate">중복확인</string>
+    <string name="id_match">ID는 4자 이상 10자 이하 영소문자/숫자만을 허용합니다.</string>
+    <string name="password_match">PW는 5자 이상 15자 이하의 영소문자/숫자만을 허용합니다.</string>
     <string name="btn_duplicate_ok">사용가능</string>
     <string name="btn_verify">인증하기</string>
     <string name="btn_verify_ok">인증완료</string>
@@ -96,7 +98,7 @@
     <string name="mypage_calculate">정산대기</string>
     <string name="mypage_statistics">주문통계</string>
     <string name="mypage_order_list">배송주문내역</string>
-    <string name="mypage_total_num">총 123개</string>
+    <string name="mypage_total_num">총 0개</string>
 
     <string-array name="alignment">
         <item>최신순</item>
@@ -105,11 +107,13 @@
 
     <string name="setting">설정</string>
     <string name="push">푸쉬알림</string>
-    <string name="account">회원정보 수정</string>
+    <string name="account">로그아웃</string>
     <string name="center">고객센터</string>
 
     <string name="cart">장바구니</string>
+    <string name="cart_direct_order">바로주문</string>
     <string name="cart_products">장바구니 상품</string>
+    <string name="cart_direct_order_products">바로주문 상품</string>
     <string name="cart_empty">장바구니가 비어있습니다</string>
     <string name="cart_select_sum">선택상품 예상 오다가</string>
     <string name="cart_order_request">주문 요청하기</string>
@@ -132,7 +136,20 @@
     <string name="review_post_title_tools">제목을 입력해주세요</string>
     <string name="review_post_content_tools">내용을 입력해주세요</string>
 
+    <string name="home_select_at_least">적어도 하나의 상품을 선택해 주세요.</string>
+    <string name="cart_select_at_least">선택을 안했거나, 상품의 개수가 모두 0개 입니다.</string>
+    <string name="complete_price">예상 오다가</string>
+
     <string name="order_request">주문요청</string>
+    <string name="order_request_complete">주문요청 완료</string>
+    <string name="order_request_complete_text">주문요청이 완료되었습니다!</string>
+    <string name="order_request_product_info_text">상품정보</string>
+    <string name="order_request_complete_product_name">특란 50구 외 4개의 상품</string>
+    <string name="order_request_complete_product_price">예상 오다가 45,000원</string>
+    <string name="order_request_complete_address">수령정보</string>
+    <string name="order_request_complete_address_text">서울시 서대문구 연회동 45-1</string>
+    <string name="order_request_complete_time">오전(7시-12시) 수령</string>
+    <string name="order_request_complete_push">주문승인이 완료되면 푸시알림을 보내드립니다\n수령 후 일주일 내에 정산해주세요</string>
     <string name="order_request_btn">주문 요청하기</string>
     <string name="order_request_info">수령정보</string>
     <string name="order_request_name_hint">수령 지점명</string>
@@ -143,6 +160,10 @@
     <string name="order_request_message">요청사항</string>
     <string name="order_request_morning">아침</string>
     <string name="order_request_am">오전</string>
+    <string name="complete_am">오전(7시-12시) 수령</string>
+    <string name="complete_pm">오후(13시-18시) 수령</string>
+    <string name="complete_morning">오전(6시-7시) 수령</string>
+    <string name="complete_dawn">오전(3시-6시) 수령</string>
     <string name="order_request_pm">오후</string>
     <string name="order_request_dawn">새벽</string>
     <string name="order_request_set_basic">기본정보로 설정</string>
@@ -158,4 +179,14 @@
     <string name="order_request_product_price_tools">9,000원</string>
     <string name="order_request_product_num_tools">/ 3개</string>
 
+    <string name="my_page_list_parent_delivery">9/20\n도착예정</string>
+    <string name="my_page_list_parent_delivery_btn">배송추적</string>
+    <string name="my_page_list_parent_header">17/09/18 주문번호 17091800021</string>
+    <string name="my_page_list_parent_expand">주문 상세보기</string>
+    <string name="my_page_list_parent_fold">주문 간략보기</string>
+
+    <string name="order_request_product_child_title_tools">CJ 비비고왕교자490x2</string>
+    <string name="order_request_product_child_price_tools">7,890원</string>
+    <string name="order_request_product_child_num_tools">5개</string>
+    <string name="order_request_product_child_delivery_tools">9/25\n도착예정</string>
 </resources>

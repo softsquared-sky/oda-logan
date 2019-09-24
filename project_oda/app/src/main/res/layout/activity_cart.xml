@@ -39,6 +39,7 @@
         android:id="@+id/linear_select_all"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:background="@drawable/home_bottom_bar"
         app:layout_constraintTop_toBottomOf="@id/cart_top">
 
         <CheckBox
@@ -47,7 +48,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
-            android:buttonTint="@color/normal"
             android:clickable="false"
             />
 
@@ -76,6 +76,34 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/linear_cart_direct_order"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:visibility="gone"
+                android:background="@drawable/home_bottom_bar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/boarder"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/cart_direct_order_products"
+                    android:textColor="@color/catering"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_direct_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/linear_cart_basket"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:background="@drawable/home_bottom_bar">
@@ -86,6 +114,7 @@
                     android:background="@color/boarder"
                     android:gravity="center_vertical"
                     android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     android:text="@string/cart_products"
                     android:textColor="@color/catering"
                     android:textSize="14sp"
@@ -96,7 +125,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_cart"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
@@ -119,6 +148,7 @@
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/tv_cart_selected_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -139,6 +169,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_cart_total_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="22dp"
@@ -159,6 +190,7 @@
         android:text="@string/cart_order_request"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <LinearLayout
@@ -170,6 +202,7 @@
         android:layout_marginBottom="56dp"
         android:gravity="center"
         android:onClick="onClick"
+        android:visibility="visible"
         android:background="@color/home_textview_background"
         >
 

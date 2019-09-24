@@ -16,20 +16,29 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import static my.project.project_oda.src.ApplicationClass.TAG;
+
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import my.project.project_oda.R;
 
-import static my.project.project_oda.src.ApplicationClass.TAG;
-
+import my.project.project_oda.src.cart.CartActivity;
 import my.project.project_oda.src.main.MainActivity;
 import my.project.project_oda.src.main.home.HomeService;
 import my.project.project_oda.src.main.home.adapter.HomeAdapter;
 import my.project.project_oda.src.main.home.interfaces.HomeActivityView;
 import my.project.project_oda.src.main.home.models.Home_Item;
+import my.project.project_oda.src.main.home.models.ProductNumber;
 import my.project.project_oda.src.main.home.models.Result;
 import my.project.project_oda.src.main.home.models.SpacesItemDecoration;
+import my.project.project_oda.src.main.home.models.ProductNumberList;
 import my.project.project_oda.src.product.ProductActivity;
 
 public class FragmentHome extends Fragment implements HomeActivityView {
@@ -81,8 +90,6 @@ public class FragmentHome extends Fragment implements HomeActivityView {
             case R.id.chbox_home_select_all:
                 mChboxSelectAll.setBackgroundTintList(getActivity().getResources().getColorStateList(R.color.checkbox));
                 break;
-            case R.id.tv_home_nothing:
-                break;
         }
     }
 
@@ -130,7 +137,7 @@ public class FragmentHome extends Fragment implements HomeActivityView {
                         if (!item.isChecked()) {
                             item.setChecked(true);
                             mSelectCount += 1;
-                        }else{
+                        } else {
                             continue;
                         }
                     }
@@ -171,6 +178,49 @@ public class FragmentHome extends Fragment implements HomeActivityView {
         homeService.getProducts();
     }
 
+    //바로 주문
+    public void postDirectOrder() {
+
+        boolean atLeast = false;
+        for (int i = 0; i < mHomeItemList.size(); i++) {
+            if (mHomeItemList.get(i).isChecked()) {
+                atLeast = true;
+                break;
+            }
+        }
+
+        if (atLeast) {
+
+            JSONObject params = new JSONObject();
+            ArrayList<ProductNumber> productNumberList = new ArrayList<>();
+
+            for (int i = 0; i < mHomeItemList.size(); i++) {
+                if (mHomeItemList.get(i).isChecked()) {
+                    productNumberList.add(new ProductNumber(mHomeItemList.get(i).getpNum()));
+                }
+            }
+
+            ProductNumberList pNumList = new ProductNumberList(productNumberList);
+
+            try {
+                JSONArray jsonArray = new JSONArray();
+                for (int i = 0; i < productNumberList.size(); i++) {
+                    JSONObject jsonObject = new JSONObject();
+                    jsonObject.put("pNum", productNumberList.get(i).getpNum());
+                    jsonArray.put(jsonObject);
+                }
+                params.put("pNumList", jsonArray);
+            } catch (JSONException e) {
+                return;
+            }
+
+            final HomeService homeService = new HomeService(this, params);
+            homeService.postDirectOrder();
+        } else {
+            ((MainActivity) getActivity()).showCustomToast(getResources().getString(R.string.home_select_at_least));
+        }
+    }
+
     @Override
     public void getProductSuccess(List<Result> resultList) {
         ((MainActivity) getActivity()).hideProgressDialog();
@@ -187,6 +237,19 @@ public class FragmentHome extends Fragment implements HomeActivityView {
 
     @Override
     public void getProductFailure(String message) {
+        ((MainActivity) getActivity()).hideProgressDialog();
+        ((MainActivity) getActivity()).showCustomToast(message);
+    }
+
+    @Override
+    public void postDirectOrderSuccess(String message) {
+        ((MainActivity) getActivity()).hideProgressDialog();
+        ((MainActivity) getActivity()).showCustomToast(message);
+        startActivity(new Intent(getActivity(), CartActivity.class));
+    }
+
+    @Override
+    public void postDirectOrderFailure(String message) {
         ((MainActivity) getActivity()).hideProgressDialog();
         ((MainActivity) getActivity()).showCustomToast(message);
     }

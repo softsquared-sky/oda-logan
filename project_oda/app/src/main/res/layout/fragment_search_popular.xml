@@ -4,13 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-   <TextView
-       android:layout_width="match_parent"
-       android:layout_height="20dp"
-       android:text="@string/contentDescription_product_main_image"
-       android:gravity="center"
-       />
-
    <ListView
        android:id="@+id/lv_search_popular"
        android:layout_width="match_parent"

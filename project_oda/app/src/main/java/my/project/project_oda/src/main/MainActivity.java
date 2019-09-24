@@ -17,7 +17,7 @@ import my.project.project_oda.src.cart.CartActivity;
 import my.project.project_oda.src.login.LoginActivity;
 import my.project.project_oda.src.main.home.fragments.FragmentHome;
 import my.project.project_oda.src.main.interfaces.MainActivityView;
-import my.project.project_oda.src.main.mypage.fragments.Fragment_mypage;
+import my.project.project_oda.src.main.myPage.fragments.FragmentMyPage;
 import my.project.project_oda.src.search.SearchActivity;
 import my.project.project_oda.src.setting.SettingActivity;
 
@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
 
     private FragmentManager mFragmentManager;
     private FragmentHome mFragmentHome;
-    private Fragment_mypage mFragmentMyPage;
+    private FragmentMyPage mFragmentMyPage;
     private FragmentTransaction mTransaction;
 
     private ImageView mIvMainHome;
@@ -36,6 +36,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
     private TextView mTvMainHome;
     private TextView mTvMainMyPage;
     private TextView mTvMainMyPageTopTitle;
+    private TextView mTvDirectOrder;
     private FloatingActionButton mFloatingBtnMain;
 
     @Override
@@ -54,6 +55,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
         mTvMainMyPage = findViewById(R.id.tv_main_mypage);
         mFloatingBtnMain = findViewById(R.id.fbtn_main);
         mTvMainMyPageTopTitle = findViewById(R.id.tv_main_top_title);
+        mTvDirectOrder = findViewById(R.id.tv_main_direct_order);
 
         mIvMainSearch = findViewById(R.id.iv_main_search);
         mIvMainCart = findViewById(R.id.iv_main_cart);
@@ -76,7 +78,8 @@ public class MainActivity extends BaseActivity implements MainActivityView {
                 mIvMainMyPage.setImageResource(R.drawable.ic_my_page_normal);
                 mTvMainHome.setTextColor(getResources().getColor(R.color.splash_back));
                 mTvMainMyPage.setTextColor(getResources().getColor(R.color.normal));
-                mFloatingBtnMain.show();
+                //mFloatingBtnMain.show();
+                //mTvDirectOrder.setVisibility(View.VISIBLE);
                 mTvMainMyPageTopTitle.setText(getString(R.string.oda));
                 mIvMainSetting.setVisibility(View.GONE);
                 mIvMainSearch.setVisibility(View.VISIBLE);
@@ -88,7 +91,8 @@ public class MainActivity extends BaseActivity implements MainActivityView {
                 mIvMainMyPage.setImageResource(R.drawable.ic_my_page);
                 mTvMainHome.setTextColor(getResources().getColor(R.color.normal));
                 mTvMainMyPage.setTextColor(getResources().getColor(R.color.splash_back));
-                mFloatingBtnMain.hide();
+                //mFloatingBtnMain.hide();
+                //mTvDirectOrder.setVisibility(View.GONE);
                 mTvMainMyPageTopTitle.setText(getString(R.string.menu_myPage));
                 mIvMainSetting.setVisibility(View.VISIBLE);
                 mIvMainSearch.setVisibility(View.GONE);
@@ -101,8 +105,8 @@ public class MainActivity extends BaseActivity implements MainActivityView {
                 startActivity(new Intent(this, CartActivity.class));
                 break;
             case R.id.fbtn_main:
-                postDirectOrder();
-                break;
+                FragmentHome fragmentHome = (FragmentHome) getSupportFragmentManager().findFragmentById(R.id.frame_main);
+                fragmentHome.postDirectOrder();
         }
     }
 
@@ -110,31 +114,10 @@ public class MainActivity extends BaseActivity implements MainActivityView {
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentHome = new FragmentHome();
-        mFragmentMyPage = new Fragment_mypage();
+        mFragmentMyPage = new FragmentMyPage();
         mTransaction = mFragmentManager.beginTransaction();
         mTransaction.replace(R.id.frame_main, mFragmentHome).commitAllowingStateLoss();
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(getApplication(), LoginActivity.class));
-    }
-
-    //바로 주문
-    void postDirectOrder(){
-
-
-    }
-
-    @Override
-    public void postDirectOrderSuccess(String message) {
-
-    }
-
-    @Override
-    public void postDirectOrderFailure(String message) {
-
-    }
 }

@@ -14,18 +14,18 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import my.project.project_oda.R;
-import my.project.project_oda.src.search.models.Recent_Item;
+import my.project.project_oda.src.search.models.RecentItem;
 
 public class RecentAdapter extends BaseAdapter implements Filterable{
 
     private Context mContext;
-    private ArrayList<Recent_Item> mListItem;
-    private ArrayList<Recent_Item> mFilteredItem;
+    private ArrayList<RecentItem> mListItem;
+    private ArrayList<RecentItem> mFilteredItem;
     Filter mListFilter;
     private ViewHolder mViewHolder;
     LayoutInflater mLayoutInflater;
 
-    public RecentAdapter(Context mContext, ArrayList<Recent_Item> mListItem) {
+    public RecentAdapter(Context mContext, ArrayList<RecentItem> mListItem) {
         this.mListItem = mListItem;
         this.mContext = mContext;
         this.mFilteredItem = mListItem;
@@ -59,7 +59,7 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
             mViewHolder = (ViewHolder) v.getTag();
         }
 
-        Recent_Item item = (Recent_Item) getItem(position);
+        RecentItem item = (RecentItem) getItem(position);
         mViewHolder.keyword.setText(item.getKeyword());
         mViewHolder.iv_close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,9 +100,9 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
                 results.count = mListItem.size();
             } else {
 
-                ArrayList<Recent_Item> itemList = new ArrayList<>();
+                ArrayList<RecentItem> itemList = new ArrayList<>();
 
-                for (Recent_Item item : mListItem) {
+                for (RecentItem item : mListItem) {
                     if (item.getKeyword().toUpperCase().contains(constraint.toString().toUpperCase())) {
                         itemList.add(item);
                         Log.d("로그",item.getKeyword()+"filtered");
@@ -117,7 +117,7 @@ public class RecentAdapter extends BaseAdapter implements Filterable{
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
 
-            mFilteredItem = (ArrayList<Recent_Item>)results.values;
+            mFilteredItem = (ArrayList<RecentItem>)results.values;
 
             if(results.count > 0){
                 notifyDataSetChanged();

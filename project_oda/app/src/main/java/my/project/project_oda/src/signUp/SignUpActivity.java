@@ -1,12 +1,13 @@
 package my.project.project_oda.src.signUp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -15,11 +16,12 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import my.project.project_oda.R;
 import my.project.project_oda.src.BaseActivity;
 import my.project.project_oda.src.signUp.interfaces.SignUpActivityView;
-
-import static my.project.project_oda.src.ApplicationClass.TAG;
 
 public class SignUpActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, SignUpActivityView {
 
@@ -40,10 +42,11 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
     private Button mBtnPost;
     //private TextView mTvSignUp;
     int mCatering;
-    private Boolean isChecked;
-    private Boolean isPwnull;
-    private Boolean isSame;
-    private Boolean isTyped;
+    private boolean mIsChecked;
+    private boolean mIsPwNull;
+    private boolean mIsSame;
+    private boolean mIsTyped;
+    private boolean mIsMatch;
 
     private final int SUCCESS = 200;
 
@@ -53,10 +56,6 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
 
         DuplicateCode(int value) {
             this.value = value;
-        }
-
-        public int getValue() {
-            return value;
         }
     }
 
@@ -98,10 +97,11 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         //mTvSignUp = findViewById(R.id.tv_sign_up);
 
         mCatering = -1;
-        isChecked = false;
-        isPwnull = false;
-        isSame = false;
-        isTyped = false;
+        mIsChecked = false;
+        mIsPwNull = false;
+        mIsSame = false;
+        mIsTyped = false;
+        mIsMatch = false;
 
     }//view_initialize finished
 
@@ -111,28 +111,32 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             case R.id.btn_duplicate:
                 if (mEdtId.getText().toString().equals("")) {
                     showCustomToast(getString(R.string.EdtId));
-                } else duplicateCheck();
+                } else {
+                    if (idMatch(mEdtId.getText().toString())) {
+                        duplicateCheck();
+                    } else showCustomToast(getString(R.string.id_match));
+                }
                 break;
             case R.id.iv_back_arrow:
                 finish();
                 break;
             case R.id.btn_verify:
-                if(!mEdtBusinessNumber.getText().toString().equals("")) {
+                if (!mEdtBusinessNumber.getText().toString().equals("")) {
                     mBtnVerify.setBackgroundResource(R.drawable.btn_duplicate_ok);
                     mBtnVerify.setText(getResources().getString(R.string.btn_verify_ok));
                     mBtnVerify.setTextColor(getResources().getColor(R.color.white));
                     mBtnVerify.setClickable(false);
                     mEdtBusinessNumber.setBackground(null);
-                    mEdtPostDetail.requestFocus();
-                }else{
+                    mEdtPost.requestFocus();
+                } else {
                     showCustomToast(getString(R.string.business_number));
                     mEdtBusinessNumber.requestFocus();
                 }
                 break;
             case R.id.btn_post:
-                if(mEdtPost.getText().toString().equals("")){
+                if (mEdtPost.getText().toString().equals("")) {
                     showCustomToast(getString(R.string.post_information));
-                }else{
+                } else {
                     mBtnPost.setVisibility(View.GONE);
                     mEdtPost.setBackground(null);
                     mEdtPostDetail.requestFocus();
@@ -141,42 +145,53 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             case R.id.tv_sign_up:
                 if (mRgLine1.getCheckedRadioButtonId() != -1) {
                     mCatering = mRgLine1.indexOfChild(mRgLine1.findViewById(mRgLine1.getCheckedRadioButtonId())) + 1;
-                    Log.d(TAG, "Line1:" + mCatering);
+                    //Log.d(TAG, "Line1:" + mCatering);
                 } else if (mRgLine2.getCheckedRadioButtonId() != -1) {
                     mCatering = mRgLine2.indexOfChild(mRgLine2.findViewById(mRgLine2.getCheckedRadioButtonId())) + 6;
-                    Log.d(TAG, "Line2:" + mCatering);
+                    //Log.d(TAG, "Line2:" + mCatering);
                 }
 
                 //패스워드가 null인지 체크
                 if (mEdtSignUpPassword.getText().toString().equals("")) {
-                    isPwnull = true;
-                } else isPwnull = false;
+                    mIsPwNull = true;
+                } else mIsPwNull = false;
 
-                //비밀번호 확인 체크
+                //비밀번호 양식 체크
+                if (!passwordMatch(mEdtSignUpPassword.getText().toString()) || !passwordMatch(mEdtSignUpPasswordOk.getText().toString())) {
+                    mIsMatch = false;
+                } else {
+                    mIsMatch = true;
+                }
+
+                //비밀번호 일치 체크
                 if (mEdtSignUpPassword.getText().toString().equals(mEdtSignUpPasswordOk.getText().toString())) {
-                    isSame = true;
-                } else isSame = false;
+                    mIsSame = true;
+                } else mIsSame = false;
 
                 //요식업 체크
                 if (mCatering == -1) {
-                    isTyped = false;
-                } else isTyped = true;
+                    mIsTyped = false;
+                } else mIsTyped = true;
 
-                if (isChecked) {
-                    if (!isPwnull) {
-                        if (isSame) {
-                            if (isTyped) {
-                                signUp(mCatering);
-                            } else showCustomToast2(getString(R.string.CheckCatering));
+                if (mIsChecked) {
+                    if (!mIsPwNull) {
+                        if (mIsMatch) {
+                            if (mIsSame) {
+                                if (mIsTyped) {
+                                    signUp(mCatering);
+                                } else showCustomToast(getString(R.string.CheckCatering));
+                            } else {
+                                showCustomToast(getString(R.string.NotMatchPassword));
+                                mEdtSignUpPasswordOk.requestFocus();
+                            }
                         } else {
-                            showCustomToast2(getString(R.string.NotMatchPassword));
-                            mEdtSignUpPasswordOk.requestFocus();
+                            showCustomToast2(getString(R.string.password_match));
                         }
                     } else {
-                        showCustomToast2(getString(R.string.FillPassword));
+                        showCustomToast(getString(R.string.FillPassword));
                         mEdtSignUpPassword.requestFocus();
                     }
-                } else showCustomToast2(getString(R.string.CheckDuplicate));
+                } else showCustomToast(getString(R.string.CheckDuplicate));
                 break;
         }
     }//onClick finished
@@ -239,10 +254,10 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             //비밀번호 입력란으로 focus 이동
             mEdtSignUpPassword.requestFocus();
             showCustomToast2(text);
-            isChecked = true;
+            mIsChecked = true;
         } else if (code == DuplicateCode.YES.value) {
             showCustomToast2(text);
-            isChecked = false;
+            mIsChecked = false;
         }
     }
 
@@ -272,6 +287,27 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
         showCustomToast(message);
     }
 
+    private void hideKeyBoard(EditText et) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(et.getWindowToken(), 0);
+    }
+
+    public boolean idMatch(String inpt) {
+        Pattern pattern = Pattern.compile("[a-z0-9]{4,10}");
+        Matcher matcher = pattern.matcher(inpt);
+        if (matcher.matches()) {
+            return true;
+        } else return false;
+    }
+
+    public boolean passwordMatch(String inpt) {
+        Pattern pattern = Pattern.compile("[0-9a-z]{5,15}");
+        Matcher matcher = pattern.matcher(inpt);
+        if (matcher.matches()) {
+            return true;
+        } else return false;
+    }
+
     public void setListener() {
 
         mEdtId.addTextChangedListener(new TextWatcher() {
@@ -291,7 +327,7 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
                 mBtnDuplicate.setText(getResources().getString(R.string.btn_duplicate));
                 mBtnDuplicate.setTextColor(getResources().getColor(R.color.normal));
                 mBtnDuplicate.setClickable(true);
-                isChecked = false;
+                mIsChecked = false;
             }
         });
 
@@ -320,10 +356,13 @@ public class SignUpActivity extends BaseActivity implements RadioGroup.OnChecked
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     mEdtPostDetail.setBackground(null);
+                    mRgLine1.requestFocus();
+                    hideKeyBoard(mEdtPostDetail);
                 }
                 return false;
             }
         });
+
     }
 
 }//SignUpActivity finished

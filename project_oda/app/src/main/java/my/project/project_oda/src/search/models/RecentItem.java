@@ -1,14 +1,14 @@
 package my.project.project_oda.src.search.models;
 
-public class Recent_Item {
+public class RecentItem {
 
     private String keyword;
 
-    public Recent_Item(){
+    public RecentItem(){
 
     }
 
-    public Recent_Item(String keyword){
+    public RecentItem(String keyword){
         this.keyword = keyword;
     }
 

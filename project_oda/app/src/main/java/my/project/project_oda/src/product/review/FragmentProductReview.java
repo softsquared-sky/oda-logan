@@ -2,6 +2,7 @@ package my.project.project_oda.src.product.review;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import static my.project.project_oda.src.ApplicationClass.TAG;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,7 @@ import my.project.project_oda.src.product.review.models.ReviewItem;
 import my.project.project_oda.src.product.review.models.ReviewResult;
 import my.project.project_oda.src.product.review.interfaces.ReviewFragmentView;
 
-public class fragmentProductReview extends Fragment implements ReviewFragmentView {
+public class FragmentProductReview extends Fragment implements ReviewFragmentView {
 
     private Context mContext;
     private ArrayList<ReviewItem> mReviewItemList;
@@ -29,7 +31,7 @@ public class fragmentProductReview extends Fragment implements ReviewFragmentVie
     private ReviewAdapter mReviewAdapter;
     private int mProductNumber;
 
-    public fragmentProductReview(Context context, int mProductNumber) {
+    public FragmentProductReview(Context context, int mProductNumber) {
         mContext = context;
         this.mProductNumber = mProductNumber;
     }
@@ -55,7 +57,7 @@ public class fragmentProductReview extends Fragment implements ReviewFragmentVie
         }
     }
 
-    private void getProductReview() {
+    public void getProductReview() {
         ((ProductActivity) getActivity()).showProgressDialog();
         final ReviewService reviewService = new ReviewService(this, mProductNumber);
         reviewService.getProductReview();
@@ -79,4 +81,5 @@ public class fragmentProductReview extends Fragment implements ReviewFragmentVie
         ((ProductActivity) getActivity()).hideProgressDialog();
         ((ProductActivity) getActivity()).showCustomToast(message);
     }
+
 }

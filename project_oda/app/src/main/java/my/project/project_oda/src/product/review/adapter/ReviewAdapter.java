@@ -93,7 +93,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
             star.append("*");
         }
         String newId = reviewItem.getReviewId().substring(0, reviewItem.getReviewId().length() / 2) + star;
-        holder.tv_writer.setText(reviewItem.getReviewDate() + " " + newId + "님");
+        holder.tv_writer.setText(reviewItem.getReviewDate().concat(" ").concat(newId).concat("님"));
         Glide.with(mContext).load(reviewItem.getReviewImage()).placeholder(R.drawable.ic_app_icon).into(holder.iv_image);
 
     }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    >
+
+    <TextView
+        android:id="@+id/item_search_popular_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#4a4a4a"
+        android:lineSpacingExtra="10sp"
+        android:layout_marginStart="18dp"
+        android:layout_gravity="center"
+        tools:text="1"
+        />
+
+    <TextView
+        android:id="@+id/item_search_popular_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/catering"
+        android:lineSpacingExtra="10sp"
+        android:layout_marginStart="32dp"
+        tools:text="고추장"
+        android:layout_gravity="center_vertical"
+        />
+
+</LinearLayout>

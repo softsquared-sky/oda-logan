@@ -1,6 +1,4 @@
-package my.project.project_oda.src.main.mypage.models;
-
-import com.google.gson.annotations.SerializedName;
+package my.project.project_oda.src.main.myPage.models;
 
 public class ProductNumber {
 

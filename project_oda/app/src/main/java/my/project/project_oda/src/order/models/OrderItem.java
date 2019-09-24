@@ -5,17 +5,16 @@ public class OrderItem {
     private int pNum;
     private String orderImage;
     private String orderTitle;
-    private String orderPrice;
+    private int orderPrice;
     private int orderNumOfProduct;
 
-    public OrderItem(int pNum, String orderTitle, String orderPrice, String orderImage, int orderNumOfProduct){
+    public OrderItem(int pNum, String orderTitle, int orderPrice, String orderImage, int orderNumOfProduct){
         this.pNum = pNum;
         this.orderTitle = orderTitle;
         this.orderPrice = orderPrice;
         this.orderImage = orderImage;
         this.orderNumOfProduct = orderNumOfProduct;
     }
-
 
     public int getpNum() {
         return pNum;
@@ -41,11 +40,11 @@ public class OrderItem {
         this.orderTitle = orderTitle;
     }
 
-    public String getOrderPrice() {
+    public int getOrderPrice() {
         return orderPrice;
     }
 
-    public void setOrderPrice(String orderPrice) {
+    public void setOrderPrice(int orderPrice) {
         this.orderPrice = orderPrice;
     }
 
